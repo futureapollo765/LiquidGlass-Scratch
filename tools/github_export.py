@@ -15,6 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 LOCAL_ONLY = {f'versions/0.6.0/validation/{name}-comparison.mp4' for name in ('drag','menu')}
 ARCHIVES = {'.sb3', '.sprite3', '.zip'}
 MEDIA = {'.svg', '.png', '.mp4'}
+PUBLISH_REPO = 'futureapollo765/LiquidGlass-Scratch'
 TEXT = {'', '.md', '.txt', '.py', '.cpp', '.cjs', '.json', '.log', '.sh', '.yml', '.toml', '.sha256'}
 PERSONAL_PATH = re.compile(r'/(?:Users|home)/[\w. -]+/|/(?:private/)?var/folders/[a-z0-9]{2}/', re.I)
 EMAIL = re.compile(r'(?i)\b[\w.%+-]+@[a-z0-9.-]+\.(?:com|org|edu|net|io|dev|us|cn)\b')
@@ -163,6 +164,16 @@ def sync(message):
         raise SystemExit('Set up the private GitHub checkout in .github-sync first.')
     if git(mirror,'branch','--show-current',read=True) != 'main':
         raise SystemExit('Switch the publishing checkout to main before syncing.')
+    push_url = git(mirror,'remote','get-url','--push','origin',read=True).removesuffix('.git').lower()
+    if push_url.startswith('git@'):
+        host, _, path = push_url.removeprefix('git@').partition(':')
+        push_url = f'https://{host}/{path}'
+    if push_url != f'https://github.com/{PUBLISH_REPO}'.lower():
+        raise SystemExit('The publishing checkout must point to the Liquid Glass GitHub repository.')
+    visibility = subprocess.check_output(['gh','repo','view',PUBLISH_REPO,'--json','visibility','--jq','.visibility'],
+                                         text=True).strip()
+    if visibility != 'PRIVATE':
+        raise SystemExit('Sync stopped: the GitHub destination must be private.')
     email = git(mirror,'config','user.email',read=True).lower()
     if not email.endswith('@' + 'users.noreply.github.com'):
         raise SystemExit('Configure a GitHub no-reply commit email in the publishing checkout.')

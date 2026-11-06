@@ -256,7 +256,7 @@ Use `tools.build_ui` above to build this framework from its native inputs. After
 
 To sync a completed update, review the changes and run `sh tools/sync_github.sh "Describe the update"`. The original working directory keeps its local history and uses a separate `.github-sync` checkout for the private GitHub repository. The helper removes personal paths from the exported reports and historical builders, checks the reviewed media hashes, and uses Gitleaks to scan text and unpacked Scratch files before pushing. Two historical comparison videos with device footage are kept locally. Gitleaks must be on the PATH, in `.local-tools/gitleaks`, or supplied through `GITLEAKS_BIN`.
 
-For a new release, finish the numbered local snapshot, validation, and both update logs before syncing. Pushing the new `VERSION` starts **Publish Scratch release**, which verifies the Studio and component against the snapshot manifest and attaches them to the matching GitHub release. A later editor save stays in Git alongside the original release download.
+Before every sync, the helper verifies that the destination is the private Liquid Glass repository. For a new release, finish the numbered local snapshot, validation, and both update logs before syncing. Pushing the new `VERSION` starts **Publish Scratch release**, which verifies the Studio and component against the snapshot manifest and attaches them to the matching GitHub release. A later editor save stays in Git alongside the original release download.
 
 **Verification status**
 
