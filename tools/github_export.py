@@ -161,7 +161,7 @@ def sync(message):
         raise SystemExit('Remove the origin from the original local-history checkout before syncing.')
     mirror = ROOT if 'origin' in remote_names and not local_only else ROOT/'.github-sync'
     if not (mirror/'.git').is_dir():
-        raise SystemExit('Set up the private GitHub checkout in .github-sync first.')
+        raise SystemExit('Set up the publishing checkout in .github-sync first.')
     if git(mirror,'branch','--show-current',read=True) != 'main':
         raise SystemExit('Switch the publishing checkout to main before syncing.')
     push_url = git(mirror,'remote','get-url','--push','origin',read=True).removesuffix('.git').lower()
@@ -172,8 +172,8 @@ def sync(message):
         raise SystemExit('The publishing checkout must point to the Liquid Glass GitHub repository.')
     visibility = subprocess.check_output(['gh','repo','view',PUBLISH_REPO,'--json','visibility','--jq','.visibility'],
                                          text=True).strip()
-    if visibility != 'PRIVATE':
-        raise SystemExit('Sync stopped: the GitHub destination must be private.')
+    if visibility != 'PUBLIC':
+        raise SystemExit('Sync stopped: the release repository is expected to be public.')
     email = git(mirror,'config','user.email',read=True).lower()
     if not email.endswith('@' + 'users.noreply.github.com'):
         raise SystemExit('Configure a GitHub no-reply commit email in the publishing checkout.')
