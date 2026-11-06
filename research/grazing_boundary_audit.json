@@ -1,0 +1,90 @@
+{
+  "rectangle": [
+    0,
+    0,
+    120,
+    60,
+    12
+  ],
+  "circle": [
+    60,
+    0,
+    80,
+    80,
+    40
+  ],
+  "original_intersection_x": 33.542486889354095,
+  "samples": [
+    {
+      "model": "legacy_normal_gate",
+      "boundary_y": 30.000000000000007,
+      "one_sided_slopes": [
+        {
+          "step": 0.1,
+          "left_slope": 7.105427357601002e-14,
+          "right_slope": 0.8789628109830261,
+          "slope_gap": 0.878962810982955
+        },
+        {
+          "step": 0.01,
+          "left_slope": 7.105427357601002e-13,
+          "right_slope": 0.8816208944544712,
+          "slope_gap": 0.8816208944537607
+        },
+        {
+          "step": 0.001,
+          "left_slope": 7.105427357601002e-12,
+          "right_slope": 0.8818874749252359,
+          "slope_gap": 0.8818874749181305
+        },
+        {
+          "step": 0.0001,
+          "left_slope": 7.105427357601002e-11,
+          "right_slope": 0.8819141407201414,
+          "slope_gap": 0.8819141406490871
+        }
+      ]
+    },
+    {
+      "model": "bbox_only_smooth_coincidence",
+      "boundary_y": 34.763552954672775,
+      "one_sided_slopes": [
+        {
+          "step": 0.1,
+          "left_slope": 0.14309819305751148,
+          "right_slope": 0.1434057542215328,
+          "slope_gap": 0.0003075611640213083
+        },
+        {
+          "step": 0.01,
+          "left_slope": 0.14323597084029416,
+          "right_slope": 0.14326672615254665,
+          "slope_gap": 3.075531225249506e-05
+        },
+        {
+          "step": 0.001,
+          "left_slope": 0.14324980448066071,
+          "right_slope": 0.14325288000804903,
+          "slope_gap": 3.075527388318733e-06
+        },
+        {
+          "step": 0.0001,
+          "left_slope": 0.14325118840474715,
+          "right_slope": 0.1432514959276432,
+          "slope_gap": 3.0752289603697136e-07
+        }
+      ]
+    }
+  ],
+  "dense_candidate_contour": {
+    "x_range": [
+      20,
+      80
+    ],
+    "samples": 1001,
+    "slope_probe": 0.0001,
+    "max_one_sided_slope_gap": 3.120902647424373e-05,
+    "at_x": 44.42
+  },
+  "passed": true
+}

@@ -1,0 +1,118 @@
+{
+  "project": "./versions/0.4.0/LiquidGlass_Studio_0.4.0.sb3",
+  "sha256": "938946226fa6d0758afb552b6ea2a5bb2e81c447e51e87725a04b1c38727802f",
+  "checks": [
+    {
+      "name": "The default Studio scene creates a sidebar, fixed button and compact menu",
+      "passed": true
+    },
+    {
+      "name": "The sidebar stays fixed and produces no hover, press, drag, or action",
+      "passed": true
+    },
+    {
+      "name": "Button hover expands around its anchor, a horizontal pull deforms it, and releasing the drag cancels activation",
+      "passed": true
+    },
+    {
+      "name": "Each complete button click fires once and switches between both optical backgrounds",
+      "passed": true
+    },
+    {
+      "name": "The launcher animates into a vertical list with two separate hit rows",
+      "passed": true
+    },
+    {
+      "name": "A nested leaf changes the background and emits its full path once",
+      "passed": true
+    },
+    {
+      "name": "An outside press dismisses the reopened menu without choosing another action",
+      "passed": true
+    },
+    {
+      "name": "Dragging a draggable launcher changes its menu anchor without activating an item",
+      "passed": true
+    },
+    {
+      "name": "Both optical backgrounds use their stored pixels at interior and clipped edge samples",
+      "passed": true
+    },
+    {
+      "name": "Public Button inputs independently configure a circle, capsule, and rounded rectangle",
+      "passed": true
+    },
+    {
+      "name": "A clipped custom label preserves letter case and stays inside its own button",
+      "passed": true
+    },
+    {
+      "name": "An identical prepared frame retains the existing UI art without stamping again",
+      "passed": true
+    },
+    {
+      "name": "A stage mouse-down and release wholly inside a native strip stamp activates the button once",
+      "passed": true
+    },
+    {
+      "name": "Native labels and icons stamp above the glass strokes and restored backdrop",
+      "passed": true
+    },
+    {
+      "name": "A native sprite import delivers Button and nested Menu broadcasts to another sprite (compiler)",
+      "passed": true
+    },
+    {
+      "name": "A native sprite import delivers Button and nested Menu broadcasts to another sprite (interpreter)",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "openMenu": {
+      "earlyHeight": 62.8101166259498,
+      "settledHeight": 101.99999999994317,
+      "rows": [
+        {
+          "index": 1,
+          "label": "Background",
+          "path": "Background",
+          "role": "submenu"
+        },
+        {
+          "index": 2,
+          "label": "Detail",
+          "path": "Detail",
+          "role": "submenu"
+        }
+      ]
+    },
+    "draggedMenuAnchor": [
+      91.99999999898553,
+      87.00000000047555
+    ],
+    "clippedLabel": "MiXeD…",
+    "busyClick": {
+      "frame": 0,
+      "costume": "LG strip 1 1",
+      "x": 67,
+      "y": -96
+    },
+    "foregroundStamps": 98,
+    "import_compiler": {
+      "stageScripts": 0,
+      "received": 2,
+      "action": "Detail>Balanced",
+      "path": "Detail>Balanced",
+      "source": 3
+    },
+    "import_interpreter": {
+      "stageScripts": 0,
+      "received": 2,
+      "action": "Detail>Balanced",
+      "path": "Detail>Balanced",
+      "source": 3
+    }
+  },
+  "componentSHA256": "11f68c8ad76408fb733c47948676ca77292860482a9d90cf04df199c73f14684",
+  "passed": true
+}

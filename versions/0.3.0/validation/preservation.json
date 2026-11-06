@@ -1,0 +1,26 @@
+{
+  "LiquidGlass_Component_0.3.0.sprite3": {
+    "jsonBytes": 3409673,
+    "allOriginalAssetsPreserved": true,
+    "priorScalarsAndListsIdentical": true,
+    "modifiedScripts": [
+      "LG initialize",
+      "LG render",
+      "LG shade %s %s %s",
+      "LG background %s %s"
+    ],
+    "otherTopLevelScriptsUnchanged": 7
+  },
+  "LiquidGlass_Studio_0.3.0.sb3": {
+    "jsonBytes": 3301674,
+    "allOriginalAssetsPreserved": true,
+    "priorScalarsAndListsIdentical": true,
+    "modifiedScripts": [
+      "LG render",
+      "LG shade %s %s %s",
+      "LG background %s %s",
+      "LG initialize"
+    ],
+    "otherTopLevelScriptsUnchanged": 19
+  }
+}

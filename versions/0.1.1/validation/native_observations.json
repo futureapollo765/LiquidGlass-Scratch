@@ -1,0 +1,14 @@
+{
+  "version": "0.1.1",
+  "sourceSHA256": "40155fe8d470fd8a12cac3d115cff86c9f311c7493d91e504f48f9ecc3271204",
+  "observed": [
+    "Loaded the preserved numbered archive in the dedicated former EditorVerified window.",
+    "Visible green-flag main loop with three direct Glass calls rendered all components.",
+    "M automatic circle join displayed rounded continuous transitions into the rectangle."
+  ],
+  "notClaimed": [
+    "Native editor save/reopen of this revision",
+    "Automated capture of diagonal drag motion"
+  ],
+  "headlessRuntimeChecksPassed": 36
+}

@@ -1,0 +1,32 @@
+{
+  "version": "0.2.3",
+  "application": "Official vanilla Scratch editor in isolated Chrome Incognito window",
+  "url": "https://scratch.mit.edu/projects/editor/",
+  "method": "Native UI interactions and visual screenshots; console read through Chrome DevTools UI",
+  "reproducedBefore": {
+    "artifact": "versions/0.2.1/LiquidGlass_Studio_0.2.1.sb3",
+    "firstError": "Field ID indicator is contained in block ID. This may cause problems with focus: l_field.",
+    "symptom": "Palette disappeared while workspace scripts remained visible",
+    "cascade": "Cannot read properties of undefined (reading 2) during flyout disposal"
+  },
+  "after": {
+    "project": "./versions/0.2.3/LiquidGlass_Studio_0.2.3.sb3",
+    "sha256": "23d57b1cfefe4a76b8ff447eaed88a9a6c181a265410339f19571e9cefc89e0f",
+    "motionPaletteVisible": true,
+    "variablesPaletteVisible": true,
+    "myBlocksPaletteVisible": true,
+    "customBlocksVisible": 12,
+    "penPaletteVisible": true,
+    "costumesCodeTabSwitch": true,
+    "greenFlagVisibleExampleCalls": 3,
+    "greenFlagRenderedRectangleCircleCapsule": true,
+    "savedViaScratchFileMenu": true,
+    "nativeSave": "./versions/0.2.3/validation/ScratchVerified_0.2.3.sb3",
+    "nativeSaveSHA256": "bef809fb846d5f10c4d98137c1f0d457405096daa864b9af791fdb239a9c4292",
+    "nativeSaveReopened": true,
+    "controlAndMyBlocksAfterReopen": true,
+    "reservedIdAndFlyoutErrorsAfterRepair": false,
+    "unrelatedConsoleMessages": "Unauthenticated project API CORS/network errors and Blockly deprecation warnings; no palette exception"
+  },
+  "scope": "No project publication or account login. UI verification completed on desktop Chrome; no Safari/mobile claim."
+}

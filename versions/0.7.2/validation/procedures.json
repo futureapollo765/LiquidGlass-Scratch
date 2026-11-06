@@ -1,0 +1,58 @@
+{
+  "sb3": {
+    "unchangedOriginalProcedures": 95,
+    "changedOriginalProcedures": [
+      "LG render",
+      "UI grow sheet %s owner %s width %s radius %s",
+      "UI input",
+      "UI layer frame key",
+      "UI layers begin",
+      "UI layers reset",
+      "UI paint floating menus",
+      "UI panels %s options %s width %s radius %s",
+      "UI push %s path %s from %s row %s",
+      "UI reset",
+      "UI sample glyph ink",
+      "UI sample ink row",
+      "UI source row owner %s path %s from %s",
+      "UI stamp group opacity",
+      "UI step menu springs %s open travel %s open growth %s close travel %s close growth %s bounce %s"
+    ],
+    "newProcedures": [
+      "UI step sheet travel %s owner %s"
+    ],
+    "copiedAssets": 342,
+    "allOriginalArtworkRetained": true,
+    "retiredGeneratedTextures": 66,
+    "additionalBitmapTextures": 66,
+    "existingEventScriptsIdentical": true
+  },
+  "sprite3": {
+    "unchangedOriginalProcedures": 93,
+    "changedOriginalProcedures": [
+      "LG render",
+      "UI grow sheet %s owner %s width %s radius %s",
+      "UI input",
+      "UI layer frame key",
+      "UI layers begin",
+      "UI layers reset",
+      "UI paint floating menus",
+      "UI panels %s options %s width %s radius %s",
+      "UI push %s path %s from %s row %s",
+      "UI reset",
+      "UI sample glyph ink",
+      "UI sample ink row",
+      "UI source row owner %s path %s from %s",
+      "UI stamp group opacity",
+      "UI step menu springs %s open travel %s open growth %s close travel %s close growth %s bounce %s"
+    ],
+    "newProcedures": [
+      "UI step sheet travel %s owner %s"
+    ],
+    "copiedAssets": 342,
+    "allOriginalArtworkRetained": true,
+    "retiredGeneratedTextures": 66,
+    "additionalBitmapTextures": 66,
+    "existingEventScriptsIdentical": true
+  }
+}

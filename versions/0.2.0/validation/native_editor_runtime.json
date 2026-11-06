@@ -1,0 +1,51 @@
+{
+  "project": "./versions/0.2.0/EditorVerified_0.2.0.sb3",
+  "sha256": "2dd3c6143f5ee8e79bcc4a5ee8b2216ccf53c6124f9c16e1b2b921d8902f1e9c",
+  "tests": [
+    {
+      "name": "Native-editor saved project preserves all three distinct centers and renders repeatedly",
+      "passed": true
+    },
+    {
+      "name": "Native-editor field samples are inside the separate components at their actual centers",
+      "passed": true
+    },
+    {
+      "name": "Native-editor preserved keyboard and forever loop change main shape to a circle",
+      "passed": true
+    },
+    {
+      "name": "Native-editor geometry procedures also retain center subtraction in Scratch interpreter",
+      "passed": true
+    }
+  ],
+  "initial": {
+    "x": [
+      -90,
+      85,
+      20
+    ],
+    "y": [
+      10,
+      10,
+      -100
+    ],
+    "width": [
+      156,
+      76,
+      176
+    ],
+    "height": [
+      96,
+      76,
+      44
+    ]
+  },
+  "centerFields": [
+    -48,
+    -37,
+    -22
+  ],
+  "compilationErrors": [],
+  "passed": true
+}

@@ -1,0 +1,6 @@
+{
+  "archive": "versions/0.7.3/LiquidGlass_Studio_0.7.3.sb3",
+  "observations": [],
+  "passed": false,
+  "error": "AssertionError [ERR_ASSERTION]: Held Background w must shrink toward its press size: 196,219.2311314830041,219.2311314830041\n    at checkPanel (/private/tmp/lg074-panel-private.cjs:53:20)\n    at run (/private/tmp/lg074-panel-private.cjs:81:9)\n    at async /private/tmp/lg074-panel-private.cjs:93:42"
+}

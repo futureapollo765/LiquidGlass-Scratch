@@ -1,0 +1,22 @@
+{
+  "source": "./LiquidGlass_Component.sprite3",
+  "output": "./research/diagnostics/editor_ids_component.sprite3",
+  "sourceSHA256": "d21e4f5375a9463faf7b0f5056ac19a6a1439c90972c702741d9ef17b39441c9",
+  "outputSHA256": "60e40a1ff902ea82c4256516ddcfecf481bfe745150513a1f0a42a4cfa17fda1",
+  "jsonEntry": "sprite.json",
+  "jsonBytesBefore": 3338852,
+  "jsonBytesAfter": 3339025,
+  "mapping": {
+    "l_field": "lgid38bf737374cf1320362bc19d"
+  },
+  "counts": {
+    "declarations": 1,
+    "blockFields": 8,
+    "compactReporters": 0,
+    "monitors": 0
+  },
+  "inverseMappingRestoresEntireDocument": true,
+  "allOtherArchiveEntriesIdentical": true,
+  "underFiveMillionBytes": true,
+  "sourcePreserved": true
+}

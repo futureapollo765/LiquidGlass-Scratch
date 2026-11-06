@@ -1,0 +1,34 @@
+{
+  "project": "/private/tmp/lg071/final.sb3",
+  "sha256": "9c8e6304f8a5c87712364c07d945a3fd7b3e0db6e726d8dcf8bbef30bab7b429",
+  "checks": [
+    {
+      "name": "A native sprite import delivers Button and nested Menu broadcasts to another sprite (compiler)",
+      "passed": true
+    },
+    {
+      "name": "A native sprite import delivers Button and nested Menu broadcasts to another sprite (interpreter)",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "import_compiler": {
+      "stageScripts": 0,
+      "openSubmenuHostBytes": 4778288,
+      "received": 2,
+      "action": "Detail>Balanced",
+      "path": "Detail>Balanced",
+      "source": 3
+    },
+    "import_interpreter": {
+      "stageScripts": 0,
+      "openSubmenuHostBytes": 4779764,
+      "received": 2,
+      "action": "Detail>Balanced",
+      "path": "Detail>Balanced",
+      "source": 3
+    }
+  },
+  "componentSHA256": "12785b9651513e147c0bc77c384fa4374bf7041e9e564a8500d483fb9878d203",
+  "passed": true
+}

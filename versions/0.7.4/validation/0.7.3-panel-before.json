@@ -1,0 +1,6 @@
+{
+  "archive": "versions/0.7.3/LiquidGlass_Studio_0.7.3.sb3",
+  "observations": [],
+  "passed": false,
+  "error": "AssertionError [ERR_ASSERTION]: Held root w must shrink toward its press size: 188,211.23113148300408,211.23113148300408\n    at checkPanel (./tools/test_menu_drag_return.cjs:53:20)\n    at run (./tools/test_menu_drag_return.cjs:74:9)\n    at async ./tools/test_menu_drag_return.cjs:93:42"
+}

@@ -1,0 +1,32 @@
+{
+  "sha256": "ed8177b1d43aad05ce681fd094e9489f06f43af725b8b909ab81eb99ca9ee404",
+  "saves": [
+    {
+      "state": "running, launcher closed",
+      "projectJsonBytes": 4130949
+    },
+    {
+      "state": "root menu open",
+      "projectJsonBytes": 4131593
+    },
+    {
+      "state": "child menu open, parent retained",
+      "projectJsonBytes": 4132182
+    }
+  ],
+  "gridStoredRows": 102,
+  "placementInputs": [
+    "alignment",
+    "expanded x",
+    "expanded y"
+  ],
+  "launcherCenter": [
+    60,
+    102
+  ],
+  "demoFinishes": [
+    "Smoked",
+    "Clear"
+  ],
+  "passed": true
+}

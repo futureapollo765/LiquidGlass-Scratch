@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "legacy_shadow_missing_inputs",
+      "rejected": true
+    },
+    {
+      "name": "modern_partial_inputs",
+      "rejected": true
+    },
+    {
+      "name": "signature_argument_count_mismatch",
+      "rejected": true
+    },
+    {
+      "name": "body_argument_name_change",
+      "rejected": true
+    }
+  ]
+}

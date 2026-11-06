@@ -1,0 +1,32 @@
+{
+  "project": "./research/diagnostics/ui_0.4.0/ui_ready.sb3",
+  "sha256": "e6c9890f6100d857f5866bd0d3ee5c84a5e59bb89537774e2d40314569b7520f",
+  "checks": [
+    {
+      "name": "A native sprite import delivers Button and nested Menu broadcasts to another sprite (compiler)",
+      "passed": true
+    },
+    {
+      "name": "A native sprite import delivers Button and nested Menu broadcasts to another sprite (interpreter)",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "import_compiler": {
+      "stageScripts": 0,
+      "received": 2,
+      "action": "Detail>Balanced",
+      "path": "Detail>Balanced",
+      "source": 3
+    },
+    "import_interpreter": {
+      "stageScripts": 0,
+      "received": 2,
+      "action": "Detail>Balanced",
+      "path": "Detail>Balanced",
+      "source": 3
+    }
+  },
+  "componentSHA256": "ba79029ec48e457759d41992546bc4b63931086dfd86658ce37c0e84c035c2d4",
+  "passed": true
+}

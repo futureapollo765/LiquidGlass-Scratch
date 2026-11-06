@@ -1,0 +1,323 @@
+{
+  "previous": "versions/0.4.1/LiquidGlass_Studio_0.4.1.sb3",
+  "current": "/private/tmp/liquidglass-050-validation/final.sb3",
+  "previousSHA256": "08aab33924da818d2b912ec8b24093ad4fa35d3e66273b3e7e697bbe5ac8e2cc",
+  "currentSHA256": "9839e01d752e178b8e612f875b648eebf40a911004d241b6778bdd465440a9da",
+  "checks": [
+    {
+      "name": "All public role blocks preserve existing arguments and expose the new material inputs",
+      "passed": true
+    },
+    {
+      "name": "Neutral settings preserve the baseline native glass stroke colors on both supplied backgrounds",
+      "passed": true
+    },
+    {
+      "name": "Actual Pen color blends hex and packed tints through the requested transparency and invalidates a retained frame",
+      "passed": true
+    },
+    {
+      "name": "Positive and negative brightness move the native output toward white and black",
+      "passed": true
+    },
+    {
+      "name": "Button and Menu forward their configured material to independently shaded contours",
+      "passed": true
+    },
+    {
+      "name": "Joined glass mixes the two per-slot materials continuously through the connecting region",
+      "passed": true
+    },
+    {
+      "name": "Spatial blur softens a real calibration stripe and changes the retained output at fixed geometry",
+      "passed": true
+    },
+    {
+      "name": "Blur clamps each axis at all four actual stage corners without sampling the opposite edges",
+      "passed": true
+    },
+    {
+      "name": "The Scratch interpreter renders the combined spatial blur, background brightness and colored coat in order",
+      "passed": true
+    }
+  ],
+  "samples": {
+    "tint": {
+      "clear": [
+        170,
+        210,
+        231
+      ],
+      "half": [
+        183,
+        141,
+        132
+      ],
+      "opaque": [
+        196,
+        72,
+        32
+      ],
+      "recolored": [
+        21,
+        72,
+        220
+      ]
+    },
+    "brightness": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        40,
+        53,
+        74
+      ],
+      [
+        61,
+        83,
+        114
+      ],
+      [
+        130,
+        143,
+        163
+      ],
+      [
+        255,
+        255,
+        255
+      ]
+    ],
+    "joined": {
+      "samples": [
+        [
+          216,
+          0,
+          38
+        ],
+        [
+          140,
+          0,
+          114
+        ],
+        [
+          128,
+          0,
+          127
+        ],
+        [
+          115,
+          0,
+          140
+        ],
+        [
+          38,
+          0,
+          216
+        ]
+      ],
+      "recolored": [
+        0,
+        128,
+        128
+      ]
+    },
+    "blur": [
+      {
+        "blur": 0,
+        "left": [
+          170,
+          210,
+          231
+        ],
+        "nearby": [
+          61,
+          83,
+          114
+        ],
+        "contrast": 204.2033300414075
+      },
+      {
+        "blur": 1,
+        "left": [
+          138,
+          173,
+          197
+        ],
+        "nearby": [
+          66,
+          87,
+          117
+        ],
+        "contrast": 137.76792079435617
+      },
+      {
+        "blur": 2,
+        "left": [
+          106,
+          135,
+          163
+        ],
+        "nearby": [
+          70,
+          92,
+          122
+        ],
+        "contrast": 69.46941773183362
+      },
+      {
+        "blur": 4,
+        "left": [
+          97,
+          125,
+          153
+        ],
+        "nearby": [
+          82,
+          106,
+          135
+        ],
+        "contrast": 30.166206257996713
+      },
+      {
+        "blur": 6,
+        "left": [
+          87,
+          114,
+          144
+        ],
+        "nearby": [
+          94,
+          119,
+          148
+        ],
+        "contrast": 9.486832980505138
+      },
+      {
+        "blur": 9,
+        "left": [
+          84,
+          108,
+          138
+        ],
+        "nearby": [
+          86,
+          112,
+          141
+        ],
+        "contrast": 5.385164807134504
+      },
+      {
+        "blur": 12,
+        "left": [
+          78,
+          103,
+          133
+        ],
+        "nearby": [
+          80,
+          104,
+          133
+        ],
+        "contrast": 2.23606797749979
+      },
+      {
+        "blur": 16,
+        "left": [
+          80,
+          104,
+          133
+        ],
+        "nearby": [
+          80,
+          104,
+          133
+        ],
+        "contrast": 0
+      },
+      {
+        "blur": 20,
+        "left": [
+          80,
+          104,
+          133
+        ],
+        "nearby": [
+          81,
+          104,
+          133
+        ],
+        "contrast": 1
+      },
+      {
+        "blur": 100,
+        "left": [
+          80,
+          104,
+          133
+        ],
+        "nearby": [
+          81,
+          104,
+          133
+        ],
+        "contrast": 1
+      }
+    ],
+    "cornerBlur": [
+      {
+        "x": -238,
+        "y": 176,
+        "color": [
+          230,
+          30,
+          69
+        ]
+      },
+      {
+        "x": 238,
+        "y": 176,
+        "color": [
+          39,
+          68,
+          216
+        ]
+      },
+      {
+        "x": -238,
+        "y": -176,
+        "color": [
+          26,
+          215,
+          101
+        ]
+      },
+      {
+        "x": 238,
+        "y": -176,
+        "color": [
+          220,
+          211,
+          47
+        ]
+      }
+    ],
+    "interpretedMixture": {
+      "actual": [
+        174,
+        106,
+        89
+      ],
+      "expected": [
+        173.54546875,
+        105.928828125,
+        89.31546875000001
+      ]
+    }
+  },
+  "method": "Installed TurboWarp VM running native Scratch blocks in compiled and interpreted modes. Renderer callbacks record each sampled Pen line’s actual RGBA and stage position.",
+  "passed": true
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "inputSHA256": "ed8177b1d43aad05ce681fd094e9489f06f43af725b8b909ab81eb99ca9ee404",
+    "resultSHA256": "beb5f2b4a7a422e22bcc4a3ed9a3a56a7efee0911f1e96421bf5aa816d77c11c",
+    "originalAssets": 276,
+    "allAssetsAndBackgroundsUnchanged": true,
+    "publicCallsWithPriorBindings": [
+      "Background",
+      "Button",
+      "Menu",
+      "Glass",
+      "Glass",
+      "Glass"
+    ],
+    "jsonBytes": 4368503
+  },
+  {
+    "inputSHA256": "f07e0d0343784bb272615a6d8a542c5228aad6147a9b902f7c5132b2fc3d0d59",
+    "resultSHA256": "93afacae78693bc69d782cc836a15524f00d47cc389c48c6a57f0ecad7413f93",
+    "originalAssets": 276,
+    "allAssetsAndBackgroundsUnchanged": true,
+    "publicCallsWithPriorBindings": [
+      "Glass",
+      "Background",
+      "Button",
+      "Menu"
+    ],
+    "jsonBytes": 4496966
+  }
+]

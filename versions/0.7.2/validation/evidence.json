@@ -1,0 +1,102 @@
+{
+  "0.7.1-negative-control.json": {
+    "sha256": "675ffac750c70ed09b6e4d7865737ca599c433363e71c03b00735b09fd026b0b",
+    "bytes": 669
+  },
+  "README.md": {
+    "sha256": "6fbf3b22a7508d54d888dc5a045b4fc203967132d8491972f9001b097e8272c7",
+    "bytes": 2489
+  },
+  "body.json": {
+    "sha256": "ad56e298b285a76254a3a8b630b7b52651bff31a322022e4d42101b4eeb54042",
+    "bytes": 1425
+  },
+  "components.json": {
+    "sha256": "05bea84352d6aacd9ff7c2c0522a479d6bfcf7db62f63adef5dc736625f44147",
+    "bytes": 4143
+  },
+  "control-motion.json": {
+    "sha256": "51de01dc6142c6d02e4ab7846d54cb4c7a6dfa8a53c8fad92d7252c0b8d35a31",
+    "bytes": 4701
+  },
+  "disclosure.json": {
+    "sha256": "69f5ecb315306b18be827644741845813f0b3b4e7d4b54ccef06f1ed279b9f99",
+    "bytes": 770
+  },
+  "folding-submenu.png": {
+    "sha256": "21309ba54724e49fe1544f5f90d93fbd075b858da4921e099ee17696c9995c22",
+    "bytes": 490421
+  },
+  "full-dismiss-theme.json": {
+    "sha256": "af5cf08eb7b6ddbc551bedfc3dd9367f6eb610bc2063a233c80a55e0d3c5cea1",
+    "bytes": 19444
+  },
+  "handoff.json": {
+    "sha256": "9033e870b1eda7377b81a3c276076e631c4e8cf781f37f6c4c986a5fdfe3000f",
+    "bytes": 3783
+  },
+  "highlights.json": {
+    "sha256": "186983f2deceb8dad57f9232b08bc705c30f9bef0e3393528b6b8fee102a41eb",
+    "bytes": 14422
+  },
+  "layers.json": {
+    "sha256": "0af9c9ddcf1a6f6bd4f049db46bf078f7f7086f7cdf7ea6172d115d882515a65",
+    "bytes": 8055
+  },
+  "menu-timing.mp4": {
+    "sha256": "e3dfafdca6eb65e04f555fce4c3dff8a5a40e079a6f55622b2999a95c0301f48",
+    "bytes": 387987
+  },
+  "native-save.json": {
+    "sha256": "ccd01ec1fdfdbdfa0d257b3e3d29c3a9f954a8e1f0cdfa113a4b85818b70dcc4",
+    "bytes": 678
+  },
+  "opacity.json": {
+    "sha256": "5efc416d2213d223e192a3596fc91353f0a2fc91fee68cc4f209aa47ab1b89fa",
+    "bytes": 1982
+  },
+  "preservation.json": {
+    "sha256": "aed5f175ffd3ecc031b99744075a08f532e66d86d5d100cf79061cdbae0fd771",
+    "bytes": 917
+  },
+  "procedures.json": {
+    "sha256": "d03c4d1fbbf9e368f7693f414792d7d7553a343e7245651c94289b5c1d391dd3",
+    "bytes": 1811
+  },
+  "reference.json": {
+    "sha256": "e6953e97b750998fb13d0828854924d171c4595891262f935c985f7d12cc220a",
+    "bytes": 18901
+  },
+  "retained.json": {
+    "sha256": "f5221fa186644a97eaa7bc21c6d9e0d3a97738667b46581b03d6b169bfe7f2b9",
+    "bytes": 3164
+  },
+  "root-timing.json": {
+    "sha256": "d74c8d009e2aa4d2bec89404465af6b29e80e6d1fb4a62d54195360adbc57e9f",
+    "bytes": 1186
+  },
+  "settle.json": {
+    "sha256": "05604b3a7b1b0a9dc4675233da8b6aeaeee257a091c1319eca63321a65c64569",
+    "bytes": 2071
+  },
+  "sprite.json": {
+    "sha256": "e61015b81485727682d3b7ff7fa3e19678d99470507c8399767f94b8350bff08",
+    "bytes": 173
+  },
+  "studio.json": {
+    "sha256": "23ad12073dd19d882b69f4c94a0f79ff3d31fa22aa52b36f9af8fac817011a5d",
+    "bytes": 182
+  },
+  "submenu-timing.json": {
+    "sha256": "e283c4121b6a8ff70b78dfb961e0ff173bee9e2ce83e6bdb86c565108647e756",
+    "bytes": 4533
+  },
+  "textures-sprite.json": {
+    "sha256": "a40ed375b870a107dadbcd5794f25de73dc8505cb0ea92995b85b700d311bc61",
+    "bytes": 342
+  },
+  "textures-studio.json": {
+    "sha256": "e5570b9f326e475797e11180122fc020b472d31bc71bde895e30f948903ab251",
+    "bytes": 334
+  }
+}

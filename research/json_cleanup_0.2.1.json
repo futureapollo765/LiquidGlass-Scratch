@@ -1,0 +1,79 @@
+{
+  "source": "./versions/0.2.0/EditorVerified_0.2.0.sb3",
+  "output": "./LiquidGlass_Studio.sb3",
+  "sourceSHA256": "6f36fbcb71934beae2ef20001d700c4eb755b57ed36df5ae22d3564cd2b76c29",
+  "outputSHA256": "b93e04c2686e7d99d8b4b895d1a5223a3d351f136820fc3eea6be7c69986aaaa",
+  "projectJsonBytesBefore": 8452882,
+  "projectJsonBytesAfter": 3231258,
+  "bytesRemoved": 5221624,
+  "buffers": [
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_field",
+      "list": "field",
+      "removedItems": 85248,
+      "savedBytesRemoved": 1600732
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_pixelBand",
+      "list": "pixelBand",
+      "removedItems": 85248,
+      "savedBytesRemoved": 893447
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_pixelDistortion",
+      "list": "pixelDistortion",
+      "removedItems": 85248,
+      "savedBytesRemoved": 170495
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_pixelEdge",
+      "list": "pixelEdge",
+      "removedItems": 85248,
+      "savedBytesRemoved": 170495
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_pixelHighlight",
+      "list": "pixelHighlight",
+      "removedItems": 85248,
+      "savedBytesRemoved": 170495
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_pixelLightX",
+      "list": "pixelLightX",
+      "removedItems": 85248,
+      "savedBytesRemoved": 170495
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_pixelLightY",
+      "list": "pixelLightY",
+      "removedItems": 85248,
+      "savedBytesRemoved": 255743
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_pixelTint",
+      "list": "pixelTint",
+      "removedItems": 85248,
+      "savedBytesRemoved": 1789738
+    }
+  ],
+  "onlyFrameBufferContentsChanged": true,
+  "allOtherArchiveEntriesIdentical": true,
+  "sourcePreserved": true,
+  "underFiveMillionBytes": true
+}

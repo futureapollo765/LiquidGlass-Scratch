@@ -1,0 +1,33 @@
+{
+  "version": "0.1.0",
+  "previous": null,
+  "createdUTC": "2026-11-05T01:44:10.624111+00:00",
+  "note": "Current progress checkpoint: symmetric directional pull and initial smooth-join correction; before axis-aligned pull revision.",
+  "files": {
+    "LiquidGlass_Studio_0.1.0.sb3": {
+      "sha256": "7a663ef21bddce6f0f2a78d703a663ecc1ff5da4d395fbf7e934745bc5a48ab4",
+      "bytes": 879094
+    },
+    "LiquidGlass_Component_0.1.0.sprite3": {
+      "sha256": "0cfd89d935edab07d10859f3e0274197383679eda5be19e9a30aa9d89a22e71e",
+      "bytes": 874956
+    },
+    "project.json": {
+      "sha256": "688a032bdd88184570944488df1ac41237c49e17f553f42f8babe981c31f4edb",
+      "bytes": 3336936
+    },
+    "build_renderer.py": {
+      "sha256": "704e9df4442a34cce51240529ff3528cd2716779d3b16cf016356733e0638a2d",
+      "bytes": 35631
+    },
+    "README.md": {
+      "sha256": "37f9cfb457d6f89a0ff072e6779806fe559cf7737f0033f313ed8ae877761b43",
+      "bytes": 17481
+    },
+    "tools/snapshot_release.py": {
+      "sha256": "2434817cf7e3dc135680ff0c9842cbfd80379202c814552e5ae2885f456c894e",
+      "bytes": 2572
+    }
+  },
+  "validation": "Build checkpoint; final verification recorded separately."
+}

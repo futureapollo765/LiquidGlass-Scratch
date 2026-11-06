@@ -1,0 +1,46 @@
+{
+  "sha256": "beb5f2b4a7a422e22bcc4a3ed9a3a56a7efee0911f1e96421bf5aa816d77c11c",
+  "checks": [
+    "A circular closed launcher displays its own ellipsis.",
+    "Circular launcher ink follows its center, shrinks or stretches with both body axes, and crossfades into the heading.",
+    "The first visible letter of Grid remains on its transformed row throughout growth of the private child; its curves are painted at the same pose."
+  ],
+  "observations": {
+    "intermediateCircleFrames": 11,
+    "firstVisibleChildRow": {
+      "key": "37,1,UI glyph [G],-16.80775381401145,56.381464474050325",
+      "kind": "pen",
+      "art": "UI glyph [G]",
+      "layer": 1,
+      "ox": -16.80775381401145,
+      "oy": 56.381464474050325,
+      "pitch": 34,
+      "sizeX": 0.9143780215953744,
+      "sizeY": 0.3150560721526956,
+      "cx": 60,
+      "cy": 67.09337092724198,
+      "w": 196,
+      "h": 102,
+      "opacity": 0.027621399194569962,
+      "rowCount": 2
+    },
+    "settledChildRow": {
+      "key": "61,1,UI glyph [G],-20.180661109921743,1.6505109507849056",
+      "kind": "pen",
+      "art": "UI glyph [G]",
+      "layer": 1,
+      "ox": -20.180661109921743,
+      "oy": 1.6505109507849056,
+      "pitch": 34,
+      "sizeX": 1.0021507274990684,
+      "sizeY": 1.0110320510980324,
+      "cx": 64,
+      "cy": 36.025600688118004,
+      "w": 196,
+      "h": 102,
+      "opacity": 1,
+      "rowCount": 2
+    }
+  },
+  "passed": true
+}

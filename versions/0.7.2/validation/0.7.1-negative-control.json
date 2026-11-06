@@ -1,0 +1,7 @@
+{
+  "sha256": "9c8e6304f8a5c87712364c07d945a3fd7b3e0db6e726d8dcf8bbef30bab7b429",
+  "checks": [],
+  "observations": {},
+  "passed": false,
+  "error": "AssertionError [ERR_ASSERTION]: Tools entering displayed position at 0.03 s: 0.014006102029976942 vs 0.08979957342263356 (±0.025)\n    at near (./tools/test_submenu_timing.cjs:11:33)\n    at checkTrack (./tools/test_submenu_timing.cjs:114:9)\n    at cycle (./tools/test_submenu_timing.cjs:128:53)\n    at main (./tools/test_submenu_timing.cjs:136:5)"
+}

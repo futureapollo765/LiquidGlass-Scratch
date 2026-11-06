@@ -1,0 +1,109 @@
+{
+  "version": "0.4.1",
+  "previous": "0.4.0",
+  "createdUTC": "2026-11-05T20:04:19.484529+00:00",
+  "note": "Make hovered, pressed and selected highlights uniform by painting one visible Pen mark per control. Protect circular buttons and avoid stacking row highlight states.",
+  "files": {
+    "LiquidGlass_Studio_0.4.1.sb3": {
+      "sha256": "15cbc78188d117eb0debc115ca32aa16984ab1890451b6617de1ca08fa06b702",
+      "bytes": 1651721
+    },
+    "LiquidGlass_Component_0.4.1.sprite3": {
+      "sha256": "ac97ad71e3646f95ad6f7a5b0b9d8c5d6eaa3a0e5031abe216208858015cacf8",
+      "bytes": 1418267
+    },
+    "project.json": {
+      "sha256": "389598a35aef82600c8365460a98a9ef285741d10c10b610b086aceb218a919a",
+      "bytes": 3755119
+    },
+    "build_renderer.py": {
+      "sha256": "e38fccee850dde0fcb30c079ffc93ddbb7d1a85983908a333453c5c6ad1ecb89",
+      "bytes": 38685
+    },
+    "README.md": {
+      "sha256": "165a3cc90d1149bf10eb6b083e38cac68e056d8e52baa67f97d8b02129ae70d6",
+      "bytes": 26347
+    },
+    "tools/snapshot_release.py": {
+      "sha256": "1918852f4c998c1980533e0c1025200a75af3961744f7b7b5acf0bd43886f9e9",
+      "bytes": 4384
+    },
+    "tools/repair_editor_ids.py": {
+      "sha256": "d65bb013235c04af8e4c0115b34b1f5241b3b56343acbb55d3f583f24efba26b",
+      "bytes": 7615
+    },
+    "tools/validate_sb3.py": {
+      "sha256": "063beb41bafb2b68900bb7dea35286ca7c00bc03aab9708e2b92862a7d528dc2",
+      "bytes": 13509
+    },
+    "tools/stable_pen.py": {
+      "sha256": "362a4811f466db1393aec083683d46baa98aecd290e72286d8273ede42788e1d",
+      "bytes": 18706
+    },
+    "tools/upgrade_stable_pen.py": {
+      "sha256": "24b61133f91f11baa7e9ea294207e4ed1007023da939456e5e65aae0608a94df",
+      "bytes": 4964
+    },
+    "tools/test_frame_presentation.cjs": {
+      "sha256": "9aefd30fd709842c6afed347710c784e9116ce9cb3103af61a4b24342f986c70",
+      "bytes": 12343
+    },
+    "tools/test_renderer.cjs": {
+      "sha256": "375b0353db7d6c512e2eaecc314fb07bb1fb78e0b1b25d6edc8cf463bc0e0f28",
+      "bytes": 27111
+    },
+    "tools/test_editor_runtime.cjs": {
+      "sha256": "bfbedce9211528f321cacada1e62977991d497201f4600bb9fb0dad40197477f",
+      "bytes": 2758
+    },
+    "tools/vm_harness.cjs": {
+      "sha256": "aeb2d47b466098b4a4a1cb43da1545c8ab04871e9df46aef582e6eed990073ab",
+      "bytes": 7862
+    },
+    "tools/verify_editor_roundtrip.py": {
+      "sha256": "5d0612278cfb2430e040ab9fc69075152a62a7df3b04e9ec75785dd45a572747",
+      "bytes": 3459
+    },
+    "research/nary_blend_audit.json": {
+      "sha256": "90c6c50aa4e7554b695a0ce864f5a3e68c99fc6a95520736547a5dc3ee278ca0",
+      "bytes": 18577
+    },
+    "inputs/Studio_before_upgrade.sb3": {
+      "sha256": "938946226fa6d0758afb552b6ea2a5bb2e81c447e51e87725a04b1c38727802f",
+      "bytes": 1651374
+    },
+    "inputs/Component_before_upgrade.sprite3": {
+      "sha256": "11f68c8ad76408fb733c47948676ca77292860482a9d90cf04df199c73f14684",
+      "bytes": 1417927
+    },
+    "CHANGELOG.md": {
+      "sha256": "38ab5f734ec8a31cd7aacf34a320fbc900f8d06dc46614ed832315080b9f2e34",
+      "bytes": 5100
+    },
+    "tools/compact_project.py": {
+      "sha256": "a81e730205c4d6441556866ed7e29de42588ac926b448eeae8f3469518e4f021",
+      "bytes": 6162
+    },
+    "tools/build_ui.py": {
+      "sha256": "304858e3cc4eb9a333c7a9be8650b664f66a066bc272fdbdd7f34087a2240719",
+      "bytes": 6520
+    },
+    "tools/ui_components.py": {
+      "sha256": "e8665301ff1a9e5843361b5b66c840a94d1f18218d771eb70b3ae17ac8432f4c",
+      "bytes": 28834
+    },
+    "tools/ui_labels.py": {
+      "sha256": "5b10095da378546c08d672223d171aa61bcd13df99483727adbe85b5e03eb1ff",
+      "bytes": 31205
+    },
+    "tools/test_ui_components.cjs": {
+      "sha256": "704951d364df0c97b395df8aba4609935c361c17e6ecf5174e8c834e15eabb41",
+      "bytes": 24043
+    },
+    "tools/test_ui_highlights.cjs": {
+      "sha256": "1679a8275399bcf8c78fee14146844d6ca0e8042a95b00f3a67b2783af604fbb",
+      "bytes": 8807
+    }
+  },
+  "validation": "Build checkpoint; final verification recorded separately."
+}

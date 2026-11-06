@@ -1,0 +1,34 @@
+{
+  "project": "/private/tmp/lg074/final/LiquidGlass_Studio.sb3",
+  "sha256": "dce43901124f2b7b9a85c63805cb656f526460b67ccae16985a34fd076274a39",
+  "checks": [
+    {
+      "name": "A native sprite import delivers Button and nested Menu broadcasts to another sprite (compiler)",
+      "passed": true
+    },
+    {
+      "name": "A native sprite import delivers Button and nested Menu broadcasts to another sprite (interpreter)",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "import_compiler": {
+      "stageScripts": 0,
+      "openSubmenuHostBytes": 4800120,
+      "received": 2,
+      "action": "Detail>Balanced",
+      "path": "Detail>Balanced",
+      "source": 3
+    },
+    "import_interpreter": {
+      "stageScripts": 0,
+      "openSubmenuHostBytes": 4801577,
+      "received": 2,
+      "action": "Detail>Balanced",
+      "path": "Detail>Balanced",
+      "source": 3
+    }
+  },
+  "componentSHA256": "57928fddfa3b2e5743775c7ba2a1836e42668cca36077c695ebae6e851103ac2",
+  "passed": true
+}

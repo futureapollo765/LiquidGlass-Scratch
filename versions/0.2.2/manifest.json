@@ -1,0 +1,49 @@
+{
+  "version": "0.2.2",
+  "previous": "0.2.1",
+  "createdUTC": "2026-11-05T03:09:33.257493+00:00",
+  "note": "Repair reserved list ID l_field and eight references for modern vanilla Scratch palette; algorithms and native user customizations unchanged.",
+  "files": {
+    "LiquidGlass_Studio_0.2.2.sb3": {
+      "sha256": "b93e04c2686e7d99d8b4b895d1a5223a3d351f136820fc3eea6be7c69986aaaa",
+      "bytes": 1001839
+    },
+    "LiquidGlass_Component_0.2.2.sprite3": {
+      "sha256": "d21e4f5375a9463faf7b0f5056ac19a6a1439c90972c702741d9ef17b39441c9",
+      "bytes": 879243
+    },
+    "project.json": {
+      "sha256": "61980a989fb0e534564210193c028df894cc67bddcb26a6ab33da77cb6a3a7fb",
+      "bytes": 3231258
+    },
+    "build_renderer.py": {
+      "sha256": "55ce100de30c29b0143b7ccb5c741e1595bbef0bebc4333e40208cbc1eec7b94",
+      "bytes": 38288
+    },
+    "README.md": {
+      "sha256": "ed6f7f7dd5c58556333537394f76fb42901fe37dde5d01dfe3f5a26d02bb0ec8",
+      "bytes": 22676
+    },
+    "tools/snapshot_release.py": {
+      "sha256": "8eaf5031a3382f36c5be9387a9fb9945f44d5242642854ad03266ef1b3c84c05",
+      "bytes": 2912
+    },
+    "tools/repair_editor_ids.py": {
+      "sha256": "6fd3ae067121c0eeef9bc480b8dd8503d8c1d693385bb4447d927a7170d2cb1f",
+      "bytes": 7596
+    },
+    "tools/validate_sb3.py": {
+      "sha256": "477904ca8de83f7cbed6b00dbed12334aa3626896300be3b0d01be2e5ec1cf4d",
+      "bytes": 10272
+    },
+    "CHANGELOG.md": {
+      "sha256": "e0975e4459b300de99232b3ae2e79e5d8591da92812440926495d2c384065ab5",
+      "bytes": 2953
+    },
+    "tools/compact_project.py": {
+      "sha256": "50e625384ad7b9a5f786db122591e2f9c6013a5868ee090ac4d4627c24c0c89c",
+      "bytes": 5833
+    }
+  },
+  "validation": "Build checkpoint; final verification recorded separately."
+}

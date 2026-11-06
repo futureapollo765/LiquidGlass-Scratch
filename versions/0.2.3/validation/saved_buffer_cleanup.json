@@ -1,0 +1,79 @@
+{
+  "source": "./research/diagnostics/Latest_user_save_before_palette_repair.sb3",
+  "output": "./research/diagnostics/Latest_user_save_compacted.sb3",
+  "sourceSHA256": "1728964c4dc042381a3ec7a932d8eba3d079d68c0e7625a04adbadc55ae191f8",
+  "outputSHA256": "d372fd8c0e92f38ff49aea7301108978aed93690a6b70b891ea93a24a11389af",
+  "projectJsonBytesBefore": 5061365,
+  "projectJsonBytesAfter": 3231362,
+  "bytesRemoved": 1830003,
+  "buffers": [
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_field",
+      "list": "field",
+      "removedItems": 26390,
+      "savedBytesRemoved": 494627
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_pixelBand",
+      "list": "pixelBand",
+      "removedItems": 26390,
+      "savedBytesRemoved": 139706
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_pixelDistortion",
+      "list": "pixelDistortion",
+      "removedItems": 26390,
+      "savedBytesRemoved": 52779
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_pixelEdge",
+      "list": "pixelEdge",
+      "removedItems": 26390,
+      "savedBytesRemoved": 52779
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_pixelHighlight",
+      "list": "pixelHighlight",
+      "removedItems": 26390,
+      "savedBytesRemoved": 52779
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_pixelLightX",
+      "list": "pixelLightX",
+      "removedItems": 26390,
+      "savedBytesRemoved": 105559
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_pixelLightY",
+      "list": "pixelLightY",
+      "removedItems": 26390,
+      "savedBytesRemoved": 377817
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_pixelTint",
+      "list": "pixelTint",
+      "removedItems": 26390,
+      "savedBytesRemoved": 554021
+    }
+  ],
+  "onlyFrameBufferContentsChanged": true,
+  "allOtherArchiveEntriesIdentical": true,
+  "sourcePreserved": true,
+  "underFiveMillionBytes": true
+}

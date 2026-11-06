@@ -1,0 +1,89 @@
+{
+  "version": "0.3.0",
+  "previous": "0.2.3",
+  "createdUTC": "2026-11-05T03:43:23.881788+00:00",
+  "note": "Keep the previous Pen frame visible while shading; repaint only affected background strips and skip unchanged scenes. Preserve the latest native editor customizations.",
+  "files": {
+    "LiquidGlass_Studio_0.3.0.sb3": {
+      "sha256": "efabb11965f15e7a0482486dcd6b9473d13750a9e6bab6f36fdeb1695a87dea7",
+      "bytes": 1514550
+    },
+    "LiquidGlass_Component_0.3.0.sprite3": {
+      "sha256": "0aeaf4561a455ef8d7829a961c374cf5b71bbebe13a6b6d11b4e77dda6f149c9",
+      "bytes": 1306556
+    },
+    "project.json": {
+      "sha256": "07b60a61a7aeb8b2604524d0047e406aea9e407277bcfb842cbf56b7422a7c00",
+      "bytes": 3301674
+    },
+    "build_renderer.py": {
+      "sha256": "35596fdf7af53743aff9d8e9cc64b13ae224f6066ce23fe36a29fac65b614f0d",
+      "bytes": 38546
+    },
+    "README.md": {
+      "sha256": "8c03528b268ac81a4122c95ff7b68bdcf79d59de4bc2aab723ac07bb64810df5",
+      "bytes": 23463
+    },
+    "tools/snapshot_release.py": {
+      "sha256": "77559ea1166100c322712f531ad5ad6215ab766b8cb07f46558ad7f24f447430",
+      "bytes": 4140
+    },
+    "tools/repair_editor_ids.py": {
+      "sha256": "d65bb013235c04af8e4c0115b34b1f5241b3b56343acbb55d3f583f24efba26b",
+      "bytes": 7615
+    },
+    "tools/validate_sb3.py": {
+      "sha256": "063beb41bafb2b68900bb7dea35286ca7c00bc03aab9708e2b92862a7d528dc2",
+      "bytes": 13509
+    },
+    "tools/stable_pen.py": {
+      "sha256": "362a4811f466db1393aec083683d46baa98aecd290e72286d8273ede42788e1d",
+      "bytes": 18706
+    },
+    "tools/upgrade_stable_pen.py": {
+      "sha256": "50f7d7ec5b1ad8d6a037a33f62f794c2004d65024d72ed2aefa60e356d499b6d",
+      "bytes": 4821
+    },
+    "tools/test_frame_presentation.cjs": {
+      "sha256": "9bb9e615317fe39079dc531f5f3541d98b7cdc1f4e66089cfa511f552d682599",
+      "bytes": 11150
+    },
+    "tools/test_renderer.cjs": {
+      "sha256": "ec1158f56a581b1887812994641af68424b53038fd797fb5f63b710ad304434c",
+      "bytes": 26244
+    },
+    "tools/test_editor_runtime.cjs": {
+      "sha256": "bfbedce9211528f321cacada1e62977991d497201f4600bb9fb0dad40197477f",
+      "bytes": 2758
+    },
+    "tools/vm_harness.cjs": {
+      "sha256": "7039840732900670ca2437f96807abdbe76ad8715c57bc035d20ad94a98979be",
+      "bytes": 7253
+    },
+    "tools/verify_editor_roundtrip.py": {
+      "sha256": "5d0612278cfb2430e040ab9fc69075152a62a7df3b04e9ec75785dd45a572747",
+      "bytes": 3459
+    },
+    "research/nary_blend_audit.json": {
+      "sha256": "90c6c50aa4e7554b695a0ce864f5a3e68c99fc6a95520736547a5dc3ee278ca0",
+      "bytes": 18577
+    },
+    "inputs/Studio_before_upgrade.sb3": {
+      "sha256": "f1457f1381dc036d090df57ce0efb6924f2581abef881b9e39a90bcb41fa0775",
+      "bytes": 1002659
+    },
+    "inputs/Component_before_upgrade.sprite3": {
+      "sha256": "60e40a1ff902ea82c4256516ddcfecf481bfe745150513a1f0a42a4cfa17fda1",
+      "bytes": 879319
+    },
+    "CHANGELOG.md": {
+      "sha256": "52e014a3fdb8e668612255e474ba7ebb7303557de59e35e73dc70814b6df91c0",
+      "bytes": 3958
+    },
+    "tools/compact_project.py": {
+      "sha256": "a81e730205c4d6441556866ed7e29de42588ac926b448eeae8f3469518e4f021",
+      "bytes": 6162
+    }
+  },
+  "validation": "Build checkpoint; final verification recorded separately."
+}

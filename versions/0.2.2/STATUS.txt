@@ -1,0 +1,1 @@
+Pre-repair checkpoint only. A size guard rejected the newer native save before applying the ID repair. No modified artifact from this checkpoint was reloaded. Use 0.2.3 for the palette repair; it also preserves the latest user spring/damping settings.

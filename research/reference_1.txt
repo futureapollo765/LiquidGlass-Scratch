@@ -1,0 +1,330 @@
+
+TARGET Stage
+
+
+TARGET Render
+
+HAT
+event_whenflagclicked()
+looks_hide()
+pen_setPenSizeTo(SIZE=1)
+setvariableto(VARIABLE=Distortion, VALUE=10)
+setvariableto(VARIABLE=Edge distortion thickness, VALUE=12)
+setvariableto(VARIABLE=H, VALUE=360)
+setvariableto(VARIABLE=W, VALUE=480)
+setvariableto(VARIABLE=Screen Pixel, VALUE=(H * W))
+control_wait(DURATION=0.05)
+event_broadcastandwait(BROADCAST_INPUT=Scan screen)
+To RBG Maps []
+event_broadcast(BROADCAST_INPUT=Run)
+
+DEFINE To RBG Maps []
+deletealloflist(LIST=R Map)
+deletealloflist(LIST=B Map)
+deletealloflist(LIST=G Map)
+setvariableto(VARIABLE=#colori, VALUE=0)
+control_repeat(TIMES=Screen Pixel)
+SUBSTACK
+  changevariableby(VARIABLE=#colori, VALUE=1)
+  addtolist(LIST=R Map, ITEM=(Colour Map[#colori] mod 256))
+  addtolist(LIST=G Map, ITEM=(floor((Colour Map[#colori] / 256)) mod 256))
+  addtolist(LIST=B Map, ITEM=(floor((Colour Map[#colori] / 65536)) mod 256))
+
+DEFINE Render []
+pen_clear()
+setvariableto(VARIABLE=#id, VALUE=0)
+setvariableto(VARIABLE=#y, VALUE=180)
+control_repeat(TIMES=H)
+SUBSTACK
+  setvariableto(VARIABLE=#x, VALUE=-240)
+  control_repeat(TIMES=W)
+  SUBSTACK
+    changevariableby(VARIABLE=#id, VALUE=1)
+    control_if(CONDITION=(Distance Map[#id] < 1))
+    SUBSTACK
+      setvariableto(VARIABLE=#d, VALUE=Distance Map[#id])
+      setvariableto(VARIABLE=#absd, VALUE=abs(#d))
+      setvariableto(VARIABLE=#color id in list, VALUE=#id)
+      control_if(CONDITION=(#absd < Edge distortion thickness))
+      SUBSTACK
+        setvariableto(VARIABLE=#d0, VALUE=Distance Map[#id])
+        setvariableto(VARIABLE=#dx, VALUE=((Distance Map[(#id + 1)] - Distance Map[(#id - 1)]) / 2))
+        setvariableto(VARIABLE=#dy, VALUE=((Distance Map[(#id - W)] - Distance Map[(#id + W)]) / 2))
+        setvariableto(VARIABLE=#len, VALUE=sqrt(((#dx * #dx) + (#dy * #dy))))
+        setvariableto(VARIABLE=#nx, VALUE=((#len > 0) * (#dx / #len)))
+        setvariableto(VARIABLE=#ny, VALUE=((#len > 0) * (#dy / #len)))
+        setvariableto(VARIABLE=#t, VALUE=(1 - (#absd / Edge distortion thickness)))
+        setvariableto(VARIABLE=#t, VALUE=((#t > 0) * #t))
+        setvariableto(VARIABLE=#strength, VALUE=(#t * (#t * #t)))
+        setvariableto(VARIABLE=#sax, VALUE=round(NUM=(#x - (#nx * (#strength * Distortion)))))
+        setvariableto(VARIABLE=#say, VALUE=round(NUM=(#y - (#ny * (#strength * Distortion)))))
+        setvariableto(VARIABLE=#color id in list, VALUE=(((W * (180 - #say)) + (#sax + 240)) + 1))
+      pen_setPenColorToColor(COLOR=(R Map[#color id in list] + ((G Map[#color id in list] * 256) + (B Map[#color id in list] * 65536))))
+      control_if(CONDITION=(#absd < .5))
+      SUBSTACK
+        pen_changePenColorParamBy(COLOR_PARAM=pen_menu_colorParam(colorParam=brightness), VALUE=-15)
+        control_if_else(CONDITION=(#ny > 0))
+        SUBSTACK
+          pen_changePenColorParamBy(COLOR_PARAM=pen_menu_colorParam(colorParam=brightness), VALUE=(abs(#ny) * 30))
+          pen_changePenColorParamBy(COLOR_PARAM=pen_menu_colorParam(colorParam=saturation), VALUE=(abs(#ny) * -30))
+        SUBSTACK2
+          pen_changePenColorParamBy(COLOR_PARAM=pen_menu_colorParam(colorParam=brightness), VALUE=(abs(#ny) * 20))
+          pen_changePenColorParamBy(COLOR_PARAM=pen_menu_colorParam(colorParam=saturation), VALUE=(abs(#ny) * -20))
+      motion_gotoxy(X=#x, Y=#y)
+      pen_penDown()
+      pen_penUp()
+    changevariableby(VARIABLE=#x, VALUE=1)
+  changevariableby(VARIABLE=#y, VALUE=-1)
+
+DEFINE SDF circle %s %s %s %s %s ["cx","cy","cr","x","y"]
+setvariableto(VARIABLE=#dx, VALUE=($x - $cx))
+setvariableto(VARIABLE=#dy, VALUE=($y - $cy))
+setvariableto(VARIABLE=#distance, VALUE=(sqrt(((#dx * #dx) + (#dy * #dy))) - $cr))
+
+DEFINE SDF rounded rectangle %s %s %s %s %s %s %s ["sx","sy","sw","sh","sr","x","y"]
+setvariableto(VARIABLE=#dx, VALUE=abs(($x - $sx)))
+setvariableto(VARIABLE=#dy, VALUE=abs(($y - $sy)))
+setvariableto(VARIABLE=#qx, VALUE=(#dx - (($sw / 2) - $sr)))
+setvariableto(VARIABLE=#qy, VALUE=(#dy - (($sh / 2) - $sr)))
+setvariableto(VARIABLE=#qx2, VALUE=((#qx > 0) * #qx))
+setvariableto(VARIABLE=#qy2, VALUE=((#qy > 0) * #qy))
+setvariableto(VARIABLE=#outside, VALUE=sqrt(((#qx2 * #qx2) + (#qy2 * #qy2))))
+setvariableto(VARIABLE=#inside, VALUE=(((#qx < #qy) * #qy) + (not(OPERAND=(#qx < #qy)) * #qx)))
+setvariableto(VARIABLE=#inside, VALUE=((#inside < 0) * #inside))
+setvariableto(VARIABLE=#distance, VALUE=((#outside + #inside) - $sr))
+
+DEFINE SDF id: %s position: %s %s ["id","x","y"]
+control_if(CONDITION=(#shape type[$id] = 1))
+SUBSTACK
+  SDF circle %s %s %s %s %s ['#shape x[$id]', '#shape y[$id]', '#shape radius[$id]', '$x', '$y']
+  control_stop(STOP_OPTION=this script)
+control_if(CONDITION=(#shape type[$id] = 2))
+SUBSTACK
+  SDF rounded rectangle %s %s %s %s %s %s %s ['#shape x[$id]', '#shape y[$id]', '#shape width[$id]', '#shape height[$id]', '#shape radius[$id]', '$x', '$y']
+  control_stop(STOP_OPTION=this script)
+control_if(CONDITION=(#shape type[$id] = 3))
+SUBSTACK
+  SDF capsule %s %s %s %s %s %s ['#shape x[$id]', '#shape y[$id]', '#shape width[$id]', '#shape height[$id]', '$x', '$y']
+  control_stop(STOP_OPTION=this script)
+
+DEFINE SDF capsule %s %s %s %s %s %s ["sx","sy","sw","sh","x","y"]
+control_if(CONDITION=($sw > $sh))
+SUBSTACK
+  SDF rounded rectangle %s %s %s %s %s %s %s ['$sx', '$sy', '$sw', '$sh', '($sh / 2)', '$x', '$y']
+  control_stop(STOP_OPTION=this script)
+SDF rounded rectangle %s %s %s %s %s %s %s ['$sx', '$sy', '$sw', '$sh', '($sw / 2)', '$x', '$y']
+
+DEFINE Reset []
+pen_setPenSizeTo(SIZE=1)
+setvariableto(VARIABLE=Adhesion radius, VALUE=8)
+Delete all object []
+deletealloflist(LIST=Distance Map)
+control_repeat(TIMES=Screen Pixel)
+SUBSTACK
+  addtolist(LIST=Distance Map, ITEM=-)
+
+DEFINE Scan Screen []
+control_if(CONDITION=(#onmouse = 0))
+SUBSTACK
+  setvariableto(VARIABLE=#holdingshape, VALUE=0)
+setvariableto(VARIABLE=#id, VALUE=0)
+setvariableto(VARIABLE=#cx, VALUE=-240)
+setvariableto(VARIABLE=#cy, VALUE=180)
+control_repeat(TIMES=H)
+SUBSTACK
+  setvariableto(VARIABLE=#cx, VALUE=-240)
+  control_repeat(TIMES=W)
+  SUBSTACK
+    setvariableto(VARIABLE=#is, VALUE=0)
+    changevariableby(VARIABLE=#id, VALUE=1)
+    control_repeat(TIMES=#shape num)
+    SUBSTACK
+      changevariableby(VARIABLE=#is, VALUE=1)
+      SDF id: %s position: %s %s ['#is', '#cx', '#cy']
+      control_if(CONDITION=(#distance < 0))
+      SUBSTACK
+        control_if(CONDITION=(#onmouse = 0))
+        SUBSTACK
+          control_if(CONDITION=((##mx = #cx) and (##my = #cy)))
+          SUBSTACK
+            setvariableto(VARIABLE=#holdingshape, VALUE=#is)
+      control_if_else(CONDITION=(#is = 1))
+      SUBSTACK
+        setvariableto(VARIABLE=#min distance, VALUE=#distance)
+      SUBSTACK2
+        Smooth union %s %s %s ['#min distance', '#distance', 'Adhesion radius']
+    replaceitemoflist(LIST=Distance Map, INDEX=#id, ITEM=#min distance)
+    changevariableby(VARIABLE=#cx, VALUE=1)
+  changevariableby(VARIABLE=#cy, VALUE=-1)
+
+DEFINE Delete all object []
+setvariableto(VARIABLE=#shape num, VALUE=0)
+deletealloflist(LIST=#shape type)
+deletealloflist(LIST=#shape x)
+deletealloflist(LIST=#shape y)
+deletealloflist(LIST=#shape width)
+deletealloflist(LIST=#shape height)
+deletealloflist(LIST=#shape radius)
+
+DEFINE Create Object %s %s %s %s %s %s ["st","sx","sy","sw","sh","sr"]
+changevariableby(VARIABLE=#shape num, VALUE=1)
+addtolist(LIST=#shape type, ITEM=$st)
+addtolist(LIST=#shape x, ITEM=$sx)
+addtolist(LIST=#shape y, ITEM=$sy)
+addtolist(LIST=#shape width, ITEM=$sw)
+addtolist(LIST=#shape height, ITEM=$sh)
+addtolist(LIST=#shape radius, ITEM=$sr)
+
+HAT
+event_whenbroadcastreceived(BROADCAST_OPTION=Run)
+Reset []
+Create Object %s %s %s %s %s %s ['2', '-100', '-100', '100', '100', '20']
+Create Object %s %s %s %s %s %s ['1', '0', '0', '0', '0', '50']
+Create Object %s %s %s %s %s %s ['3', '0', '0', '100', '30', '50']
+setvariableto(VARIABLE=#onmouse, VALUE=0)
+control_forever()
+SUBSTACK
+  control_if_else(CONDITION=sensing_mousedown())
+  SUBSTACK
+    setvariableto(VARIABLE=#onmouse, VALUE=1)
+  SUBSTACK2
+    setvariableto(VARIABLE=#onmouse, VALUE=0)
+  setvariableto(VARIABLE=##mx, VALUE=round(NUM=sensing_mousex()))
+  setvariableto(VARIABLE=##my, VALUE=round(NUM=sensing_mousey()))
+  Scan Screen []
+  Render []
+  Update Obj []
+
+DEFINE Smooth union %s %s %s ["a","b","k"]
+setvariableto(VARIABLE=#min distance, VALUE=((($a < $b) * $a) + (not(OPERAND=($a < $b)) * $b)))
+control_if(CONDITION=($k = 0))
+SUBSTACK
+  control_stop(STOP_OPTION=this script)
+setvariableto(VARIABLE=#h, VALUE=($k - abs(($a - $b))))
+setvariableto(VARIABLE=#h, VALUE=((#h > 0) * #h))
+setvariableto(VARIABLE=#min distance, VALUE=(#min distance - ((#h * #h) / (4 * $k))))
+
+DEFINE Move shape %s %s %s ["id","x","y"]
+replaceitemoflist(LIST=#shape x, INDEX=$id, ITEM=$x)
+replaceitemoflist(LIST=#shape y, INDEX=$id, ITEM=$y)
+
+DEFINE Reshape Shape %s %s %s %s ["id","w","h","r"]
+replaceitemoflist(LIST=#shape width, INDEX=$id, ITEM=$w)
+replaceitemoflist(LIST=#shape height, INDEX=$id, ITEM=$h)
+replaceitemoflist(LIST=#shape radius, INDEX=$id, ITEM=$r)
+
+DEFINE Update Obj []
+control_if(CONDITION=(#onmouse = 1))
+SUBSTACK
+  Move shape %s %s %s ['#holdingshape', '##mx', '##my']
+
+TARGET Scanner
+
+DEFINE Get Color []
+setvariableto(VARIABLE=#color, VALUE=0)
+control_repeat(TIMES=32)
+SUBSTACK
+  control_repeat(TIMES=32)
+  SUBSTACK
+    control_repeat(TIMES=16)
+    SUBSTACK
+      control_if(CONDITION=sensing_touchingcolor(COLOR=#color))
+      SUBSTACK
+        control_stop(STOP_OPTION=this script)
+      changevariableby(VARIABLE=#color, VALUE=16)
+    changevariableby(VARIABLE=#color, VALUE=1792)
+  changevariableby(VARIABLE=#color, VALUE=458752)
+
+DEFINE Scan []
+motion_sety(Y=180)
+setvariableto(VARIABLE=#scan idx, VALUE=1)
+control_repeat(TIMES=360)
+SUBSTACK
+  motion_setx(X=-240)
+  control_repeat(TIMES=480)
+  SUBSTACK
+    control_if(CONDITION=not(OPERAND=sensing_touchingcolor(COLOR=#color)))
+    SUBSTACK
+      setvariableto(VARIABLE=#color, VALUE=(2 * Colour Map[#scan idx]))
+      setvariableto(VARIABLE=i, VALUE=1)
+      control_repeat_until(CONDITION=sensing_touchingcolor(COLOR=(#color + #colours[i])))
+      SUBSTACK
+        changevariableby(VARIABLE=i, VALUE=1)
+      changevariableby(VARIABLE=#color, VALUE=#colours[i])
+    replaceitemoflist(LIST=Colour Map, INDEX=#scan idx, ITEM=#color)
+    changevariableby(VARIABLE=#scan idx, VALUE=1)
+    motion_changexby(DX=1)
+  motion_changeyby(DY=-1)
+
+HAT
+event_whenflagclicked()
+deletealloflist(LIST=#colours)
+Setup Colours List from %s depth %s ['0', '2']
+Setup Colours List from %s depth %s ['-526352', '4']
+looks_hide()
+pen_clear()
+looks_switchcostumeto(COSTUME=looks_costume(COSTUME=black screen))
+control_create_clone_of(CLONE_OPTION=control_create_clone_of_menu(CLONE_OPTION=_myself_))
+looks_setsizeto(SIZE=1)
+looks_switchcostumeto(COSTUME=looks_costume(COSTUME=dot))
+
+HAT
+event_whenbroadcastreceived(BROADCAST_OPTION=Scanner #scan pass)
+control_if(CONDITION=(looks_costumenumbername(NUMBER_NAME=number) > 1))
+SUBSTACK
+  changevariableby(VARIABLE=Scanner #SCAN PASS, VALUE=1)
+  looks_show()
+  looks_seteffectto(EFFECT=GHOST, VALUE=#ghost values[Scanner #SCAN PASS])
+  control_stop(STOP_OPTION=this script)
+control_if_else(CONDITION=(Scanner #SCAN PASS = 1))
+SUBSTACK
+  Initial Scan []
+SUBSTACK2
+  Scan []
+
+DEFINE Initial Scan []
+motion_sety(Y=180)
+control_repeat(TIMES=360)
+SUBSTACK
+  motion_setx(X=-240)
+  control_repeat(TIMES=480)
+  SUBSTACK
+    setvariableto(VARIABLE=i, VALUE=1)
+    control_repeat_until(CONDITION=sensing_touchingcolor(COLOR=#colours[i]))
+    SUBSTACK
+      changevariableby(VARIABLE=i, VALUE=1)
+    addtolist(LIST=Colour Map, ITEM=#colours[i])
+    motion_changexby(DX=1)
+  motion_changeyby(DY=-1)
+
+DEFINE Setup Colours List from %s depth %s ["color","depth"]
+setvariableto(VARIABLE=#color, VALUE=$color)
+control_repeat(TIMES=$depth)
+SUBSTACK
+  control_repeat(TIMES=$depth)
+  SUBSTACK
+    control_repeat(TIMES=$depth)
+    SUBSTACK
+      control_if(CONDITION=not(OPERAND=listcontainsitem(LIST=#colours, ITEM=#color)))
+      SUBSTACK
+        addtolist(LIST=#colours, ITEM=#color)
+      changevariableby(VARIABLE=#color, VALUE=524288)
+    changevariableby(VARIABLE=#color, VALUE=(2048 - (524288 * $depth)))
+  changevariableby(VARIABLE=#color, VALUE=(16 - (2048 * $depth)))
+
+HAT
+event_whenbroadcastreceived(BROADCAST_OPTION=Scanner #scan complete)
+looks_hide()
+
+HAT
+event_whenbroadcastreceived(BROADCAST_OPTION=Scan screen)
+control_if(CONDITION=(looks_costumenumbername(NUMBER_NAME=number) > 1))
+SUBSTACK
+  control_stop(STOP_OPTION=this script)
+sensing_resettimer()
+setvariableto(VARIABLE=Scanner #SCAN PASS, VALUE=0)
+deletealloflist(LIST=Colour Map)
+control_repeat(TIMES=5)
+SUBSTACK
+  event_broadcastandwait(BROADCAST_INPUT=Scanner #scan pass)
+event_broadcastandwait(BROADCAST_INPUT=Scanner #scan complete)

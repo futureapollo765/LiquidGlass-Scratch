@@ -1,0 +1,22 @@
+{
+  "source": "./research/diagnostics/Latest_user_save_compacted.sb3",
+  "output": "./LiquidGlass_Studio.sb3",
+  "sourceSHA256": "d372fd8c0e92f38ff49aea7301108978aed93690a6b70b891ea93a24a11389af",
+  "outputSHA256": "23d57b1cfefe4a76b8ff447eaed88a9a6c181a265410339f19571e9cefc89e0f",
+  "jsonEntry": "project.json",
+  "jsonBytesBefore": 3231362,
+  "jsonBytesAfter": 3231535,
+  "mapping": {
+    "l_field": "lgid38bf737374cf1320362bc19d"
+  },
+  "counts": {
+    "declarations": 1,
+    "blockFields": 8,
+    "compactReporters": 0,
+    "monitors": 0
+  },
+  "inverseMappingRestoresEntireDocument": true,
+  "allOtherArchiveEntriesIdentical": true,
+  "underFiveMillionBytes": true,
+  "sourcePreserved": true
+}

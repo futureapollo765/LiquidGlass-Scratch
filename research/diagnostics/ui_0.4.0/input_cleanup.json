@@ -1,0 +1,111 @@
+{
+  "source": "./research/diagnostics/ui_0.4.0/source.sb3",
+  "output": "./research/diagnostics/ui_0.4.0/source_compact.sb3",
+  "sourceSHA256": "2f9c28c74aa49d9d5219c93d99c472cd29a2b1796949fc0ad682b07a6eeb93ae",
+  "outputSHA256": "7ca308ac5f6c7deabfd04f9d92461bce2681e0f878c975ad159605489c91e4c4",
+  "projectJsonBytesBefore": 4491577,
+  "projectJsonBytesAfter": 3294757,
+  "bytesRemoved": 1196820,
+  "buffers": [
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "lgid38bf737374cf1320362bc19d",
+      "list": "field",
+      "removedItems": 18984,
+      "savedBytesRemoved": 233387
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "lgframe51187bdb1e9c19c6d8dd",
+      "list": "frameRGB",
+      "removedItems": 0,
+      "savedBytesRemoved": 0
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "lgframeff3d514ba775b0d2eba8",
+      "list": "frameTransparency",
+      "removedItems": 0,
+      "savedBytesRemoved": 0
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "lgframe6ab54b330e458228503d",
+      "list": "frameX",
+      "removedItems": 0,
+      "savedBytesRemoved": 0
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "lgframe7df3d9a1a1f03069646e",
+      "list": "frameY",
+      "removedItems": 0,
+      "savedBytesRemoved": 0
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_pixelBand",
+      "list": "pixelBand",
+      "removedItems": 18984,
+      "savedBytesRemoved": 103572
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_pixelDistortion",
+      "list": "pixelDistortion",
+      "removedItems": 18984,
+      "savedBytesRemoved": 37967
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_pixelEdge",
+      "list": "pixelEdge",
+      "removedItems": 18984,
+      "savedBytesRemoved": 37967
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_pixelHighlight",
+      "list": "pixelHighlight",
+      "removedItems": 18984,
+      "savedBytesRemoved": 37967
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_pixelLightX",
+      "list": "pixelLightX",
+      "removedItems": 18984,
+      "savedBytesRemoved": 75935
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_pixelLightY",
+      "list": "pixelLightY",
+      "removedItems": 18984,
+      "savedBytesRemoved": 271493
+    },
+    {
+      "targetIndex": 1,
+      "target": "Liquid Glass",
+      "id": "l_pixelTint",
+      "list": "pixelTint",
+      "removedItems": 18984,
+      "savedBytesRemoved": 398548
+    }
+  ],
+  "onlyFrameBufferContentsChanged": true,
+  "allOtherArchiveEntriesIdentical": true,
+  "sourcePreserved": true,
+  "underFiveMillionBytes": true
+}

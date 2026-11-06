@@ -1,0 +1,374 @@
+
+TARGET Stage
+
+
+TARGET liquid glass
+
+HAT
+event_whenflagclicked()
+pen_clear()
+setvariableto(VARIABLE=W, VALUE=480)
+setvariableto(VARIABLE=H, VALUE=360)
+setvariableto(VARIABLE=N, VALUE=(W * H))
+setvariableto(VARIABLE=PI, VALUE=3.1415926535)
+setvariableto(VARIABLE=dpr, VALUE=1)
+setvariableto(VARIABLE=res_y, VALUE=360)
+setvariableto(VARIABLE=res1x_y, VALUE=360)
+setvariableto(VARIABLE=thick, VALUE=20)
+setvariableto(VARIABLE=ior, VALUE=1.4)
+setvariableto(VARIABLE=disp, VALUE=7)
+setvariableto(VARIABLE=blur_edge, VALUE=1)
+setvariableto(VARIABLE=f_range, VALUE=30)
+setvariableto(VARIABLE=f_factor, VALUE=20)
+setvariableto(VARIABLE=f_hard, VALUE=20)
+setvariableto(VARIABLE=g_range, VALUE=30)
+setvariableto(VARIABLE=g_conv, VALUE=50)
+setvariableto(VARIABLE=g_opp, VALUE=80)
+setvariableto(VARIABLE=g_fact, VALUE=90)
+setvariableto(VARIABLE=g_fact, VALUE=20)
+setvariableto(VARIABLE=g_ang, VALUE=-0.78)
+setvariableto(VARIABLE=tr, VALUE=255)
+setvariableto(VARIABLE=tg, VALUE=255)
+setvariableto(VARIABLE=tb, VALUE=255)
+setvariableto(VARIABLE=ta, VALUE=0)
+setvariableto(VARIABLE=NR, VALUE=0.98)
+setvariableto(VARIABLE=NG, VALUE=1.0)
+setvariableto(VARIABLE=NB, VALUE=1.02)
+setvariableto(VARIABLE=f_pow, VALUE=((500 / f_range) * (500 / f_range)))
+setvariableto(VARIABLE=g_pow, VALUE=((500 / g_range) * (500 / g_range)))
+setvariableto(VARIABLE=base_mult, VALUE=(0.05 * dpr))
+pen_clear()
+clear_blur []
+control_forever()
+SUBSTACK
+  clear_sdf []
+  add_circle %s %s %s ['-160', '0', '40']
+  add_circle %s %s %s ['0', '0', '40']
+  add_circle %s %s %s ['160', '0', '40']
+  add_circle %s %s %s ['sensing_mousex()', 'sensing_mousey()', '30']
+  generate_sdf []
+  pen_clear()
+  render %s %s ['1', 'None', 'debug']
+
+DEFINE sa %s ["x"]
+min %s %s ['$x', '1']
+max %s %s ['-1', '$x']
+setvariableto(VARIABLE=sa_return, VALUE=asin(max_return))
+
+DEFINE samp %s %s %s ["t","u","v"]
+setvariableto(VARIABLE=px, VALUE=($u + 240))
+setvariableto(VARIABLE=py, VALUE=($v + 180))
+min %s %s ['px', '479']
+max %s %s ['0', 'min_return']
+setvariableto(VARIABLE=px, VALUE=max_return)
+min %s %s ['py', '359']
+max %s %s ['0', 'min_return']
+setvariableto(VARIABLE=py, VALUE=max_return)
+setvariableto(VARIABLE=x0, VALUE=floor(px))
+setvariableto(VARIABLE=y0, VALUE=floor(py))
+min %s %s ['(x0 + 1)', '479']
+setvariableto(VARIABLE=x1, VALUE=min_return)
+min %s %s ['(y0 + 1)', '359']
+setvariableto(VARIABLE=y1, VALUE=min_return)
+setvariableto(VARIABLE=fx, VALUE=(px - x0))
+setvariableto(VARIABLE=fy, VALUE=(py - y0))
+control_if(CONDITION=($t = bg_r))
+SUBSTACK
+  setvariableto(VARIABLE=a, VALUE=((image r[((y0 * W) + x0)] * (1 - fx)) + (image r[((y0 * W) + x1)] * fx)))
+  setvariableto(VARIABLE=b, VALUE=((image r[((y1 * W) + x0)] * (1 - fx)) + (image r[((y1 * W) + x1)] * fx)))
+control_if(CONDITION=($t = blur_r))
+SUBSTACK
+  setvariableto(VARIABLE=a, VALUE=((blur_r[((y0 * W) + x0)] * (1 - fx)) + (blur_r[((y0 * W) + x1)] * fx)))
+  setvariableto(VARIABLE=b, VALUE=((blur_r[((y1 * W) + x0)] * (1 - fx)) + (blur_r[((y1 * W) + x1)] * fx)))
+control_if(CONDITION=($t = bg_g))
+SUBSTACK
+  setvariableto(VARIABLE=a, VALUE=((image g[((y0 * W) + x0)] * (1 - fx)) + (image g[((y0 * W) + x1)] * fx)))
+  setvariableto(VARIABLE=b, VALUE=((image g[((y1 * W) + x0)] * (1 - fx)) + (image g[((y1 * W) + x1)] * fx)))
+control_if(CONDITION=($t = blur_g))
+SUBSTACK
+  setvariableto(VARIABLE=a, VALUE=((blur_g[((y0 * W) + x0)] * (1 - fx)) + (blur_g[((y0 * W) + x1)] * fx)))
+  setvariableto(VARIABLE=b, VALUE=((blur_g[((y1 * W) + x0)] * (1 - fx)) + (blur_g[((y1 * W) + x1)] * fx)))
+control_if(CONDITION=($t = bg_b))
+SUBSTACK
+  setvariableto(VARIABLE=a, VALUE=((image b[((y0 * W) + x0)] * (1 - fx)) + (image b[((y0 * W) + x1)] * fx)))
+  setvariableto(VARIABLE=b, VALUE=((image b[((y1 * W) + x0)] * (1 - fx)) + (image b[((y1 * W) + x1)] * fx)))
+control_if(CONDITION=($t = blur_b))
+SUBSTACK
+  setvariableto(VARIABLE=a, VALUE=((blur_b[((y0 * W) + x0)] * (1 - fx)) + (blur_b[((y0 * W) + x1)] * fx)))
+  setvariableto(VARIABLE=b, VALUE=((blur_b[((y1 * W) + x0)] * (1 - fx)) + (blur_b[((y1 * W) + x1)] * fx)))
+setvariableto(VARIABLE=samp_return, VALUE=((a * (1 - fy)) + (b * fy)))
+
+DEFINE get_n %s %s ["arr_x","arr_y"]
+min %s %s ['478', 'round(NUM=$arr_x)']
+max %s %s ['1', 'min_return']
+setvariableto(VARIABLE=ix, VALUE=max_return)
+min %s %s ['358', 'round(NUM=$arr_y)']
+max %s %s ['1', 'min_return']
+setvariableto(VARIABLE=iy, VALUE=max_return)
+setvariableto(VARIABLE=right, VALUE=sdf_list[((iy * W) + (ix + 1))])
+setvariableto(VARIABLE=left, VALUE=sdf_list[((iy * W) + (ix - 1))])
+setvariableto(VARIABLE=top, VALUE=sdf_list[(((iy + 1) * W) + ix)])
+setvariableto(VARIABLE=bottom, VALUE=sdf_list[(((iy - 1) * W) + ix)])
+setvariableto(VARIABLE=gx, VALUE=(right - left))
+setvariableto(VARIABLE=gy, VALUE=(top - bottom))
+setvariableto(VARIABLE=l, VALUE=sqrt(((gx * gx) + (gy * gy))))
+control_if_else(CONDITION=(l = 0))
+SUBSTACK
+  setvariableto(VARIABLE=get_n_out_x, VALUE=0)
+  setvariableto(VARIABLE=get_n_out_y, VALUE=0)
+  setvariableto(VARIABLE=get_n_out_l, VALUE=0)
+SUBSTACK2
+  setvariableto(VARIABLE=m, VALUE=(1414.213562 / l))
+  setvariableto(VARIABLE=get_n_out_x, VALUE=(gx * m))
+  setvariableto(VARIABLE=get_n_out_y, VALUE=(gy * m))
+  setvariableto(VARIABLE=get_n_out_l, VALUE=1.0)
+
+DEFINE min %s %s ["a","b"]
+setvariableto(VARIABLE=min_return, VALUE=$a)
+control_if(CONDITION=($b < $a))
+SUBSTACK
+  setvariableto(VARIABLE=min_return, VALUE=$b)
+
+DEFINE max %s %s ["a","b"]
+setvariableto(VARIABLE=max_return, VALUE=$a)
+control_if(CONDITION=($b > $a))
+SUBSTACK
+  setvariableto(VARIABLE=max_return, VALUE=$b)
+
+DEFINE render %s %s ["res","debug"]
+pen_setPenSizeTo(SIZE=(1.5 * $res))
+setvariableto(VARIABLE=i, VALUE=0)
+control_repeat(TIMES=(360 / $res))
+SUBSTACK
+  control_repeat(TIMES=(480 / $res))
+  SUBSTACK
+    changevariableby(VARIABLE=i, VALUE=$res)
+    calculate pixel %s ['$debug']
+  changevariableby(VARIABLE=i, VALUE=(($res - 1) * W))
+
+DEFINE generate_sdf []
+setvariableto(VARIABLE=i, VALUE=0)
+control_repeat(TIMES=N)
+SUBSTACK
+  changevariableby(VARIABLE=i, VALUE=1)
+  setvariableto(VARIABLE=arr_x, VALUE=(i mod W))
+  setvariableto(VARIABLE=arr_y, VALUE=(i / W))
+  setvariableto(VARIABLE=math_x, VALUE=(arr_x - (W / 2)))
+  setvariableto(VARIABLE=math_y, VALUE=(arr_y - (H / 2)))
+  changevariableby(VARIABLE=math_x, VALUE=( - circles[1]))
+  changevariableby(VARIABLE=math_y, VALUE=( - circles[2]))
+  setvariableto(VARIABLE=dist, VALUE=sqrt(((math_x * math_x) + (math_y * math_y))))
+  changevariableby(VARIABLE=dist, VALUE=( - circles[3]))
+  setvariableto(VARIABLE=d, VALUE=dist)
+  setvariableto(VARIABLE=j, VALUE=0)
+  control_repeat(TIMES=((lengthoflist(LIST=circles) - 3) / 3))
+  SUBSTACK
+    changevariableby(VARIABLE=j, VALUE=3)
+    setvariableto(VARIABLE=math_x, VALUE=(arr_x - (W / 2)))
+    setvariableto(VARIABLE=math_y, VALUE=(arr_y - (H / 2)))
+    changevariableby(VARIABLE=math_x, VALUE=( - circles[(j + 1)]))
+    changevariableby(VARIABLE=math_y, VALUE=( - circles[(j + 2)]))
+    setvariableto(VARIABLE=dist, VALUE=sqrt(((math_x * math_x) + (math_y * math_y))))
+    changevariableby(VARIABLE=dist, VALUE=( - circles[(j + 3)]))
+    min %s %s ['1', '(0.5 + (0.5 * ((dist - d) / k)))']
+    max %s %s ['0', 'min_return']
+    setvariableto(VARIABLE=h, VALUE=max_return)
+    setvariableto(VARIABLE=d, VALUE=(((d * h) + (dist * (1 - h))) - ((k * h) * (1 - h))))
+  addtolist(LIST=sdf_list, ITEM=d)
+
+DEFINE render_pixel %s %s %s ["r","g","b"]
+motion_gotoxy(X=uvx, Y=uvy)
+pen_setPenColorToColor(COLOR=(((floor(($r * 0.999)) * 65536) + (floor(($g * 0.999)) * 256)) + floor(($b * 0.999))))
+pen_penDown()
+pen_penUp()
+
+DEFINE calculate pixel %s ["debug"]
+setvariableto(VARIABLE=x, VALUE=(i mod 480))
+setvariableto(VARIABLE=y, VALUE=(i / 480))
+setvariableto(VARIABLE=m, VALUE=sdf_list[i])
+control_if_else(CONDITION=($debug = 1))
+SUBSTACK
+  setvariableto(VARIABLE=uvx, VALUE=(x - 240))
+  setvariableto(VARIABLE=uvy, VALUE=(y - 180))
+  render_pixel %s %s %s ['m', 'm', 'm']
+SUBSTACK2
+  control_if_else(CONDITION=(0.005 < m))
+  SUBSTACK
+  SUBSTACK2
+    generate_blur %s %s %s ['blur_radius', '1', 'i']
+    setvariableto(VARIABLE=uvx, VALUE=(x - 240))
+    setvariableto(VARIABLE=uvy, VALUE=(y - 180))
+    setvariableto(VARIABLE=nm, VALUE=(0 - m))
+    setvariableto(VARIABLE=xr, VALUE=(1 - (nm / thick)))
+    sa %s ['(xr * xr)']
+    setvariableto(VARIABLE=ti, VALUE=sa_return)
+    sa %s ['((1 / ior) * sin(ti))']
+    setvariableto(VARIABLE=tt, VALUE=sa_return)
+    setvariableto(VARIABLE=ef, VALUE=(0 - tan((tt - ti))))
+    control_if(CONDITION=((nm > thick) or (nm = thick)))
+    SUBSTACK
+      setvariableto(VARIABLE=ef, VALUE=0)
+    get_n %s %s ['x', 'y']
+    setvariableto(VARIABLE=nx, VALUE=get_n_out_x)
+    setvariableto(VARIABLE=ny, VALUE=get_n_out_y)
+    setvariableto(VARIABLE=nl, VALUE=get_n_out_l)
+    control_if(CONDITION=($debug = 2))
+    SUBSTACK
+      render_pixel %s %s %s ['((nx * (127 / 1414)) + 128)', '((ny * (127 / 1414)) + 128)', '(nl * 128)']
+      control_stop(STOP_OPTION=this script)
+    control_if_else(CONDITION=((ef < 0) or (ef = 0)))
+    SUBSTACK
+      samp %s %s %s ['blur_r', 'uvx', 'uvy', 'None']
+      setvariableto(VARIABLE=sr, VALUE=samp_return)
+      samp %s %s %s ['blur_g', 'uvx', 'uvy', 'None']
+      setvariableto(VARIABLE=sg, VALUE=samp_return)
+      samp %s %s %s ['blur_b', 'uvx', 'uvy', 'None']
+      setvariableto(VARIABLE=sb, VALUE=samp_return)
+      render_pixel %s %s %s ['sr', 'sg', 'sb']
+    SUBSTACK2
+      get_n %s %s ['x', 'y']
+      setvariableto(VARIABLE=nx, VALUE=get_n_out_x)
+      setvariableto(VARIABLE=ny, VALUE=get_n_out_y)
+      setvariableto(VARIABLE=nl, VALUE=get_n_out_l)
+      setvariableto(VARIABLE=bx, VALUE=(0 - (nx * (ef * base_mult))))
+      setvariableto(VARIABLE=by, VALUE=(0 - (ny * (ef * base_mult))))
+      setvariableto(VARIABLE=bm, VALUE=1.0)
+      control_if(CONDITION=(blur_edge = 1))
+      SUBSTACK
+        setvariableto(VARIABLE=bm, VALUE=(nm / thick))
+      samp %s %s %s ['bg_r', '(uvx + (bx * (1 - ((NR - 1) * disp))))', '(uvy + (by * (1 - ((NR - 1) * disp))))', 'None']
+      setvariableto(VARIABLE=pr, VALUE=samp_return)
+      samp %s %s %s ['blur_r', '(uvx + (bx * (1 - ((NR - 1) * disp))))', '(uvy + (by * (1 - ((NR - 1) * disp))))', 'None']
+      setvariableto(VARIABLE=br, VALUE=samp_return)
+      setvariableto(VARIABLE=pix_r, VALUE=(pr + ((br - pr) * bm)))
+      samp %s %s %s ['bg_g', '(uvx + (bx * (1 - ((NG - 1) * disp))))', '(uvy + (by * (1 - ((NG - 1) * disp))))', 'None']
+      setvariableto(VARIABLE=pg, VALUE=samp_return)
+      samp %s %s %s ['blur_g', '(uvx + (bx * (1 - ((NG - 1) * disp))))', '(uvy + (by * (1 - ((NG - 1) * disp))))', 'None']
+      setvariableto(VARIABLE=bg, VALUE=samp_return)
+      setvariableto(VARIABLE=pix_g, VALUE=(pg + ((bg - pg) * bm)))
+      samp %s %s %s ['bg_b', '(uvx + (bx * (1 - ((NB - 1) * disp))))', '(uvy + (by * (1 - ((NB - 1) * disp))))', 'None']
+      setvariableto(VARIABLE=pb, VALUE=samp_return)
+      samp %s %s %s ['blur_b', '(uvx + (bx * (1 - ((NB - 1) * disp))))', '(uvy + (by * (1 - ((NB - 1) * disp))))', 'None']
+      setvariableto(VARIABLE=bb, VALUE=samp_return)
+      setvariableto(VARIABLE=pix_b, VALUE=(pb + ((bb - pb) * bm)))
+      control_if(CONDITION=($debug = 3))
+      SUBSTACK
+        render_pixel %s %s %s ['pix_r', 'pix_g', 'pix_b']
+        control_stop(STOP_OPTION=this script)
+      setvariableto(VARIABLE=cr, VALUE=(pix_r + (((tr - pix_r) * ta) * 0.8)))
+      setvariableto(VARIABLE=cg, VALUE=(pix_g + (((tg - pix_g) * ta) * 0.8)))
+      setvariableto(VARIABLE=cb, VALUE=(pix_b + (((tb - pix_b) * ta) * 0.8)))
+      setvariableto(VARIABLE=t, VALUE=(m / 1500))
+      setvariableto(VARIABLE=t, VALUE=(t * f_pow))
+      setvariableto(VARIABLE=t, VALUE=(t + 1))
+      setvariableto(VARIABLE=t, VALUE=(t + f_hard))
+      setvariableto(VARIABLE=t, VALUE=(t * (t * (t * (t * t)))))
+      min %s %s ['1', 't']
+      max %s %s ['0', 'min_return']
+      setvariableto(VARIABLE=ff, VALUE=max_return)
+      angle_to_prism %s %s ['nx', 'ny']
+      setvariableto(VARIABLE=fm, VALUE=(((ff * f_factor) * (0.7 * nl)) / 1414.213562))
+      changevariableby(VARIABLE=cr, VALUE=((angle_to_prism_r - cr) * fm))
+      changevariableby(VARIABLE=cg, VALUE=((angle_to_prism_g - cg) * fm))
+      changevariableby(VARIABLE=cb, VALUE=((angle_to_prism_b - cb) * fm))
+      control_if(CONDITION=($debug = 4))
+      SUBSTACK
+        render_pixel %s %s %s ['cr', 'cg', 'cb']
+        control_stop(STOP_OPTION=this script)
+      render_pixel %s %s %s ['cr', 'cg', 'cb']
+
+DEFINE generate_blur %s %s %s ["rad","sam","i"]
+control_if(CONDITION=(blur_samples[$i] < 50))
+SUBSTACK
+  replaceitemoflist(LIST=blur_r, INDEX=$i, ITEM=(blur_r[$i] * blur_samples[$i]))
+  replaceitemoflist(LIST=blur_g, INDEX=$i, ITEM=(blur_g[$i] * blur_samples[$i]))
+  replaceitemoflist(LIST=blur_b, INDEX=$i, ITEM=(blur_b[$i] * blur_samples[$i]))
+  setvariableto(VARIABLE=arr_x, VALUE=(($i mod 480) - 240))
+  setvariableto(VARIABLE=arr_y, VALUE=(($i / 480) - 180))
+  setvariableto(VARIABLE=pix_r, VALUE=0)
+  setvariableto(VARIABLE=pix_g, VALUE=0)
+  setvariableto(VARIABLE=pix_b, VALUE=0)
+  control_repeat(TIMES=$sam)
+  SUBSTACK
+    samp %s %s %s ['bg_r', '(arr_x + (random(FROM=-0.5, TO=0.5) * $rad))', '(arr_y + (random(FROM=-0.5, TO=0.5) * $rad))', 'None']
+    changevariableby(VARIABLE=pix_r, VALUE=samp_return)
+    samp %s %s %s ['bg_g', '(arr_x + (random(FROM=-0.5, TO=0.5) * $rad))', '(arr_y + (random(FROM=-0.5, TO=0.5) * $rad))', 'None']
+    changevariableby(VARIABLE=pix_g, VALUE=samp_return)
+    samp %s %s %s ['bg_b', '(arr_x + (random(FROM=-0.5, TO=0.5) * $rad))', '(arr_y + (random(FROM=-0.5, TO=0.5) * $rad))', 'None']
+    changevariableby(VARIABLE=pix_b, VALUE=samp_return)
+  replaceitemoflist(LIST=blur_r, INDEX=$i, ITEM=(blur_r[$i] + pix_r))
+  replaceitemoflist(LIST=blur_g, INDEX=$i, ITEM=(blur_g[$i] + pix_g))
+  replaceitemoflist(LIST=blur_b, INDEX=$i, ITEM=(blur_b[$i] + pix_b))
+  replaceitemoflist(LIST=blur_samples, INDEX=$i, ITEM=(blur_samples[$i] + $sam))
+  replaceitemoflist(LIST=blur_r, INDEX=$i, ITEM=(blur_r[$i] / blur_samples[$i]))
+  replaceitemoflist(LIST=blur_g, INDEX=$i, ITEM=(blur_g[$i] / blur_samples[$i]))
+  replaceitemoflist(LIST=blur_b, INDEX=$i, ITEM=(blur_b[$i] / blur_samples[$i]))
+
+DEFINE angle_to_prism %s %s ["nx","ny"]
+setvariableto(VARIABLE=angle, VALUE=(90 - (atan(($nx / $ny)) + (($ny < 0) * (((($nx > 0) * 2) - 1) * 180)))))
+control_if(CONDITION=(angle < 0))
+SUBSTACK
+  changevariableby(VARIABLE=angle, VALUE=360)
+control_if(CONDITION=(360 < angle))
+SUBSTACK
+  changevariableby(VARIABLE=angle, VALUE=-360)
+setvariableto(VARIABLE=hue, VALUE=(angle / 360))
+setvariableto(VARIABLE=h_i, VALUE=floor((hue * 6)))
+setvariableto(VARIABLE=f, VALUE=((hue * 6) - h_i))
+setvariableto(VARIABLE=p, VALUE=0.5)
+setvariableto(VARIABLE=q, VALUE=(0.5 * (1 - f)))
+setvariableto(VARIABLE=t, VALUE=(0.5 * (f + 0.5)))
+control_if(CONDITION=(h_i = 0))
+SUBSTACK
+  setvariableto(VARIABLE=angle_to_prism_r, VALUE=1)
+  setvariableto(VARIABLE=angle_to_prism_g, VALUE=t)
+  setvariableto(VARIABLE=angle_to_prism_b, VALUE=p)
+control_if(CONDITION=(h_i = 1))
+SUBSTACK
+  setvariableto(VARIABLE=angle_to_prism_r, VALUE=q)
+  setvariableto(VARIABLE=angle_to_prism_g, VALUE=1)
+  setvariableto(VARIABLE=angle_to_prism_b, VALUE=p)
+control_if(CONDITION=(h_i = 2))
+SUBSTACK
+  setvariableto(VARIABLE=angle_to_prism_r, VALUE=p)
+  setvariableto(VARIABLE=angle_to_prism_g, VALUE=1)
+  setvariableto(VARIABLE=angle_to_prism_b, VALUE=t)
+control_if(CONDITION=(h_i = 3))
+SUBSTACK
+  setvariableto(VARIABLE=angle_to_prism_r, VALUE=p)
+  setvariableto(VARIABLE=angle_to_prism_g, VALUE=q)
+  setvariableto(VARIABLE=angle_to_prism_b, VALUE=1)
+control_if(CONDITION=(h_i = 4))
+SUBSTACK
+  setvariableto(VARIABLE=angle_to_prism_r, VALUE=t)
+  setvariableto(VARIABLE=angle_to_prism_g, VALUE=p)
+  setvariableto(VARIABLE=angle_to_prism_b, VALUE=1)
+control_if(CONDITION=(h_i = 5))
+SUBSTACK
+  setvariableto(VARIABLE=angle_to_prism_r, VALUE=1)
+  setvariableto(VARIABLE=angle_to_prism_g, VALUE=p)
+  setvariableto(VARIABLE=angle_to_prism_b, VALUE=q)
+setvariableto(VARIABLE=angle_to_prism_r, VALUE=floor((angle_to_prism_r * 255)))
+setvariableto(VARIABLE=angle_to_prism_g, VALUE=floor((angle_to_prism_g * 255)))
+setvariableto(VARIABLE=angle_to_prism_b, VALUE=floor((angle_to_prism_b * 255)))
+
+DEFINE clear_sdf []
+deletealloflist(LIST=sdf_list)
+deletealloflist(LIST=circles)
+
+DEFINE add_circle %s %s %s ["x","y","r"]
+addtolist(LIST=circles, ITEM=$x)
+addtolist(LIST=circles, ITEM=$y)
+addtolist(LIST=circles, ITEM=$r)
+
+DEFINE clear_blur []
+deletealloflist(LIST=blur_r)
+deletealloflist(LIST=blur_g)
+deletealloflist(LIST=blur_b)
+deletealloflist(LIST=blur_samples)
+control_repeat(TIMES=N)
+SUBSTACK
+  addtolist(LIST=blur_r, ITEM=0)
+  addtolist(LIST=blur_g, ITEM=0)
+  addtolist(LIST=blur_b, ITEM=0)
+  addtolist(LIST=blur_samples, ITEM=0)

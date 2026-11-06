@@ -1,0 +1,70 @@
+{
+  "bbox_only_does_not_preserve_every_remote_boundary_point": {
+    "a": [
+      -14.142135623730951,
+      -14.142135623730951,
+      80,
+      80,
+      40
+    ],
+    "b": [
+      14.142135623730951,
+      14.142135623730951,
+      80,
+      80,
+      40
+    ],
+    "point": [
+      -42.42640687119285,
+      14.142135623730951
+    ],
+    "hard_distance": 0,
+    "bbox_only_distance": -1.1481604530283396,
+    "spatial_gate_distance": 0.0
+  },
+  "given_grazing_case": {
+    "a": [
+      0,
+      0,
+      120,
+      60,
+      12
+    ],
+    "b": [
+      60,
+      0,
+      80,
+      80,
+      40
+    ],
+    "original_intersection": [
+      33.542486889354095,
+      30
+    ],
+    "bbox_only_distance": -11.11111111111111,
+    "spatial_gate_distance": -10.682914257241043
+  },
+  "position_gate_retains_endpoint_hard_union_corner": {
+    "a": [
+      0,
+      0,
+      80,
+      80,
+      40
+    ],
+    "b": [
+      30,
+      0,
+      100,
+      100,
+      50
+    ],
+    "intersection_on_position_gate_endpoint": [
+      0,
+      40
+    ],
+    "bbox_only_distance": -3.75,
+    "spatial_gate_distance": 0.0
+  },
+  "recommendation": "Remove the normal gate. Four C1 bbox gates with smooth coincidence damping address the demonstrated grazing corner. Do not claim every remote boundary point is unchanged: the guarantee is the pair outer axis-aligned bounds. Adding a center-projection position gate preserves circle back hemispheres but can retain a hard union corner at a gate endpoint for unequal sizes."
+}

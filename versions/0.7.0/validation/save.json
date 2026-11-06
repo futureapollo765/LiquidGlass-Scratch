@@ -1,0 +1,37 @@
+{
+  "sha256": "beb5f2b4a7a422e22bcc4a3ed9a3a56a7efee0911f1e96421bf5aa816d77c11c",
+  "saves": [
+    {
+      "state": "running, launcher closed",
+      "projectJsonBytes": 4359353
+    },
+    {
+      "state": "root menu open",
+      "projectJsonBytes": 4361107
+    },
+    {
+      "state": "child menu open, parent retained",
+      "projectJsonBytes": 4361989
+    }
+  ],
+  "gridStoredRows": 102,
+  "placementInputs": [
+    "alignment",
+    "expanded x",
+    "expanded y",
+    "open travel",
+    "open growth",
+    "close travel",
+    "close growth",
+    "bounce"
+  ],
+  "launcherCenter": [
+    60,
+    102
+  ],
+  "demoFinishes": [
+    "Smoked",
+    "Clear"
+  ],
+  "passed": true
+}

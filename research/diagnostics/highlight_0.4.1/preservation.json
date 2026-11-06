@@ -1,0 +1,30 @@
+{
+  "Studio": {
+    "sourceSHA256": "938946226fa6d0758afb552b6ea2a5bb2e81c447e51e87725a04b1c38727802f",
+    "sha256": "15cbc78188d117eb0debc115ca32aa16984ab1890451b6617de1ca08fa06b702",
+    "onlyModifiedScripts": [
+      "UI wash x %s y %s width %s height %s tone %s",
+      "UI foreground"
+    ],
+    "assetsIdentical": true,
+    "scalarsAdded": [
+      "UI wash rise",
+      "UI wash transparency"
+    ],
+    "jsonBytes": 3755119
+  },
+  "Component": {
+    "sourceSHA256": "11f68c8ad76408fb733c47948676ca77292860482a9d90cf04df199c73f14684",
+    "sha256": "ac97ad71e3646f95ad6f7a5b0b9d8c5d6eaa3a0e5031abe216208858015cacf8",
+    "onlyModifiedScripts": [
+      "UI wash x %s y %s width %s height %s tone %s",
+      "UI foreground"
+    ],
+    "assetsIdentical": true,
+    "scalarsAdded": [
+      "UI wash rise",
+      "UI wash transparency"
+    ],
+    "jsonBytes": 3861364
+  }
+}

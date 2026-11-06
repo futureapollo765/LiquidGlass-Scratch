@@ -1,0 +1,11 @@
+# Liquid Glass Studio 0.6.0 verification
+
+The dedicated TurboWarp Desktop window opened the numbered Studio and displayed its green flag, editable component calls and the saved circular launcher. Desktop pointer automation could not attach to that large editor after it loaded. The gesture, animation, artwork and pixel checks were executed in the real VM bundled with TurboWarp Desktop. The comparison movies replay the resulting native Pen commands at a 30 Hz simulated clock. Their other columns come from the supplied screen recordings.
+
+The frozen project exercised anchored button and menu dragging, four directional placements, a custom absolute center, changing that center while open, and reversal during expansion. At one measured frame the menu had traveled 68.76% of its center displacement and grown 19.45% toward its final dimensions. Checks measured both glyph coordinates and the drawn contours for unequal horizontal and vertical scales. The circular launcher's ellipsis and the growing child’s row label were also exercised in the green-flag loop.
+
+The rear-edge test uses a clear foreground above a dimmed parent with a uniform underlying image. The parent still dims outside the child. All seven foreground samples across its rear edge match the actual image color to within one channel value. Across each rounded corner, moving a sample by 0.02 stage pixel previously jumped about 45.83 pixels on the refracted image. The same probe now moves approximately 0.006 pixels. The exact curved silhouette retained half coverage at all 28 tested arc/tangent points. The slow interpreter presentation test measured zero missing probe regions at a scheduler yield and zero Pen writes when idle.
+
+The original 172,800 calibration pixels can be read and restored from 102 distinct stored rows. The full input photo, all costumes/assets and the existing public example inputs were checked against the 0.5.0 native save. Both archives rebuilt byte-for-byte from the versioned inputs and sources. Studio project.json is 4,135,588 bytes. A running native save with a child visible was 4,132,182 bytes.
+
+For the matched optical preview open clear-submenu.png. For playback details see comparison_provenance.md. The JSON reports identify tested archives by hash even when their paths refer to the staging copies.

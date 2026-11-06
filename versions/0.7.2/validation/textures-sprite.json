@@ -1,0 +1,10 @@
+{
+  "source": "/private/tmp/lg072/input.sprite3",
+  "candidate": "/private/tmp/lg072/final.sprite3",
+  "sha256": "0475ffe61bc2e6349c9042ec19697c13e7e4dd2b4320d3c304383921aa3e8f45",
+  "checkedColors": 66,
+  "unchangedCostumeNamesAndIndices": 344,
+  "unreferencedGeneratedTexturesRemoved": 66,
+  "otherAssetsIdentical": 276,
+  "passed": true
+}

@@ -1,0 +1,47 @@
+0.1.0 - 110426
+Add basic glass rendering for rounded rectangles, capsules, and circles
+
+0.1.1 - 110426
+Fix diagonal drag so shapes stretch horizontally and vertically, and smooth the corners where shapes join
+
+0.2.0 - 110426
+Refine metaball connections so three or more nearby shapes blend smoothly as a group
+
+0.2.1 - 110426
+Reduce project.json from 8.45 MB to 3.23 MB by clearing frame data that Scratch rebuilds
+
+0.2.2 - 110426
+Save a checkpoint before fixing the Scratch block palette
+
+0.2.3 - 110426
+Fix the Scratch block palette disappearing or stacking blocks in the upper-left corner
+
+0.3.0 - 110426
+Fix flashing in Scratch by keeping the previous frame visible while the next frame renders
+
+0.4.0 - 110526
+Add Menu, Button, and Background custom blocks with nested options, clickable buttons, and a fixed glass sidebar
+
+0.4.1 - 110526
+Fix the bright dot at the start of button and menu highlights
+
+0.5.0 - 110526
+Add submenus that expand from the selected row over a dimmed parent, plus adjustable tint, transparency, brightness, and blur
+
+0.6.0 - 110526
+Add custom menu placement, make text and icons stretch with the glass, and smooth refraction at rounded corners
+
+0.7.0 - 110526
+Restore stronger glass refraction and add adjustable menu springs that carry the selected row’s title and arrow into its submenu
+
+0.7.1 - 110526
+Refine drag and release springs, center menu highlights, and fix uneven transparency in dimmed text
+
+0.7.2 - 110526
+Match submenu return timing to its opening motion and keep the title and arrow visible as it folds
+
+0.7.3 - 110526
+Add a submenu curve input to adjust travel and growth timing separately for opening and closing
+
+0.7.4 - 110626
+Fix button and menu stretch so it eases back to the original size at the press point and grows again on the opposite side

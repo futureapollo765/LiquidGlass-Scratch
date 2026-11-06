@@ -1,0 +1,10 @@
+{
+  "builderEmitsSafeFieldListID": true,
+  "repairTestsPassed": 6,
+  "releaseRuntimeChecksPassed": 42,
+  "nativeRoundtripPassed": true,
+  "releaseJSONBytes": 3231535,
+  "preservedLatestNativeSpring": 15,
+  "preservedLatestNativeDamping": 0.75,
+  "releaseFilesUnchangedSinceSnapshot": true
+}

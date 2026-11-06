@@ -1,0 +1,49 @@
+{
+  "version": "0.2.3",
+  "previous": "0.2.2",
+  "createdUTC": "2026-11-05T03:10:57.880237+00:00",
+  "note": "Repair reserved list ID for vanilla Scratch palette, preserving latest native spring15/damping0.75 customization and clearing only rebuilt frame buffers.",
+  "files": {
+    "LiquidGlass_Studio_0.2.3.sb3": {
+      "sha256": "23d57b1cfefe4a76b8ff447eaed88a9a6c181a265410339f19571e9cefc89e0f",
+      "bytes": 1001980
+    },
+    "LiquidGlass_Component_0.2.3.sprite3": {
+      "sha256": "60e40a1ff902ea82c4256516ddcfecf481bfe745150513a1f0a42a4cfa17fda1",
+      "bytes": 879319
+    },
+    "project.json": {
+      "sha256": "312b2606e1b42fec8f46552c111399c1e097e3568e3b2045106d33de781e8f69",
+      "bytes": 3231535
+    },
+    "build_renderer.py": {
+      "sha256": "55ce100de30c29b0143b7ccb5c741e1595bbef0bebc4333e40208cbc1eec7b94",
+      "bytes": 38288
+    },
+    "README.md": {
+      "sha256": "c134265adce3baac4c05634fa2dc851ccf81db77a1c04c8c4711e0912e26aacf",
+      "bytes": 22676
+    },
+    "tools/snapshot_release.py": {
+      "sha256": "8eaf5031a3382f36c5be9387a9fb9945f44d5242642854ad03266ef1b3c84c05",
+      "bytes": 2912
+    },
+    "tools/repair_editor_ids.py": {
+      "sha256": "d65bb013235c04af8e4c0115b34b1f5241b3b56343acbb55d3f583f24efba26b",
+      "bytes": 7615
+    },
+    "tools/validate_sb3.py": {
+      "sha256": "477904ca8de83f7cbed6b00dbed12334aa3626896300be3b0d01be2e5ec1cf4d",
+      "bytes": 10272
+    },
+    "CHANGELOG.md": {
+      "sha256": "8c43a956df8459a934663db3f69998e668bf0713bbb96374a69a77ff02a8fa97",
+      "bytes": 3274
+    },
+    "tools/compact_project.py": {
+      "sha256": "50e625384ad7b9a5f786db122591e2f9c6013a5868ee090ac4d4627c24c0c89c",
+      "bytes": 5833
+    }
+  },
+  "validation": "Build checkpoint; final verification recorded separately."
+}

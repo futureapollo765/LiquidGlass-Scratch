@@ -1,0 +1,11 @@
+[extend]
+useDefault = true
+
+# The native Scratch builder generates these two IDs from display names.
+# Limit the exception to the specific matched text, not files or rules.
+[[allowlists]]
+regexTarget = "match"
+regexes = [
+  '''(?i)strokeY","lgframeccb54d303e2893d5cb44"''',
+  '''(?i)token","lgframec7a90eaab0ace6d9d6ce"''',
+]

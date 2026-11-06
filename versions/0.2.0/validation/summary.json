@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "passed": true,
+  "source": {
+    "path": "./versions/0.2.0/LiquidGlass_Studio_0.2.0.sb3",
+    "sha256": "2ee6a85f179540dd02347979b9e3059b90985425fc72c4a896112e0551d191f9"
+  },
+  "native_editor_saved": {
+    "path": "./versions/0.2.0/EditorVerified_0.2.0.sb3",
+    "sha256": "2dd3c6143f5ee8e79bcc4a5ee8b2216ccf53c6124f9c16e1b2b921d8902f1e9c"
+  },
+  "component": {
+    "path": "./versions/0.2.0/LiquidGlass_Component_0.2.0.sprite3",
+    "sha256": "d21e4f5375a9463faf7b0f5056ac19a6a1439c90972c702741d9ef17b39441c9",
+    "bytes": 879243
+  },
+  "procedure_definitions_preserved": 12,
+  "all_nonprimitive_opcode_counts_preserved": true,
+  "native_structure_and_boolean_sockets_passed": true,
+  "full_runtime_checks_passed": 42,
+  "additional_native_smoke_checks_passed": 4,
+  "compiled_headless_render_ms": 49.94119433333329,
+  "join_center_texture_jump_px": 1.1007760195372642,
+  "notes": [
+    "Runtime checks use the installed real TurboWarp VM; graphical interaction checks are performed separately in TurboWarp Desktop.",
+    "Headless timing excludes graphics rendering and is not a native UI FPS measurement."
+  ],
+  "native_ui_save_reopen_observed": true,
+  "independent_geometry_passed": true,
+  "preserved_versions": [
+    "0.1.0",
+    "0.1.1",
+    "0.2.0"
+  ]
+}

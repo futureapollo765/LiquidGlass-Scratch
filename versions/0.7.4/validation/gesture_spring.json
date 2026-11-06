@@ -1,0 +1,44 @@
+{
+  "sha256": "dce43901124f2b7b9a85c63805cb656f526460b67ccae16985a34fd076274a39",
+  "checks": [
+    "Both Button and Menu keep their last held position, stretch and signed velocity through the release frame.",
+    "The displayed center and contour follow the analytical solution, overshoot and return after a moving release; idle rendering retains the resting pose.",
+    "Held Button and Menu centers overshoot a stationary pointer target and settle with the matching extension.",
+    "A rapid second press attaches at the in-flight pose and can redirect it without a position jump.",
+    "Hover appearance springs between actual silhouettes for Button and Menu while retaining a fixed idle anchor.",
+    "Menu bounce zero produces a critically damped, non-oscillating return.",
+    "Six 30 Hz and twelve 60 Hz release steps give the same center, velocity and width after equal elapsed time.",
+    "The installed Scratch interpreter also carries and rebounds the visible grip."
+  ],
+  "observations": {
+    "button": {
+      "heldX": 15.682461646257645,
+      "releaseX": 15.682461646257645,
+      "releaseVelocity": 181.29048387720866,
+      "minX": -0.5017388713380205,
+      "minScaleX": 0.9948644854565434,
+      "afterOneThird": -0.42878325316088933
+    },
+    "menu": {
+      "heldX": 15.682461646257597,
+      "releaseX": 15.682461646257597,
+      "releaseVelocity": 181.29048387721076,
+      "minX": -0.5017388713380495,
+      "minScaleX": 0.9945329032829144,
+      "afterOneThird": -0.42878325316091964
+    },
+    "heldButton": {
+      "ideal": 19.68610816542948,
+      "peak": 20.242042808626703,
+      "settled": 19.68610816542948,
+      "stretch": 19.68610816542948
+    },
+    "heldMenu": {
+      "ideal": 19.68610816542948,
+      "peak": 20.242042808626806,
+      "settled": 19.68610816542948,
+      "stretch": 19.68610816542948
+    }
+  },
+  "passed": true
+}

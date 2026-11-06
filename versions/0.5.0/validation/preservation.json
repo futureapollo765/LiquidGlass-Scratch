@@ -1,0 +1,78 @@
+[
+  {
+    "source": "versions/0.4.1/LiquidGlass_Studio_0.4.1.sb3",
+    "sourceSHA256": "08aab33924da818d2b912ec8b24093ad4fa35d3e66273b3e7e697bbe5ac8e2cc",
+    "delivery": "/private/tmp/liquidglass-050-validation/final.sb3",
+    "sha256": "9839e01d752e178b8e612f875b648eebf40a911004d241b6778bdd465440a9da",
+    "jsonBytes": 4829209,
+    "sourceAssetsRetained": 276,
+    "addedAssets": 0,
+    "sampledBackgroundsIdentical": true,
+    "publicExamples": [
+      {
+        "id": "pN",
+        "type": "Background",
+        "extendedExistingInputs": []
+      },
+      {
+        "id": "pO",
+        "type": "Button",
+        "extendedExistingInputs": []
+      },
+      {
+        "id": "pP",
+        "type": "Menu",
+        "extendedExistingInputs": [
+          9
+        ]
+      },
+      {
+        "id": "pV",
+        "type": "Glass",
+        "extendedExistingInputs": []
+      },
+      {
+        "id": "pW",
+        "type": "Glass",
+        "extendedExistingInputs": []
+      },
+      {
+        "id": "pX",
+        "type": "Glass",
+        "extendedExistingInputs": []
+      }
+    ]
+  },
+  {
+    "source": "versions/0.4.1/LiquidGlass_Component_0.4.1.sprite3",
+    "sourceSHA256": "ac97ad71e3646f95ad6f7a5b0b9d8c5d6eaa3a0e5031abe216208858015cacf8",
+    "delivery": "/private/tmp/liquidglass-050-validation/final.sprite3",
+    "sha256": "147dca1a28d5f960424a355f49b1bb839d16ee7b9b81afcb624b91124550f57a",
+    "jsonBytes": 4946657,
+    "sourceAssetsRetained": 276,
+    "addedAssets": 0,
+    "sampledBackgroundsIdentical": true,
+    "publicExamples": [
+      {
+        "id": "b3662",
+        "type": "Glass",
+        "extendedExistingInputs": []
+      },
+      {
+        "id": "lgpresent1336",
+        "type": "Background",
+        "extendedExistingInputs": []
+      },
+      {
+        "id": "lgpresent1337",
+        "type": "Button",
+        "extendedExistingInputs": []
+      },
+      {
+        "id": "lgpresent1338",
+        "type": "Menu",
+        "extendedExistingInputs": []
+      }
+    ]
+  }
+]

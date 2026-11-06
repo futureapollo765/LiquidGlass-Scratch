@@ -1,0 +1,64 @@
+{
+  "sha256": "9c8e6304f8a5c87712364c07d945a3fd7b3e0db6e726d8dcf8bbef30bab7b429",
+  "priorSHA256": "8b94b2ff6a1d0e56f569dc99a7bc69c84098a2d97091a00b8858f76c5ecc5aae",
+  "checks": [
+    "Every changed glyph and rotated chevron emitted at most one visible sample per physical stage cell.",
+    "The original renderer exceeded group opacity at joins; the repaired output never exceeded it.",
+    "Opacity changes scale the composed face/outline alpha linearly to within one framebuffer alpha level at every tested location.",
+    "Independent X/Y stretch, 37-degree rotation, and accented Latin retain full-coverage visible ink.",
+    "The dimmed parent-scale pose uses a single original SVG stamp within the source curve tolerance; a near-isotropic disclosure stays a single rotated stamp.",
+    "The same native mask path executes without the compiler."
+  ],
+  "cases": [
+    {
+      "mark": "H",
+      "sx": 1.31,
+      "sy": 1.12,
+      "angle": 0,
+      "requested": 0.42,
+      "worstOld": 0.8222028444,
+      "worstNew": 0.41999999999999993,
+      "nearSolidPixels": 152,
+      "uniqueSamples": 517,
+      "compiledMs": 4
+    },
+    {
+      "mark": "O",
+      "sx": 0.81,
+      "sy": 1.25,
+      "angle": 0,
+      "requested": 0.42,
+      "worstOld": 0.9643879897968278,
+      "worstNew": 0.41999999999999993,
+      "nearSolidPixels": 91,
+      "uniqueSamples": 360,
+      "compiledMs": 3
+    },
+    {
+      "mark": "é",
+      "sx": 1.28,
+      "sy": 0.83,
+      "angle": 0,
+      "requested": 0.42,
+      "worstOld": 0.9893801939947477,
+      "worstNew": 0.41999999999999993,
+      "nearSolidPixels": 100,
+      "uniqueSamples": 371,
+      "compiledMs": 3
+    },
+    {
+      "mark": "chevron",
+      "sx": 1.29,
+      "sy": 0.88,
+      "angle": 37,
+      "requested": 0.42,
+      "worstOld": 0.8323261296,
+      "worstNew": 0.41999999999999993,
+      "nearSolidPixels": 88,
+      "uniqueSamples": 256,
+      "compiledMs": 3
+    }
+  ],
+  "interpretedMs": 68,
+  "passed": true
+}

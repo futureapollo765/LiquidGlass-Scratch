@@ -1,0 +1,12 @@
+{
+  "path": "./research/diagnostics/editor_ids_studio.sb3",
+  "targets": 2,
+  "blocks": 2677,
+  "assets": 3,
+  "extensions": [
+    "pen"
+  ],
+  "errors": [],
+  "warnings": [],
+  "passed": true
+}

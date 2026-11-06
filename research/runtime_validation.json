@@ -1,0 +1,236 @@
+{
+  "project": "./LiquidGlass_Studio.sb3",
+  "tests": [
+    {
+      "mode": "Scratch interpreter",
+      "name": "Initialization creates eight independent component slots",
+      "passed": true
+    },
+    {
+      "mode": "Scratch interpreter",
+      "name": "Public API clamps dimensions, radii, effect strengths and quality",
+      "passed": true
+    },
+    {
+      "mode": "Scratch interpreter",
+      "name": "Rounded rectangle, capsule and circle are exact distance-field cases",
+      "passed": true
+    },
+    {
+      "mode": "Scratch interpreter",
+      "name": "Same-ID changes animate continuously while other IDs retain their settings",
+      "passed": true
+    },
+    {
+      "mode": "Scratch interpreter",
+      "name": "Nearby same-group shapes bridge without changing outer/back surfaces",
+      "passed": true
+    },
+    {
+      "mode": "Scratch interpreter",
+      "name": "Cached field matches fresh queries and all four bounds prevent whole-shape bulges",
+      "passed": true
+    },
+    {
+      "mode": "Scratch interpreter",
+      "name": "Two-shape joins expose continuous optical blending for unequal-size glass",
+      "passed": true
+    },
+    {
+      "mode": "Scratch interpreter",
+      "name": "Three-shape joins remove pair-winner seams in geometry and optical thickness",
+      "passed": true
+    },
+    {
+      "mode": "Scratch interpreter",
+      "name": "N-ary groups and join-zero components remain optically and geometrically isolated",
+      "passed": true
+    },
+    {
+      "mode": "Scratch interpreter",
+      "name": "Double-angle light blending preserves symmetric highlights and wraps angles smoothly",
+      "passed": true
+    },
+    {
+      "mode": "Scratch interpreter",
+      "name": "Horizontal pull makes centered axis-aligned ellipses with reciprocal squeeze and elastic recovery",
+      "passed": true
+    },
+    {
+      "mode": "Scratch interpreter",
+      "name": "Vertical and diagonal pull combine independent axes without rotating circle ellipses",
+      "passed": true
+    },
+    {
+      "mode": "Scratch interpreter",
+      "name": "Rounded rectangle and capsule pull squeeze both sides equally without tapering",
+      "passed": true
+    },
+    {
+      "mode": "Scratch interpreter",
+      "name": "Mouse dragging uses contour hit-tests, preserves grab offset, and keeps other IDs independent",
+      "passed": true
+    },
+    {
+      "mode": "Scratch interpreter",
+      "name": "Background sampling clamps both axes independently at all four stage edges",
+      "passed": true
+    },
+    {
+      "mode": "Scratch interpreter",
+      "name": "Shading clamps refraction, RGB and opacity; zero distortion samples original background",
+      "passed": true
+    },
+    {
+      "mode": "Scratch interpreter",
+      "name": "Optics fade smoothly where merged gradients cancel while preserving ordinary edge refraction",
+      "passed": true
+    },
+    {
+      "mode": "TurboWarp compiler",
+      "name": "Initialization creates eight independent component slots",
+      "passed": true
+    },
+    {
+      "mode": "TurboWarp compiler",
+      "name": "Public API clamps dimensions, radii, effect strengths and quality",
+      "passed": true
+    },
+    {
+      "mode": "TurboWarp compiler",
+      "name": "Rounded rectangle, capsule and circle are exact distance-field cases",
+      "passed": true
+    },
+    {
+      "mode": "TurboWarp compiler",
+      "name": "Same-ID changes animate continuously while other IDs retain their settings",
+      "passed": true
+    },
+    {
+      "mode": "TurboWarp compiler",
+      "name": "Nearby same-group shapes bridge without changing outer/back surfaces",
+      "passed": true
+    },
+    {
+      "mode": "TurboWarp compiler",
+      "name": "Cached field matches fresh queries and all four bounds prevent whole-shape bulges",
+      "passed": true
+    },
+    {
+      "mode": "TurboWarp compiler",
+      "name": "Two-shape joins expose continuous optical blending for unequal-size glass",
+      "passed": true
+    },
+    {
+      "mode": "TurboWarp compiler",
+      "name": "Three-shape joins remove pair-winner seams in geometry and optical thickness",
+      "passed": true
+    },
+    {
+      "mode": "TurboWarp compiler",
+      "name": "N-ary groups and join-zero components remain optically and geometrically isolated",
+      "passed": true
+    },
+    {
+      "mode": "TurboWarp compiler",
+      "name": "Double-angle light blending preserves symmetric highlights and wraps angles smoothly",
+      "passed": true
+    },
+    {
+      "mode": "TurboWarp compiler",
+      "name": "Horizontal pull makes centered axis-aligned ellipses with reciprocal squeeze and elastic recovery",
+      "passed": true
+    },
+    {
+      "mode": "TurboWarp compiler",
+      "name": "Vertical and diagonal pull combine independent axes without rotating circle ellipses",
+      "passed": true
+    },
+    {
+      "mode": "TurboWarp compiler",
+      "name": "Rounded rectangle and capsule pull squeeze both sides equally without tapering",
+      "passed": true
+    },
+    {
+      "mode": "TurboWarp compiler",
+      "name": "Mouse dragging uses contour hit-tests, preserves grab offset, and keeps other IDs independent",
+      "passed": true
+    },
+    {
+      "mode": "TurboWarp compiler",
+      "name": "Background sampling clamps both axes independently at all four stage edges",
+      "passed": true
+    },
+    {
+      "mode": "TurboWarp compiler",
+      "name": "Shading clamps refraction, RGB and opacity; zero distortion samples original background",
+      "passed": true
+    },
+    {
+      "mode": "TurboWarp compiler",
+      "name": "Optics fade smoothly where merged gradients cancel while preserving ordinary edge refraction",
+      "passed": true
+    },
+    {
+      "mode": "TurboWarp compiler",
+      "name": "Compiled demo completes one full field-and-shading render with finite pixels",
+      "passed": true
+    },
+    {
+      "mode": "TurboWarp compiler",
+      "name": "Joined rectangle-circle center no longer creates a dark refraction seam",
+      "passed": true
+    },
+    {
+      "mode": "TurboWarp compiler",
+      "name": "Real green-flag scheduler keeps rendering and responds to all demo keyboard controls",
+      "passed": true
+    },
+    {
+      "mode": "TurboWarp compiler",
+      "name": "Real forever loop integrates mouse drag, preserves deformation, then settles on release",
+      "passed": true
+    },
+    {
+      "mode": "Native package/import",
+      "name": "Studio first script exposes three native Glass calls directly in its forever loop",
+      "passed": true
+    },
+    {
+      "mode": "Native package/import",
+      "name": "Importable component exposes one setup call and has no demo keyboard scripts",
+      "passed": true
+    },
+    {
+      "mode": "Native package/import",
+      "name": "Native VM addSprite imports the sprite archive and green flag runs its single component",
+      "passed": true
+    },
+    {
+      "mode": "Native package/import",
+      "name": "Imported single component accepts a later API update without demo code overwriting it",
+      "passed": true
+    }
+  ],
+  "timing": {
+    "compiledDemoRenderMs": 41,
+    "gridCells": 23241,
+    "compiledDemoAverageMs": 46.178735999999994,
+    "joinCenterTextureJump": 1.1007760195372642,
+    "schedulerFramesVerified": 180
+  },
+  "errors": [],
+  "artifacts": {
+    "LiquidGlass_Studio.sb3": {
+      "path": "./LiquidGlass_Studio.sb3",
+      "sha256": "2ee6a85f179540dd02347979b9e3059b90985425fc72c4a896112e0551d191f9",
+      "bytes": 883309
+    },
+    "LiquidGlass_Component.sprite3": {
+      "path": "./LiquidGlass_Component.sprite3",
+      "sha256": "d21e4f5375a9463faf7b0f5056ac19a6a1439c90972c702741d9ef17b39441c9",
+      "bytes": 879243
+    }
+  },
+  "passed": true
+}

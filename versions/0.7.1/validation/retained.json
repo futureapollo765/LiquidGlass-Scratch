@@ -1,0 +1,142 @@
+{
+  "project": "/private/tmp/lg071/final.sb3",
+  "sha256": "9c8e6304f8a5c87712364c07d945a3fd7b3e0db6e726d8dcf8bbef30bab7b429",
+  "method": "TurboWarp desktop VM in interpreter mode with native Pen callbacks. Nine stage pixel centers inside the same private surface, separated by 16 px; traces include each scheduler yield. Allow up to two adjacent rows to be repainted at once. One 525 ms simulated slow Pen stamp is permitted when three rows are simultaneously missing.",
+  "fixture": {
+    "quality": 1,
+    "probeCount": 9,
+    "probeLocations": [
+      [
+        105.5,
+        64.5
+      ],
+      [
+        105.5,
+        48.5
+      ],
+      [
+        105.5,
+        32.5
+      ],
+      [
+        105.5,
+        16.5
+      ],
+      [
+        105.5,
+        0.5
+      ],
+      [
+        105.5,
+        -15.5
+      ],
+      [
+        105.5,
+        -31.5
+      ],
+      [
+        105.5,
+        -47.5
+      ],
+      [
+        105.5,
+        -63.5
+      ]
+    ],
+    "initial": {
+      "frames": 11,
+      "elapsedMs": 5048
+    },
+    "repeated": {
+      "frames": 11,
+      "elapsedMs": 5458
+    }
+  },
+  "history": [
+    {
+      "phase": "redraw",
+      "missing": 0,
+      "stamps": 0,
+      "lines": 0
+    },
+    {
+      "phase": "redraw",
+      "missing": 0,
+      "stamps": 0,
+      "lines": 0
+    },
+    {
+      "phase": "redraw",
+      "missing": 0,
+      "stamps": 0,
+      "lines": 0
+    },
+    {
+      "phase": "redraw",
+      "missing": 0,
+      "stamps": 0,
+      "lines": 0
+    },
+    {
+      "phase": "redraw",
+      "missing": 0,
+      "stamps": 0,
+      "lines": 0
+    },
+    {
+      "phase": "redraw",
+      "missing": 0,
+      "stamps": 0,
+      "lines": 0
+    },
+    {
+      "phase": "redraw",
+      "missing": 0,
+      "stamps": 0,
+      "lines": 0
+    },
+    {
+      "phase": "redraw",
+      "missing": 0,
+      "stamps": 0,
+      "lines": 0
+    },
+    {
+      "phase": "redraw",
+      "missing": 0,
+      "stamps": 0,
+      "lines": 0
+    },
+    {
+      "phase": "redraw",
+      "missing": 0,
+      "stamps": 0,
+      "lines": 0
+    },
+    {
+      "phase": "redraw",
+      "missing": 0,
+      "stamps": 23,
+      "lines": 109268
+    }
+  ],
+  "maxMissingAtYield": 0,
+  "maxMissingDuringPaint": 1,
+  "stallInjected": false,
+  "finalDeviation": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "idle": {
+    "stamps": 0,
+    "strokes": 0
+  },
+  "passed": true
+}

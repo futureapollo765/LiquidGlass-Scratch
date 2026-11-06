@@ -1,0 +1,12 @@
+{
+  "path": "./research/diagnostics/ui_0.4.0/final_studio.sb3",
+  "targets": 2,
+  "blocks": 4672,
+  "assets": 276,
+  "extensions": [
+    "pen"
+  ],
+  "errors": [],
+  "warnings": [],
+  "passed": true
+}

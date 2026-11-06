@@ -1,0 +1,32 @@
+[
+  {
+    "inputSHA256": "2a08612b5a5d40f542f6af28799a3c2572c80073980e13104660846616c021cc",
+    "resultSHA256": "ed8177b1d43aad05ce681fd094e9489f06f43af725b8b909ab81eb99ca9ee404",
+    "jsonBytes": 4135588,
+    "allAssetsUnchanged": 276,
+    "originalPublicExampleArgumentsPreserved": [
+      "Background",
+      "Button",
+      "Menu",
+      "Glass",
+      "Glass",
+      "Glass"
+    ],
+    "logicalGridPixelsVerified": 172800,
+    "uniqueGridRows": 102
+  },
+  {
+    "inputSHA256": "147dca1a28d5f960424a355f49b1bb839d16ee7b9b81afcb624b91124550f57a",
+    "resultSHA256": "f07e0d0343784bb272615a6d8a542c5228aad6147a9b902f7c5132b2fc3d0d59",
+    "jsonBytes": 4267975,
+    "allAssetsUnchanged": 276,
+    "originalPublicExampleArgumentsPreserved": [
+      "Glass",
+      "Background",
+      "Button",
+      "Menu"
+    ],
+    "logicalGridPixelsVerified": 172800,
+    "uniqueGridRows": 102
+  }
+]

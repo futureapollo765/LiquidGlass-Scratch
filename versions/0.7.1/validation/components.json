@@ -1,0 +1,151 @@
+{
+  "project": "/private/tmp/lg071/final.sb3",
+  "sha256": "9c8e6304f8a5c87712364c07d945a3fd7b3e0db6e726d8dcf8bbef30bab7b429",
+  "checks": [
+    {
+      "name": "The default Studio scene creates a sidebar, fixed button and compact menu",
+      "passed": true
+    },
+    {
+      "name": "The sidebar stays fixed and produces no hover, press, drag, or action",
+      "passed": true
+    },
+    {
+      "name": "Button hover expands around its anchor, a horizontal pull deforms it, and releasing the drag cancels activation",
+      "passed": true
+    },
+    {
+      "name": "Each complete button click fires once and switches between both optical backgrounds",
+      "passed": true
+    },
+    {
+      "name": "The launcher animates into a vertical list with two separate hit rows",
+      "passed": true
+    },
+    {
+      "name": "A nested leaf changes the background and emits its full path once",
+      "passed": true
+    },
+    {
+      "name": "An outside press dismisses the reopened menu without choosing another action",
+      "passed": true
+    },
+    {
+      "name": "The Menu finish submenu changes the material actually registered on the same menu slot",
+      "passed": true
+    },
+    {
+      "name": "Dragging the launcher follows the pointer and returns to its configured anchor without selecting",
+      "passed": true
+    },
+    {
+      "name": "Both optical backgrounds use their stored pixels at interior and clipped edge samples",
+      "passed": true
+    },
+    {
+      "name": "Public Button inputs independently configure a circle, capsule, and rounded rectangle",
+      "passed": true
+    },
+    {
+      "name": "A clipped custom label preserves letter case and stays inside its own button",
+      "passed": true
+    },
+    {
+      "name": "An identical prepared frame retains the existing UI art without stamping again",
+      "passed": true
+    },
+    {
+      "name": "A stage mouse-down and release wholly inside a native strip stamp activates the button once",
+      "passed": true
+    },
+    {
+      "name": "Native labels and icons stamp above the glass strokes and restored backdrop",
+      "passed": true
+    },
+    {
+      "name": "A native sprite import delivers Button and nested Menu broadcasts to another sprite (compiler)",
+      "passed": true
+    },
+    {
+      "name": "A native sprite import delivers Button and nested Menu broadcasts to another sprite (interpreter)",
+      "passed": true
+    }
+  ],
+  "observations": {
+    "openMenu": {
+      "earlyHeight": 41.45331021863558,
+      "settledHeight": 136,
+      "rows": [
+        {
+          "index": 1,
+          "label": "Background",
+          "path": "Background",
+          "role": "submenu"
+        },
+        {
+          "index": 2,
+          "label": "Detail",
+          "path": "Detail",
+          "role": "submenu"
+        }
+      ]
+    },
+    "menuFinishes": [
+      {
+        "name": "Smoked",
+        "color": "#292A32",
+        "transparency": 46,
+        "brightness": -12,
+        "blur": 12
+      },
+      {
+        "name": "Clear",
+        "color": "#FFFFFF",
+        "transparency": 100,
+        "brightness": 0,
+        "blur": 0
+      },
+      {
+        "name": "Frosted",
+        "color": "#414B59",
+        "transparency": 66,
+        "brightness": 4,
+        "blur": 6
+      }
+    ],
+    "menuAnchor": {
+      "anchor": [
+        120,
+        102
+      ],
+      "pulled": [
+        131.93195426430688,
+        95.44673580321681
+      ]
+    },
+    "clippedLabel": "MiXeD…",
+    "busyClick": {
+      "frame": 0,
+      "costume": "LG strip 1 1",
+      "x": 67,
+      "y": -96
+    },
+    "foregroundStamps": 84,
+    "import_compiler": {
+      "stageScripts": 0,
+      "received": 2,
+      "action": "Detail>Balanced",
+      "path": "Detail>Balanced",
+      "source": 3
+    },
+    "import_interpreter": {
+      "stageScripts": 0,
+      "received": 2,
+      "action": "Detail>Balanced",
+      "path": "Detail>Balanced",
+      "source": 3
+    }
+  },
+  "componentSHA256": "12785b9651513e147c0bc77c384fa4374bf7041e9e564a8500d483fb9878d203",
+  "passed": true
+}

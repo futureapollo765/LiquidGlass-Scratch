@@ -1,0 +1,938 @@
+{
+  "baseline": "ed8177b1d43aad05ce681fd094e9489f06f43af725b8b909ab81eb99ca9ee404",
+  "sha256": "beb5f2b4a7a422e22bcc4a3ed9a3a56a7efee0911f1e96421bf5aa816d77c11c",
+  "effOnlySHA256": "e7b2857989a08167f765998e5a3c9d065ddd5a86d639d7fb671b6f4c7ea1ed8c",
+  "checks": [
+    "Raw Glass, Background, Button and Menu match EffOnly quadratic inward displacements at eight circular lens depths, including above 110 px.",
+    "On the same high-contrast wallpaper, actual native Pen colors follow the restored profile on all four public components.",
+    "A 433.2-pixel displacement past the stage boundary reads the nearest real stage pixel.",
+    "The private layer samples the same strong quadratic profile while its rounded corner normal stays continuous.",
+    "Both backgrounds interpolate individual RGB channels at fractional coordinates and clip to the nearest stage edge; radius one blends the raw and filtered images.",
+    "Twelve public rounded-rectangle and capsule flat-to-arc junctions preserve strong curved displacement and smoothly changing source steps at both ends of every flat side."
+  ],
+  "profiles": {
+    "Glass": [
+      {
+        "x": 44,
+        "prior": 1.5999999999999943,
+        "current": 1.6,
+        "oldRGB": [
+          12,
+          25,
+          179
+        ],
+        "actualRGB": [
+          12,
+          25,
+          179
+        ],
+        "referenceNearest": [
+          12,
+          26,
+          179
+        ]
+      },
+      {
+        "x": 52,
+        "prior": 14.400000000000006,
+        "current": 14.4,
+        "oldRGB": [
+          239,
+          22,
+          178
+        ],
+        "actualRGB": [
+          239,
+          22,
+          178
+        ],
+        "referenceNearest": [
+          240,
+          22,
+          179
+        ]
+      },
+      {
+        "x": 60,
+        "prior": 40,
+        "current": 40,
+        "oldRGB": [
+          12,
+          3,
+          179
+        ],
+        "actualRGB": [
+          12,
+          3,
+          179
+        ],
+        "referenceNearest": [
+          12,
+          4,
+          179
+        ]
+      },
+      {
+        "x": 64,
+        "prior": 57.599999999999994,
+        "current": 57.6,
+        "oldRGB": [
+          11,
+          246,
+          179
+        ],
+        "actualRGB": [
+          11,
+          246,
+          179
+        ],
+        "referenceNearest": [
+          12,
+          246,
+          179
+        ]
+      },
+      {
+        "x": 70,
+        "prior": 90,
+        "current": 90,
+        "oldRGB": [
+          12,
+          220,
+          178
+        ],
+        "actualRGB": [
+          12,
+          220,
+          178
+        ],
+        "referenceNearest": [
+          12,
+          220,
+          179
+        ]
+      },
+      {
+        "x": 74,
+        "prior": 110,
+        "current": 115.6,
+        "oldRGB": [
+          12,
+          204,
+          179
+        ],
+        "actualRGB": [
+          239,
+          197,
+          179
+        ],
+        "referenceNearest": [
+          240,
+          198,
+          179
+        ]
+      },
+      {
+        "x": 76,
+        "prior": 110,
+        "current": 129.6,
+        "oldRGB": [
+          12,
+          206,
+          179
+        ],
+        "actualRGB": [
+          11,
+          186,
+          179
+        ],
+        "referenceNearest": [
+          12,
+          186,
+          179
+        ]
+      },
+      {
+        "x": 78,
+        "prior": 110,
+        "current": 144.4,
+        "oldRGB": [
+          12,
+          208,
+          179
+        ],
+        "actualRGB": [
+          239,
+          174,
+          178
+        ],
+        "referenceNearest": [
+          240,
+          174,
+          179
+        ]
+      }
+    ],
+    "Background": [
+      {
+        "x": 44,
+        "prior": 1.4915254237288136,
+        "current": 1.6,
+        "oldRGB": [
+          12,
+          27,
+          179
+        ],
+        "actualRGB": [
+          12,
+          25,
+          179
+        ],
+        "referenceNearest": [
+          12,
+          26,
+          179
+        ]
+      },
+      {
+        "x": 52,
+        "prior": 8.703296703296704,
+        "current": 14.4,
+        "oldRGB": [
+          12,
+          27,
+          179
+        ],
+        "actualRGB": [
+          239,
+          22,
+          178
+        ],
+        "referenceNearest": [
+          240,
+          22,
+          179
+        ]
+      },
+      {
+        "x": 60,
+        "prior": 14.193548387096774,
+        "current": 40,
+        "oldRGB": [
+          12,
+          29,
+          179
+        ],
+        "actualRGB": [
+          12,
+          3,
+          179
+        ],
+        "referenceNearest": [
+          12,
+          4,
+          179
+        ]
+      },
+      {
+        "x": 64,
+        "prior": 15.91959798994975,
+        "current": 57.6,
+        "oldRGB": [
+          12,
+          32,
+          179
+        ],
+        "actualRGB": [
+          11,
+          246,
+          179
+        ],
+        "referenceNearest": [
+          12,
+          246,
+          179
+        ]
+      },
+      {
+        "x": 70,
+        "prior": 17.678571428571427,
+        "current": 90,
+        "oldRGB": [
+          239,
+          35,
+          179
+        ],
+        "actualRGB": [
+          12,
+          220,
+          178
+        ],
+        "referenceNearest": [
+          12,
+          220,
+          179
+        ]
+      },
+      {
+        "x": 74,
+        "prior": 18.482558139534884,
+        "current": 115.6,
+        "oldRGB": [
+          239,
+          39,
+          179
+        ],
+        "actualRGB": [
+          239,
+          197,
+          179
+        ],
+        "referenceNearest": [
+          240,
+          198,
+          179
+        ]
+      },
+      {
+        "x": 76,
+        "prior": 18.807387862796833,
+        "current": 129.6,
+        "oldRGB": [
+          239,
+          40,
+          179
+        ],
+        "actualRGB": [
+          11,
+          186,
+          179
+        ],
+        "referenceNearest": [
+          12,
+          186,
+          179
+        ]
+      },
+      {
+        "x": 78,
+        "prior": 19.091346153846153,
+        "current": 144.4,
+        "oldRGB": [
+          239,
+          43,
+          179
+        ],
+        "actualRGB": [
+          239,
+          174,
+          178
+        ],
+        "referenceNearest": [
+          240,
+          174,
+          179
+        ]
+      }
+    ],
+    "Button": [
+      {
+        "x": 44,
+        "prior": 1.4915254237288136,
+        "current": 1.6,
+        "oldRGB": [
+          12,
+          27,
+          179
+        ],
+        "actualRGB": [
+          12,
+          25,
+          179
+        ],
+        "referenceNearest": [
+          12,
+          26,
+          179
+        ]
+      },
+      {
+        "x": 52,
+        "prior": 8.703296703296704,
+        "current": 14.4,
+        "oldRGB": [
+          12,
+          27,
+          179
+        ],
+        "actualRGB": [
+          239,
+          22,
+          178
+        ],
+        "referenceNearest": [
+          240,
+          22,
+          179
+        ]
+      },
+      {
+        "x": 60,
+        "prior": 14.193548387096774,
+        "current": 40,
+        "oldRGB": [
+          12,
+          29,
+          179
+        ],
+        "actualRGB": [
+          12,
+          3,
+          179
+        ],
+        "referenceNearest": [
+          12,
+          4,
+          179
+        ]
+      },
+      {
+        "x": 64,
+        "prior": 15.91959798994975,
+        "current": 57.6,
+        "oldRGB": [
+          12,
+          32,
+          179
+        ],
+        "actualRGB": [
+          11,
+          246,
+          179
+        ],
+        "referenceNearest": [
+          12,
+          246,
+          179
+        ]
+      },
+      {
+        "x": 70,
+        "prior": 17.678571428571427,
+        "current": 90,
+        "oldRGB": [
+          239,
+          35,
+          179
+        ],
+        "actualRGB": [
+          12,
+          220,
+          178
+        ],
+        "referenceNearest": [
+          12,
+          220,
+          179
+        ]
+      },
+      {
+        "x": 74,
+        "prior": 18.482558139534884,
+        "current": 115.6,
+        "oldRGB": [
+          239,
+          39,
+          179
+        ],
+        "actualRGB": [
+          239,
+          197,
+          179
+        ],
+        "referenceNearest": [
+          240,
+          198,
+          179
+        ]
+      },
+      {
+        "x": 76,
+        "prior": 18.807387862796833,
+        "current": 129.6,
+        "oldRGB": [
+          239,
+          40,
+          179
+        ],
+        "actualRGB": [
+          11,
+          186,
+          179
+        ],
+        "referenceNearest": [
+          12,
+          186,
+          179
+        ]
+      },
+      {
+        "x": 78,
+        "prior": 19.091346153846153,
+        "current": 144.4,
+        "oldRGB": [
+          239,
+          43,
+          179
+        ],
+        "actualRGB": [
+          239,
+          174,
+          178
+        ],
+        "referenceNearest": [
+          240,
+          174,
+          179
+        ]
+      }
+    ],
+    "Menu": [
+      {
+        "x": 44,
+        "prior": 1.4915254237288136,
+        "current": 1.6,
+        "oldRGB": [
+          12,
+          27,
+          179
+        ],
+        "actualRGB": [
+          12,
+          25,
+          179
+        ],
+        "referenceNearest": [
+          12,
+          26,
+          179
+        ]
+      },
+      {
+        "x": 52,
+        "prior": 8.703296703296704,
+        "current": 14.4,
+        "oldRGB": [
+          12,
+          27,
+          179
+        ],
+        "actualRGB": [
+          239,
+          22,
+          178
+        ],
+        "referenceNearest": [
+          240,
+          22,
+          179
+        ]
+      },
+      {
+        "x": 60,
+        "prior": 14.193548387096774,
+        "current": 40,
+        "oldRGB": [
+          12,
+          29,
+          179
+        ],
+        "actualRGB": [
+          12,
+          3,
+          179
+        ],
+        "referenceNearest": [
+          12,
+          4,
+          179
+        ]
+      },
+      {
+        "x": 64,
+        "prior": 15.91959798994975,
+        "current": 57.6,
+        "oldRGB": [
+          12,
+          32,
+          179
+        ],
+        "actualRGB": [
+          11,
+          246,
+          179
+        ],
+        "referenceNearest": [
+          12,
+          246,
+          179
+        ]
+      },
+      {
+        "x": 70,
+        "prior": 17.678571428571427,
+        "current": 90,
+        "oldRGB": [
+          239,
+          35,
+          179
+        ],
+        "actualRGB": [
+          12,
+          220,
+          178
+        ],
+        "referenceNearest": [
+          12,
+          220,
+          179
+        ]
+      },
+      {
+        "x": 74,
+        "prior": 18.482558139534884,
+        "current": 115.6,
+        "oldRGB": [
+          239,
+          39,
+          179
+        ],
+        "actualRGB": [
+          239,
+          197,
+          179
+        ],
+        "referenceNearest": [
+          240,
+          198,
+          179
+        ]
+      },
+      {
+        "x": 76,
+        "prior": 18.807387862796833,
+        "current": 129.6,
+        "oldRGB": [
+          239,
+          40,
+          179
+        ],
+        "actualRGB": [
+          11,
+          186,
+          179
+        ],
+        "referenceNearest": [
+          12,
+          186,
+          179
+        ]
+      },
+      {
+        "x": 78,
+        "prior": 19.091346153846153,
+        "current": 144.4,
+        "oldRGB": [
+          239,
+          43,
+          179
+        ],
+        "actualRGB": [
+          239,
+          174,
+          178
+        ],
+        "referenceNearest": [
+          240,
+          174,
+          179
+        ]
+      }
+    ]
+  },
+  "private": {
+    "edgeDisplacement": 143.9774809952761,
+    "cornerChangeOverPoint02": 0.09328407365570904
+  },
+  "extendedReach": {
+    "displacement": 433.20000000000005,
+    "clampedStageX": -240
+  },
+  "publicTangencies": [
+    {
+      "shape": "rounded rectangle",
+      "face": "horizontal",
+      "signX": -1,
+      "signY": -1,
+      "sourceAtTangency": [
+        -36.373779198930265,
+        85.98492719202741
+      ],
+      "incomingSourceStep": [
+        1.6471796080299441,
+        -0.20647508230246103
+      ],
+      "outgoingSourceStep": [
+        1.9753918144957652,
+        -0.1295311323649173
+      ],
+      "sourceStepChange": 0.337110699778506,
+      "maxAnglePerStagePixel": 1.710303729566693,
+      "curvedDisplacement": 132.16495539228848,
+      "curvedRayDegrees": 29.311539612637468
+    },
+    {
+      "shape": "rounded rectangle",
+      "face": "horizontal",
+      "signX": -1,
+      "signY": 1,
+      "sourceAtTangency": [
+        -36.373779198930265,
+        -85.98492719202738
+      ],
+      "incomingSourceStep": [
+        1.6471796080299441,
+        0.20647508230251788
+      ],
+      "outgoingSourceStep": [
+        1.9753918144957652,
+        0.1295311323648889
+      ],
+      "sourceStepChange": 0.33711069977852537,
+      "maxAnglePerStagePixel": 1.710303729566693,
+      "curvedDisplacement": 132.16495539228848,
+      "curvedRayDegrees": 29.31153961263748
+    },
+    {
+      "shape": "rounded rectangle",
+      "face": "horizontal",
+      "signX": 1,
+      "signY": -1,
+      "sourceAtTangency": [
+        36.373779198930265,
+        85.98492719202741
+      ],
+      "incomingSourceStep": [
+        -1.6471796080299441,
+        -0.20647508230246103
+      ],
+      "outgoingSourceStep": [
+        -1.9753918144957652,
+        -0.1295311323649173
+      ],
+      "sourceStepChange": 0.337110699778506,
+      "maxAnglePerStagePixel": 1.710303729566684,
+      "curvedDisplacement": 132.16495539228848,
+      "curvedRayDegrees": 29.311539612637468
+    },
+    {
+      "shape": "rounded rectangle",
+      "face": "horizontal",
+      "signX": 1,
+      "signY": 1,
+      "sourceAtTangency": [
+        36.373779198930265,
+        -85.98492719202738
+      ],
+      "incomingSourceStep": [
+        -1.6471796080299441,
+        0.20647508230251788
+      ],
+      "outgoingSourceStep": [
+        -1.9753918144957652,
+        0.1295311323648889
+      ],
+      "sourceStepChange": 0.33711069977852537,
+      "maxAnglePerStagePixel": 1.7103037295666823,
+      "curvedDisplacement": 132.16495539228848,
+      "curvedRayDegrees": 29.31153961263748
+    },
+    {
+      "shape": "rounded rectangle",
+      "face": "vertical",
+      "signX": -1,
+      "signY": -1,
+      "sourceAtTangency": [
+        61.984927192027385,
+        -12.373779198930237
+      ],
+      "incomingSourceStep": [
+        -0.20647508230251788,
+        1.6471796080299725
+      ],
+      "outgoingSourceStep": [
+        -0.1295311323648889,
+        1.9753918144957368
+      ],
+      "sourceStepChange": 0.3371106997784701,
+      "maxAnglePerStagePixel": 1.710303729566693,
+      "curvedDisplacement": 132.16495539228848,
+      "curvedRayDegrees": 29.31153961263748
+    },
+    {
+      "shape": "rounded rectangle",
+      "face": "vertical",
+      "signX": -1,
+      "signY": 1,
+      "sourceAtTangency": [
+        61.984927192027385,
+        12.373779198930237
+      ],
+      "incomingSourceStep": [
+        -0.20647508230251788,
+        -1.6471796080299725
+      ],
+      "outgoingSourceStep": [
+        -0.1295311323648889,
+        -1.9753918144957368
+      ],
+      "sourceStepChange": 0.3371106997784701,
+      "maxAnglePerStagePixel": 1.710303729566693,
+      "curvedDisplacement": 132.16495539228848,
+      "curvedRayDegrees": 29.31153961263748
+    },
+    {
+      "shape": "rounded rectangle",
+      "face": "vertical",
+      "signX": 1,
+      "signY": -1,
+      "sourceAtTangency": [
+        -61.98492719202741,
+        -12.373779198930237
+      ],
+      "incomingSourceStep": [
+        0.20647508230246103,
+        1.6471796080299725
+      ],
+      "outgoingSourceStep": [
+        0.1295311323649173,
+        1.9753918144957368
+      ],
+      "sourceStepChange": 0.3371106997784506,
+      "maxAnglePerStagePixel": 1.710303729566693,
+      "curvedDisplacement": 132.16495539228848,
+      "curvedRayDegrees": 29.31153961263748
+    },
+    {
+      "shape": "rounded rectangle",
+      "face": "vertical",
+      "signX": 1,
+      "signY": 1,
+      "sourceAtTangency": [
+        -61.98492719202741,
+        12.373779198930237
+      ],
+      "incomingSourceStep": [
+        0.20647508230246103,
+        -1.6471796080299725
+      ],
+      "outgoingSourceStep": [
+        0.1295311323649173,
+        -1.9753918144957368
+      ],
+      "sourceStepChange": 0.3371106997784506,
+      "maxAnglePerStagePixel": 1.710303729566693,
+      "curvedDisplacement": 132.16495539228848,
+      "curvedRayDegrees": 29.31153961263748
+    },
+    {
+      "shape": "capsule",
+      "face": "horizontal",
+      "signX": -1,
+      "signY": -1,
+      "sourceAtTangency": [
+        -35.89411971338268,
+        51.90629425725413
+      ],
+      "incomingSourceStep": [
+        0.08122332797043441,
+        -0.04286610726794038
+      ],
+      "outgoingSourceStep": [
+        0.24610984715599216,
+        0.013523452922072465
+      ],
+      "sourceStepChange": 0.1742622928448733,
+      "maxAnglePerStagePixel": 1.0978160544065103,
+      "curvedDisplacement": 90.47381515308871,
+      "curvedRayDegrees": 29.725388150008275
+    },
+    {
+      "shape": "capsule",
+      "face": "horizontal",
+      "signX": -1,
+      "signY": 1,
+      "sourceAtTangency": [
+        -35.89411971338268,
+        -51.90629425725413
+      ],
+      "incomingSourceStep": [
+        0.08122332797043441,
+        0.04286610726794038
+      ],
+      "outgoingSourceStep": [
+        0.24610984715599216,
+        -0.013523452922072465
+      ],
+      "sourceStepChange": 0.1742622928448733,
+      "maxAnglePerStagePixel": 1.0978160544065103,
+      "curvedDisplacement": 90.47381515308871,
+      "curvedRayDegrees": 29.725388150008275
+    },
+    {
+      "shape": "capsule",
+      "face": "horizontal",
+      "signX": 1,
+      "signY": -1,
+      "sourceAtTangency": [
+        35.89411971338268,
+        51.90629425725413
+      ],
+      "incomingSourceStep": [
+        -0.08122332797040599,
+        -0.04286610726794038
+      ],
+      "outgoingSourceStep": [
+        -0.24610984715599216,
+        0.013523452922072465
+      ],
+      "sourceStepChange": 0.1742622928449002,
+      "maxAnglePerStagePixel": 1.0978160544064908,
+      "curvedDisplacement": 90.47381515308871,
+      "curvedRayDegrees": 29.725388150008275
+    },
+    {
+      "shape": "capsule",
+      "face": "horizontal",
+      "signX": 1,
+      "signY": 1,
+      "sourceAtTangency": [
+        35.89411971338268,
+        -51.90629425725413
+      ],
+      "incomingSourceStep": [
+        -0.08122332797040599,
+        0.04286610726794038
+      ],
+      "outgoingSourceStep": [
+        -0.24610984715599216,
+        -0.013523452922072465
+      ],
+      "sourceStepChange": 0.1742622928449002,
+      "maxAnglePerStagePixel": 1.0978160544064908,
+      "curvedDisplacement": 90.47381515308871,
+      "curvedRayDegrees": 29.725388150008275
+    }
+  ],
+  "passed": true
+}

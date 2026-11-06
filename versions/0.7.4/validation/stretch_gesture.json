@@ -1,0 +1,827 @@
+{
+  "sha256": "dce43901124f2b7b9a85c63805cb656f526460b67ccae16985a34fd076274a39",
+  "checks": [
+    "Capsule, circular and rectangular Buttons and a capsule Menu follow both signs of cursor travel.",
+    "Both contour borders follow directional input through reversals.",
+    "Buttons and Menus shrink partway on return, recover their pressed size at the exact off-center press point, and stretch equally on the opposite side.",
+    "A small circle and short launcher lose stretch on each inward step of a 120, 80, 60 pixel pull.",
+    "Pure horizontal/vertical gestures leave the other stretch at one; diagonals stretch both axes independently.",
+    "Gesture release returns to the configured center and size and suppresses clicks and menu opening.",
+    "Native Pen centerline endpoints follow computed glass edges in compiled and interpreted Scratch execution.",
+    "A large held pointer step is followed over multiple renders until the bounded contact displacement settles.",
+    "An early reversal redirects both edges immediately even when the new absolute target remains ahead; holding that pointer sample continues in the new direction."
+  ],
+  "observations": [
+    {
+      "id": 2,
+      "axis": "x",
+      "sign": 1,
+      "pressed": 142.55999999999997,
+      "peak": 168.3368908074976,
+      "firstPaint": [
+        -68,
+        76
+      ],
+      "lastPaint": [
+        -68,
+        72
+      ]
+    },
+    {
+      "id": 2,
+      "axis": "x",
+      "sign": -1,
+      "pressed": 142.55999999999997,
+      "peak": 168.3368908074976,
+      "firstPaint": [
+        -76,
+        68
+      ],
+      "lastPaint": [
+        -72,
+        68
+      ]
+    },
+    {
+      "id": 2,
+      "axis": "y",
+      "sign": 1,
+      "pressed": 47.519999999999996,
+      "peak": 62.11304667157808
+    },
+    {
+      "id": 2,
+      "axis": "x",
+      "sign": 1,
+      "pressed": 51.04000000000002,
+      "peak": 69.13053256127098,
+      "firstPaint": [
+        -24,
+        28
+      ],
+      "lastPaint": [
+        -24,
+        28
+      ]
+    },
+    {
+      "id": 2,
+      "axis": "x",
+      "sign": -1,
+      "pressed": 51.04000000000002,
+      "peak": 69.13053256127093,
+      "firstPaint": [
+        -28,
+        24
+      ],
+      "lastPaint": [
+        -28,
+        24
+      ]
+    },
+    {
+      "id": 2,
+      "axis": "y",
+      "sign": 1,
+      "pressed": 51.04000000000002,
+      "peak": 66.07503441803382
+    },
+    {
+      "id": 2,
+      "axis": "x",
+      "sign": 1,
+      "pressed": 142.55999999999997,
+      "peak": 168.3368908074975,
+      "firstPaint": [
+        -68,
+        76
+      ],
+      "lastPaint": [
+        -68,
+        72
+      ]
+    },
+    {
+      "id": 2,
+      "axis": "x",
+      "sign": -1,
+      "pressed": 142.55999999999997,
+      "peak": 168.33689080749747,
+      "firstPaint": [
+        -76,
+        68
+      ],
+      "lastPaint": [
+        -72,
+        68
+      ]
+    },
+    {
+      "id": 2,
+      "axis": "y",
+      "sign": 1,
+      "pressed": 47.519999999999996,
+      "peak": 62.1130466715779
+    },
+    {
+      "id": 3,
+      "axis": "x",
+      "sign": 1,
+      "pressed": 136.39999999999998,
+      "peak": 162.17689080749707,
+      "firstPaint": [
+        -64,
+        72
+      ],
+      "lastPaint": [
+        -64,
+        68
+      ]
+    },
+    {
+      "id": 3,
+      "axis": "x",
+      "sign": -1,
+      "pressed": 136.39999999999998,
+      "peak": 162.17689080749747,
+      "firstPaint": [
+        -72,
+        64
+      ],
+      "lastPaint": [
+        -68,
+        64
+      ]
+    },
+    {
+      "id": 3,
+      "axis": "y",
+      "sign": 1,
+      "pressed": 44,
+      "peak": 58.008899281700174
+    },
+    {
+      "id": 2,
+      "axis": "x",
+      "sign": 1,
+      "pressed": 142.55999999999997,
+      "peak": 165.94846173543638,
+      "firstPaint": [
+        -68,
+        76
+      ],
+      "lastPaint": [
+        -72,
+        68
+      ]
+    }
+  ],
+  "heldReturns": [
+    {
+      "compiler": true,
+      "id": 2,
+      "shape": "capsule",
+      "axis": "x",
+      "sign": 1,
+      "press": [
+        -26,
+        -66
+      ],
+      "baseline": 142.55999999999997,
+      "samples": [
+        {
+          "d": 64,
+          "earlyExtent": 160.55824908611072,
+          "extent": 165.15310344827583,
+          "center": 16.735632183908045
+        },
+        {
+          "d": 18,
+          "earlyExtent": 156.02930589517817,
+          "extent": 153.70005037783372,
+          "center": 8.251889168765743
+        },
+        {
+          "d": 0,
+          "earlyExtent": 144.82559884482072,
+          "extent": 142.55999999999997,
+          "center": 0
+        },
+        {
+          "d": -18,
+          "earlyExtent": 151.43445153301298,
+          "extent": 153.70005037783372,
+          "center": -8.251889168765743
+        },
+        {
+          "d": -64,
+          "earlyExtent": 162.82384793093132,
+          "extent": 165.15310344827583,
+          "center": -16.735632183908045
+        },
+        {
+          "d": 0,
+          "earlyExtent": 147.1548543621652,
+          "extent": 142.55999999999997,
+          "center": 0
+        }
+      ]
+    },
+    {
+      "compiler": true,
+      "id": 2,
+      "shape": "capsule",
+      "axis": "y",
+      "sign": -1,
+      "press": [
+        0,
+        -57
+      ],
+      "baseline": 47.519999999999996,
+      "samples": [
+        {
+          "d": 64,
+          "earlyExtent": 61.51086426553946,
+          "extent": 63.35062410003025,
+          "center": -79.50649350649351
+        },
+        {
+          "d": 18,
+          "earlyExtent": 59.16689246258197,
+          "extent": 57.48529968454259,
+          "center": -73.38170347003154
+        },
+        {
+          "d": 0,
+          "earlyExtent": 49.546684861184765,
+          "extent": 47.519999999999996,
+          "center": -66
+        },
+        {
+          "d": -18,
+          "earlyExtent": 55.45861482335773,
+          "extent": 57.48529968454259,
+          "center": -58.618296529968454
+        },
+        {
+          "d": -64,
+          "earlyExtent": 62.62819380201002,
+          "extent": 63.35062410003025,
+          "center": -52.493506493506494
+        },
+        {
+          "d": 0,
+          "earlyExtent": 51.22827763922424,
+          "extent": 47.519999999999996,
+          "center": -66
+        }
+      ]
+    },
+    {
+      "compiler": true,
+      "id": 2,
+      "shape": "circle",
+      "axis": "x",
+      "sign": 1,
+      "press": [
+        -9,
+        -66
+      ],
+      "baseline": 51.04000000000002,
+      "samples": [
+        {
+          "d": 64,
+          "earlyExtent": 67.11478447059949,
+          "extent": 68.50649036240655,
+          "center": 16.735632183908045
+        },
+        {
+          "d": 18,
+          "earlyExtent": 64.45763331638636,
+          "extent": 62.18005037783377,
+          "center": 8.251889168765743
+        },
+        {
+          "d": 0,
+          "earlyExtent": 53.30559884482078,
+          "extent": 51.04000000000002,
+          "center": 0
+        },
+        {
+          "d": -18,
+          "earlyExtent": 59.914451533013015,
+          "extent": 62.18005037783377,
+          "center": -8.251889168765743
+        },
+        {
+          "d": -64,
+          "earlyExtent": 67.89768527453064,
+          "extent": 68.50649036240655,
+          "center": -16.735632183908045
+        },
+        {
+          "d": 0,
+          "earlyExtent": 55.634854362165235,
+          "extent": 51.04000000000002,
+          "center": 0
+        }
+      ],
+      "longPull": [
+        {
+          "d": 120,
+          "earlyExtent": 68.40451025825185,
+          "extent": 69.44340600572114,
+          "center": 20.60377358490566
+        },
+        {
+          "d": 80,
+          "earlyExtent": 69.0364816023365,
+          "extent": 68.91641741538318,
+          "center": 18.2
+        },
+        {
+          "d": 60,
+          "earlyExtent": 68.49084321485972,
+          "extent": 68.36693133549375,
+          "center": 16.29850746268657
+        },
+        {
+          "d": 0,
+          "earlyExtent": 55.51483950942253,
+          "extent": 51.04000000000002,
+          "center": 0
+        }
+      ]
+    },
+    {
+      "compiler": true,
+      "id": 2,
+      "shape": "circle",
+      "axis": "y",
+      "sign": -1,
+      "press": [
+        0,
+        -57
+      ],
+      "baseline": 51.04000000000002,
+      "samples": [
+        {
+          "d": 64,
+          "earlyExtent": 65.34582900941388,
+          "extent": 67.5997355663176,
+          "center": -79.50649350649351
+        },
+        {
+          "d": 18,
+          "earlyExtent": 62.68689246258183,
+          "extent": 61.005299684542614,
+          "center": -73.38170347003154
+        },
+        {
+          "d": 0,
+          "earlyExtent": 53.06668486118469,
+          "extent": 51.04000000000002,
+          "center": -66
+        },
+        {
+          "d": -18,
+          "earlyExtent": 58.97861482335793,
+          "extent": 61.005299684542614,
+          "center": -58.618296529968454
+        },
+        {
+          "d": -64,
+          "earlyExtent": 66.70539181646286,
+          "extent": 67.5997355663176,
+          "center": -52.493506493506494
+        },
+        {
+          "d": 0,
+          "earlyExtent": 54.74827763922392,
+          "extent": 51.04000000000002,
+          "center": -66
+        }
+      ]
+    },
+    {
+      "compiler": true,
+      "id": 2,
+      "shape": "rectangle",
+      "axis": "x",
+      "sign": 1,
+      "press": [
+        -26,
+        -66
+      ],
+      "baseline": 142.55999999999997,
+      "samples": [
+        {
+          "d": 64,
+          "earlyExtent": 160.55824908611106,
+          "extent": 165.15310344827583,
+          "center": 16.735632183908045
+        },
+        {
+          "d": 18,
+          "earlyExtent": 156.02930589517797,
+          "extent": 153.70005037783372,
+          "center": 8.251889168765743
+        },
+        {
+          "d": 0,
+          "earlyExtent": 144.82559884482052,
+          "extent": 142.55999999999997,
+          "center": 0
+        },
+        {
+          "d": -18,
+          "earlyExtent": 151.43445153301363,
+          "extent": 153.70005037783372,
+          "center": -8.251889168765743
+        },
+        {
+          "d": -64,
+          "earlyExtent": 162.8238479309316,
+          "extent": 165.15310344827583,
+          "center": -16.735632183908045
+        },
+        {
+          "d": 0,
+          "earlyExtent": 147.15485436216477,
+          "extent": 142.55999999999997,
+          "center": 0
+        }
+      ]
+    },
+    {
+      "compiler": true,
+      "id": 2,
+      "shape": "rectangle",
+      "axis": "y",
+      "sign": -1,
+      "press": [
+        0,
+        -57
+      ],
+      "baseline": 47.519999999999996,
+      "samples": [
+        {
+          "d": 64,
+          "earlyExtent": 61.51086426554018,
+          "extent": 63.35062410003025,
+          "center": -79.50649350649351
+        },
+        {
+          "d": 18,
+          "earlyExtent": 59.16689246258181,
+          "extent": 57.48529968454259,
+          "center": -73.38170347003154
+        },
+        {
+          "d": 0,
+          "earlyExtent": 49.546684861184666,
+          "extent": 47.519999999999996,
+          "center": -66
+        },
+        {
+          "d": -18,
+          "earlyExtent": 55.458614823358296,
+          "extent": 57.48529968454259,
+          "center": -58.618296529968454
+        },
+        {
+          "d": -64,
+          "earlyExtent": 62.62819380201006,
+          "extent": 63.35062410003025,
+          "center": -52.493506493506494
+        },
+        {
+          "d": 0,
+          "earlyExtent": 51.22827763922389,
+          "extent": 47.519999999999996,
+          "center": -66
+        }
+      ]
+    },
+    {
+      "compiler": true,
+      "id": 3,
+      "shape": "capsule",
+      "axis": "x",
+      "sign": 1,
+      "press": [
+        -25,
+        78
+      ],
+      "baseline": 136.39999999999998,
+      "samples": [
+        {
+          "d": 64,
+          "earlyExtent": 154.3982490861085,
+          "extent": 158.99310344827586,
+          "center": 16.735632183908045
+        },
+        {
+          "d": 18,
+          "earlyExtent": 149.8693058951784,
+          "extent": 147.54005037783372,
+          "center": 8.251889168765743
+        },
+        {
+          "d": 0,
+          "earlyExtent": 138.66559884482095,
+          "extent": 136.39999999999998,
+          "center": 0
+        },
+        {
+          "d": -18,
+          "earlyExtent": 145.27445153301193,
+          "extent": 147.54005037783372,
+          "center": -8.251889168765743
+        },
+        {
+          "d": -64,
+          "earlyExtent": 156.66384793093115,
+          "extent": 158.99310344827586,
+          "center": -16.735632183908045
+        },
+        {
+          "d": 0,
+          "earlyExtent": 140.99485436216563,
+          "extent": 136.39999999999998,
+          "center": 0
+        }
+      ]
+    },
+    {
+      "compiler": true,
+      "id": 3,
+      "shape": "capsule",
+      "axis": "y",
+      "sign": -1,
+      "press": [
+        0,
+        86
+      ],
+      "baseline": 44,
+      "samples": [
+        {
+          "d": 64,
+          "earlyExtent": 57.52541959827098,
+          "extent": 58.99096844907226,
+          "center": 64.49350649350649
+        },
+        {
+          "d": 18,
+          "earlyExtent": 55.60307186817609,
+          "extent": 53.965299684542586,
+          "center": 70.61829652996846
+        },
+        {
+          "d": 0,
+          "earlyExtent": 46.02668486118581,
+          "extent": 44,
+          "center": 78
+        },
+        {
+          "d": -18,
+          "earlyExtent": 51.93861482335678,
+          "extent": 53.965299684542586,
+          "center": 85.38170347003154
+        },
+        {
+          "d": -64,
+          "earlyExtent": 58.419565407751016,
+          "extent": 58.99096844907226,
+          "center": 91.50649350649351
+        },
+        {
+          "d": 0,
+          "earlyExtent": 47.70827763922597,
+          "extent": 44,
+          "center": 78
+        }
+      ],
+      "longPull": [
+        {
+          "d": 120,
+          "earlyExtent": 58.62658019105867,
+          "extent": 59.81565865443676,
+          "center": 62.08163265306122
+        },
+        {
+          "d": 80,
+          "earlyExtent": 59.451849169268726,
+          "extent": 59.34835103409726,
+          "center": 63.55555555555556
+        },
+        {
+          "d": 60,
+          "earlyExtent": 58.97563309413603,
+          "extent": 58.87049660832426,
+          "center": 64.77966101694915
+        },
+        {
+          "d": 0,
+          "earlyExtent": 47.62971243500508,
+          "extent": 44,
+          "center": 78
+        }
+      ]
+    },
+    {
+      "compiler": false,
+      "id": 2,
+      "shape": "capsule",
+      "axis": "x",
+      "sign": -1,
+      "press": [
+        26,
+        -66
+      ],
+      "baseline": 142.55999999999997,
+      "samples": [
+        {
+          "d": 64,
+          "earlyExtent": 160.55824908611083,
+          "extent": 165.15310344827583,
+          "center": -16.735632183908045
+        },
+        {
+          "d": 18,
+          "earlyExtent": 156.02930589517808,
+          "extent": 153.70005037783372,
+          "center": -8.251889168765743
+        },
+        {
+          "d": 0,
+          "earlyExtent": 144.82559884482063,
+          "extent": 142.55999999999997,
+          "center": 0
+        },
+        {
+          "d": -18,
+          "earlyExtent": 151.4344515330131,
+          "extent": 153.70005037783372,
+          "center": 8.251889168765743
+        },
+        {
+          "d": -64,
+          "earlyExtent": 162.8238479309315,
+          "extent": 165.15310344827583,
+          "center": 16.735632183908045
+        },
+        {
+          "d": 0,
+          "earlyExtent": 147.15485436216497,
+          "extent": 142.55999999999997,
+          "center": 0
+        }
+      ]
+    },
+    {
+      "compiler": false,
+      "id": 3,
+      "shape": "capsule",
+      "axis": "y",
+      "sign": 1,
+      "press": [
+        0,
+        70
+      ],
+      "baseline": 44,
+      "samples": [
+        {
+          "d": 64,
+          "earlyExtent": 57.52541959827169,
+          "extent": 58.99096844907226,
+          "center": 91.50649350649351
+        },
+        {
+          "d": 18,
+          "earlyExtent": 55.603071868175945,
+          "extent": 53.965299684542586,
+          "center": 85.38170347003154
+        },
+        {
+          "d": 0,
+          "earlyExtent": 46.02668486118486,
+          "extent": 44,
+          "center": 78
+        },
+        {
+          "d": -18,
+          "earlyExtent": 51.938614823357725,
+          "extent": 53.965299684542586,
+          "center": 70.61829652996846
+        },
+        {
+          "d": -64,
+          "earlyExtent": 58.41956540775107,
+          "extent": 58.99096844907226,
+          "center": 64.49350649350649
+        },
+        {
+          "d": 0,
+          "earlyExtent": 47.70827763922425,
+          "extent": 44,
+          "center": 78
+        }
+      ],
+      "longPull": [
+        {
+          "d": -120,
+          "earlyExtent": 58.62658019105924,
+          "extent": 59.81565865443676,
+          "center": 62.08163265306122
+        },
+        {
+          "d": -80,
+          "earlyExtent": 59.451849169268726,
+          "extent": 59.34835103409726,
+          "center": 63.55555555555556
+        },
+        {
+          "d": -60,
+          "earlyExtent": 58.97563309413599,
+          "extent": 58.87049660832426,
+          "center": 64.77966101694915
+        },
+        {
+          "d": 0,
+          "earlyExtent": 47.62971243500374,
+          "extent": 44,
+          "center": 78
+        }
+      ]
+    }
+  ],
+  "stepResponse": [
+    {
+      "id": 2,
+      "sign": -1,
+      "ideal": 19.327433628318587,
+      "first": 7.155652256595699,
+      "second": 15.396732256553003,
+      "held": 19.327433628318587,
+      "interrupted": 7.155652256600229,
+      "reverse": 6.85244665250719,
+      "reverseHeld": 6.503248347424252,
+      "widthAtReversal": 152.22013054641027,
+      "widthAcrossOrigin": 145.52395937531745
+    },
+    {
+      "id": 2,
+      "sign": 1,
+      "ideal": 19.327433628318587,
+      "first": 7.155652256595699,
+      "second": 15.396732256553003,
+      "held": 19.327433628318587,
+      "interrupted": 7.155652256600229,
+      "reverse": 6.85244665250719,
+      "reverseHeld": 6.503248347424252,
+      "widthAtReversal": 152.22013054641027,
+      "widthAcrossOrigin": 145.52395937531745
+    },
+    {
+      "id": 3,
+      "sign": -1,
+      "ideal": 19.327433628318587,
+      "first": 7.155652256595699,
+      "second": 15.396732256553003,
+      "held": 19.327433628318587,
+      "interrupted": 7.155652256600229,
+      "reverse": 6.85244665250719,
+      "reverseHeld": 6.503248347424252,
+      "widthAtReversal": 146.06013054641028,
+      "widthAcrossOrigin": 139.36395937531745
+    },
+    {
+      "id": 3,
+      "sign": 1,
+      "ideal": 19.327433628318587,
+      "first": 7.155652256595699,
+      "second": 15.396732256553003,
+      "held": 19.327433628318587,
+      "interrupted": 7.155652256600229,
+      "reverse": 6.852446652506998,
+      "reverseHeld": 6.50324834742419,
+      "widthAtReversal": 146.06013054641028,
+      "widthAcrossOrigin": 139.36395937531745
+    },
+    {
+      "id": 2,
+      "sign": 1,
+      "ideal": 19.327433628318587,
+      "first": 7.155652256601076,
+      "second": 15.39673225655483,
+      "held": 19.327433628318587,
+      "interrupted": 7.155652256600796,
+      "reverse": 6.8524466525075525,
+      "reverseHeld": 6.503248347424745,
+      "widthAtReversal": 152.22013054641107,
+      "widthAcrossOrigin": 145.5239593753179
+    }
+  ],
+  "passed": true
+}

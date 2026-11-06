@@ -1,0 +1,1419 @@
+{
+  "status": "passed",
+  "version": "0.2.0",
+  "scope": "Independent formula oracles for axis-aligned pulling, bounded pairs and the n-ary geometry/optical group fold. Actual Scratch execution is tested separately.",
+  "pull": {
+    "status": "passed",
+    "model": "World-axis diagonal deformation matrix diag(scaleX,scaleY); no rotation, shear, taper or center shift. Each pull channel stretches its own axis; reciprocal cross-squeeze fades when both channels are active.",
+    "random_inverse_and_axis_matrix_cases": 2500,
+    "max_inverse_error": 2.929642751054232e-14,
+    "max_off_diagonal_transform": 0.0,
+    "max_opposite_point_or_normal_symmetry_error": 0.0,
+    "scale_bounds": [
+      0.6060606060606061,
+      1.65
+    ],
+    "pure_axis_cases": 80,
+    "max_pure_axis_area_factor_error": 0.0,
+    "diagonal_area_is_intentionally_not_preserved": true,
+    "diagonal_cases": [
+      {
+        "pull": [
+          10,
+          10
+        ],
+        "scale_x": 1.25,
+        "scale_y": 1.25,
+        "area_factor": 1.5625
+      },
+      {
+        "pull": [
+          30,
+          15
+        ],
+        "scale_x": 1.65,
+        "scale_y": 1.0377358490566038,
+        "area_factor": 1.712264150943396
+      },
+      {
+        "pull": [
+          15,
+          30
+        ],
+        "scale_x": 1.0377358490566038,
+        "scale_y": 1.65,
+        "area_factor": 1.712264150943396
+      },
+      {
+        "pull": [
+          -30,
+          15
+        ],
+        "scale_x": 1.65,
+        "scale_y": 1.0377358490566038,
+        "area_factor": 1.712264150943396
+      },
+      {
+        "pull": [
+          30,
+          -15
+        ],
+        "scale_x": 1.65,
+        "scale_y": 1.0377358490566038,
+        "area_factor": 1.712264150943396
+      },
+      {
+        "pull": [
+          300,
+          300
+        ],
+        "scale_x": 1.65,
+        "scale_y": 1.65,
+        "area_factor": 2.7224999999999997
+      }
+    ],
+    "contour_samples": 2400,
+    "max_axis_aligned_ellipse_equation_residual": 6.8833827526759706e-15,
+    "max_forward_contour_distance_error": 4.39648317751562e-13,
+    "max_normal_gradient_alignment_error": 2.220446049250313e-16,
+    "max_polygon_area_factor_error": 2.220446049250313e-16,
+    "two_amplitude_bounds_corner_samples": 10000,
+    "max_extent_outside_two_amplitude_bounds": 0,
+    "one_amplitude_bounds_also_sufficient_for_axis_formula": true,
+    "zero_pull_identity": true,
+    "shape_cases": [
+      {
+        "shape": "circle",
+        "pull": [
+          26,
+          0
+        ],
+        "scale_x": 1.65,
+        "scale_y": 0.6060606060606061,
+        "area_factor": 1.0
+      },
+      {
+        "shape": "circle",
+        "pull": [
+          0,
+          26
+        ],
+        "scale_x": 0.6060606060606061,
+        "scale_y": 1.65,
+        "area_factor": 1.0
+      },
+      {
+        "shape": "circle",
+        "pull": [
+          26,
+          26
+        ],
+        "scale_x": 1.65,
+        "scale_y": 1.65,
+        "area_factor": 2.7224999999999997
+      },
+      {
+        "shape": "circle",
+        "pull": [
+          30,
+          10
+        ],
+        "scale_x": 1.65,
+        "scale_y": 0.8437499999999999,
+        "area_factor": 1.3921874999999997
+      },
+      {
+        "shape": "circle",
+        "pull": [
+          -10,
+          30
+        ],
+        "scale_x": 0.8437499999999999,
+        "scale_y": 1.65,
+        "area_factor": 1.3921874999999997
+      },
+      {
+        "shape": "rounded_rectangle",
+        "pull": [
+          26,
+          0
+        ],
+        "scale_x": 1.3714285714285714,
+        "scale_y": 0.7291666666666666,
+        "area_factor": 1.0
+      },
+      {
+        "shape": "rounded_rectangle",
+        "pull": [
+          0,
+          26
+        ],
+        "scale_x": 0.6060606060606061,
+        "scale_y": 1.65,
+        "area_factor": 1.0
+      },
+      {
+        "shape": "rounded_rectangle",
+        "pull": [
+          26,
+          26
+        ],
+        "scale_x": 1.3714285714285714,
+        "scale_y": 1.65,
+        "area_factor": 2.262857142857143
+      },
+      {
+        "shape": "rounded_rectangle",
+        "pull": [
+          30,
+          10
+        ],
+        "scale_x": 1.4285714285714286,
+        "scale_y": 0.9759036144578312,
+        "area_factor": 1.3941480206540446
+      },
+      {
+        "shape": "rounded_rectangle",
+        "pull": [
+          -10,
+          30
+        ],
+        "scale_x": 0.7714285714285714,
+        "scale_y": 1.65,
+        "area_factor": 1.2728571428571427
+      },
+      {
+        "shape": "horizontal_capsule",
+        "pull": [
+          26,
+          0
+        ],
+        "scale_x": 1.325,
+        "scale_y": 0.7547169811320755,
+        "area_factor": 1.0
+      },
+      {
+        "shape": "horizontal_capsule",
+        "pull": [
+          0,
+          26
+        ],
+        "scale_x": 0.6060606060606061,
+        "scale_y": 1.65,
+        "area_factor": 1.0
+      },
+      {
+        "shape": "horizontal_capsule",
+        "pull": [
+          26,
+          26
+        ],
+        "scale_x": 1.325,
+        "scale_y": 1.65,
+        "area_factor": 2.18625
+      },
+      {
+        "shape": "horizontal_capsule",
+        "pull": [
+          30,
+          10
+        ],
+        "scale_x": 1.375,
+        "scale_y": 1.173913043478261,
+        "area_factor": 1.6141304347826089
+      },
+      {
+        "shape": "horizontal_capsule",
+        "pull": [
+          -10,
+          30
+        ],
+        "scale_x": 0.7593749999999999,
+        "scale_y": 1.65,
+        "area_factor": 1.2529687499999997
+      },
+      {
+        "shape": "vertical_capsule",
+        "pull": [
+          26,
+          0
+        ],
+        "scale_x": 1.65,
+        "scale_y": 0.6060606060606061,
+        "area_factor": 1.0
+      },
+      {
+        "shape": "vertical_capsule",
+        "pull": [
+          0,
+          26
+        ],
+        "scale_x": 0.6976744186046512,
+        "scale_y": 1.4333333333333333,
+        "area_factor": 1.0
+      },
+      {
+        "shape": "vertical_capsule",
+        "pull": [
+          26,
+          26
+        ],
+        "scale_x": 1.65,
+        "scale_y": 1.4333333333333333,
+        "area_factor": 2.3649999999999998
+      },
+      {
+        "shape": "vertical_capsule",
+        "pull": [
+          30,
+          10
+        ],
+        "scale_x": 1.65,
+        "scale_y": 0.7875,
+        "area_factor": 1.299375
+      },
+      {
+        "shape": "vertical_capsule",
+        "pull": [
+          -10,
+          30
+        ],
+        "scale_x": 1.1858108108108107,
+        "scale_y": 1.5,
+        "area_factor": 1.7787162162162162
+      }
+    ]
+  },
+  "nary": {
+    "version": "0.2.0",
+    "model": "Per-group ordered polynomial smooth union with K=2join_j*(1-product_i(1-Kij/(2join_j))); same h blends all seven optics. Group0 and join0 isolated; different groups hard union. Pair gates use attenuated reach for their edge band.",
+    "cases": [
+      {
+        "shapes": [
+          {
+            "name": "rectangle",
+            "x": -35,
+            "y": 0,
+            "w": 130,
+            "h": 80,
+            "r": 18,
+            "join": 30,
+            "group": 1
+          },
+          {
+            "name": "circle",
+            "x": 40,
+            "y": 10,
+            "w": 70,
+            "h": 70,
+            "r": 35,
+            "join": 30,
+            "group": 1
+          },
+          {
+            "name": "capsule",
+            "x": 10,
+            "y": -35,
+            "w": 120,
+            "h": 38,
+            "r": 19,
+            "join": 30,
+            "group": 1
+          }
+        ],
+        "winner_switch": {
+          "x": 27.83096047272784,
+          "y": -19.0,
+          "direction": [
+            1,
+            0
+          ],
+          "pairs": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ]
+          ],
+          "field": -17.8676038720481,
+          "pair_bands": [
+            18.721224367120058,
+            13.537712522935756
+          ],
+          "limiting_band_jump": 5.183511844184302,
+          "score": 1.408509194245871
+        },
+        "one_sided_samples": [
+          {
+            "offset": 0.1,
+            "pairwise_band_jump": 5.1837615318660575,
+            "nary_band_difference": 0.008072143158875278,
+            "pairwise_D_difference": 0.009600763310629645,
+            "nary_D_difference": 0.03625859271505405
+          },
+          {
+            "offset": 0.01,
+            "pairwise_band_jump": 5.183535724892803,
+            "nary_band_difference": 0.0008072108841350456,
+            "pairwise_D_difference": 0.0009534861025457531,
+            "nary_D_difference": 0.0036258289330959315
+          },
+          {
+            "offset": 0.001,
+            "pairwise_band_jump": 5.183514221381618,
+            "nary_band_difference": 8.072108498247133e-05,
+            "pairwise_D_difference": 9.528303764838597e-05,
+            "nary_D_difference": 0.00036258286297652376
+          },
+          {
+            "offset": 0.0001,
+            "pairwise_band_jump": 5.183512081795305,
+            "nary_band_difference": 8.07210849629314e-06,
+            "pairwise_D_difference": 9.527648455076587e-06,
+            "nary_D_difference": 3.625828627207284e-05
+          },
+          {
+            "offset": 1e-05,
+            "pairwise_band_jump": 5.183511867944317,
+            "nary_band_difference": 8.072108492740426e-07,
+            "pairwise_D_difference": 9.527583806345774e-07,
+            "nary_D_difference": 3.6258286328916256e-06
+          }
+        ],
+        "orders_at_switch": [
+          {
+            "order": [
+              "rectangle",
+              "circle",
+              "capsule"
+            ],
+            "D": -26.35205944802101,
+            "band": 15.253315945516649
+          },
+          {
+            "order": [
+              "rectangle",
+              "capsule",
+              "circle"
+            ],
+            "D": -26.323187733699374,
+            "band": 15.760673773285989
+          },
+          {
+            "order": [
+              "circle",
+              "rectangle",
+              "capsule"
+            ],
+            "D": -26.35205944802101,
+            "band": 15.253315945516649
+          },
+          {
+            "order": [
+              "circle",
+              "capsule",
+              "rectangle"
+            ],
+            "D": -26.045175543356194,
+            "band": 15.923450963358444
+          },
+          {
+            "order": [
+              "capsule",
+              "rectangle",
+              "circle"
+            ],
+            "D": -26.323187733699374,
+            "band": 15.760673773285989
+          },
+          {
+            "order": [
+              "capsule",
+              "circle",
+              "rectangle"
+            ],
+            "D": -26.045175543356194,
+            "band": 15.923450963358444
+          }
+        ]
+      },
+      {
+        "shapes": [
+          {
+            "name": "rectangle",
+            "x": -40,
+            "y": 15,
+            "w": 100,
+            "h": 70,
+            "r": 15,
+            "join": 30,
+            "group": 1
+          },
+          {
+            "name": "circle",
+            "x": 35,
+            "y": 15,
+            "w": 70,
+            "h": 70,
+            "r": 35,
+            "join": 30,
+            "group": 1
+          },
+          {
+            "name": "capsule",
+            "x": 0,
+            "y": -35,
+            "w": 100,
+            "h": 36,
+            "r": 18,
+            "join": 30,
+            "group": 1
+          }
+        ],
+        "winner_switch": {
+          "x": 9.0,
+          "y": -8.397197714557024,
+          "direction": [
+            0,
+            1
+          ],
+          "pairs": [
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "field": -11.347857971432878,
+          "pair_bands": [
+            13.901420208400964,
+            17.5
+          ],
+          "limiting_band_jump": 3.598579791599036,
+          "score": 1.3317327226750775
+        },
+        "one_sided_samples": [
+          {
+            "offset": 0.1,
+            "pairwise_band_jump": 3.607356650443279,
+            "nary_band_difference": 0.036810070392199634,
+            "pairwise_D_difference": 0.13055194489779787,
+            "nary_D_difference": 0.1462311482890506
+          },
+          {
+            "offset": 0.01,
+            "pairwise_band_jump": 3.599455391726508,
+            "nary_band_difference": 0.003681090643377516,
+            "pairwise_D_difference": 0.013104886893748002,
+            "nary_D_difference": 0.014624188556641826
+          },
+          {
+            "offset": 0.001,
+            "pairwise_band_jump": 3.598667330720154,
+            "nary_band_difference": 0.00036810914794216387,
+            "pairwise_D_difference": 0.001310979726175887,
+            "nary_D_difference": 0.001462419929399772
+          },
+          {
+            "offset": 0.0001,
+            "pairwise_band_jump": 3.5985885453021975,
+            "nary_band_difference": 3.681091487628407e-05,
+            "pairwise_D_difference": 0.000131102876670397,
+            "nary_D_difference": 0.000146241994013252
+          },
+          {
+            "offset": 1e-05,
+            "pairwise_band_jump": 3.598580666967262,
+            "nary_band_difference": 3.6810914885165857e-06,
+            "pairwise_D_difference": 1.3110336272603718e-05,
+            "nary_D_difference": 1.4624199401680471e-05
+          }
+        ],
+        "orders_at_switch": [
+          {
+            "order": [
+              "rectangle",
+              "circle",
+              "capsule"
+            ],
+            "D": -18.030981362516656,
+            "band": 14.663171768195339
+          },
+          {
+            "order": [
+              "rectangle",
+              "capsule",
+              "circle"
+            ],
+            "D": -21.21959175600149,
+            "band": 15.361081963401048
+          },
+          {
+            "order": [
+              "circle",
+              "rectangle",
+              "capsule"
+            ],
+            "D": -18.030981362516656,
+            "band": 14.663171768195339
+          },
+          {
+            "order": [
+              "circle",
+              "capsule",
+              "rectangle"
+            ],
+            "D": -21.259691471637744,
+            "band": 15.364302840826355
+          },
+          {
+            "order": [
+              "capsule",
+              "rectangle",
+              "circle"
+            ],
+            "D": -21.219591756001492,
+            "band": 15.361081963401048
+          },
+          {
+            "order": [
+              "capsule",
+              "circle",
+              "rectangle"
+            ],
+            "D": -21.259691471637744,
+            "band": 15.364302840826355
+          }
+        ]
+      },
+      {
+        "shapes": [
+          {
+            "name": "rectangle",
+            "x": -35,
+            "y": 15,
+            "w": 90,
+            "h": 70,
+            "r": 15,
+            "join": 30,
+            "group": 1
+          },
+          {
+            "name": "circle",
+            "x": 40,
+            "y": 10,
+            "w": 60,
+            "h": 60,
+            "r": 30,
+            "join": 30,
+            "group": 1
+          },
+          {
+            "name": "capsule",
+            "x": 0,
+            "y": -25,
+            "w": 110,
+            "h": 30,
+            "r": 15,
+            "join": 30,
+            "group": 1
+          }
+        ],
+        "winner_switch": {
+          "x": 13.0,
+          "y": -6.799552356018921,
+          "direction": [
+            0,
+            1
+          ],
+          "pairs": [
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              1
+            ]
+          ],
+          "field": -11.966596281695887,
+          "pair_bands": [
+            11.340823164531665,
+            16.222013915375452
+          ],
+          "limiting_band_jump": 4.881190750843787,
+          "score": 1.7464075810271096
+        },
+        "one_sided_samples": [
+          {
+            "offset": 0.1,
+            "pairwise_band_jump": 4.890297628268096,
+            "nary_band_difference": 0.027397272882637935,
+            "pairwise_D_difference": 0.0716913171436282,
+            "nary_D_difference": 0.04457006123535123
+          },
+          {
+            "offset": 0.01,
+            "pairwise_band_jump": 4.882101046476036,
+            "nary_band_difference": 0.0027398664559363795,
+            "pairwise_D_difference": 0.007327363751510774,
+            "nary_D_difference": 0.004458670591439784
+          },
+          {
+            "offset": 0.001,
+            "pairwise_band_jump": 4.881281776395397,
+            "nary_band_difference": 0.00027398678476053817,
+            "pairwise_D_difference": 0.0007343104728665395,
+            "nary_D_difference": 0.000445868723641496
+          },
+          {
+            "offset": 0.0001,
+            "pairwise_band_jump": 4.881199853358744,
+            "nary_band_difference": 2.7398678616563643e-05,
+            "pairwise_D_difference": 7.344678024168161e-05,
+            "nary_D_difference": 4.4586874025753787e-05
+          },
+          {
+            "offset": 1e-05,
+            "pairwise_band_jump": 4.881191661094883,
+            "nary_band_difference": 2.7398678632550855e-06,
+            "pairwise_D_difference": 7.3448355415450806e-06,
+            "nary_D_difference": 4.458687403285921e-06
+          }
+        ],
+        "orders_at_switch": [
+          {
+            "order": [
+              "rectangle",
+              "circle",
+              "capsule"
+            ],
+            "D": -20.32325481175512,
+            "band": 12.964840035452527
+          },
+          {
+            "order": [
+              "rectangle",
+              "capsule",
+              "circle"
+            ],
+            "D": -20.452673440293083,
+            "band": 13.482254573531787
+          },
+          {
+            "order": [
+              "circle",
+              "rectangle",
+              "capsule"
+            ],
+            "D": -20.32325481175512,
+            "band": 12.964840035452527
+          },
+          {
+            "order": [
+              "circle",
+              "capsule",
+              "rectangle"
+            ],
+            "D": -20.362821535243494,
+            "band": 13.646512965870052
+          },
+          {
+            "order": [
+              "capsule",
+              "rectangle",
+              "circle"
+            ],
+            "D": -20.452673440293083,
+            "band": 13.482254573531787
+          },
+          {
+            "order": [
+              "capsule",
+              "circle",
+              "rectangle"
+            ],
+            "D": -20.36282153524349,
+            "band": 13.646512965870052
+          }
+        ]
+      }
+    ],
+    "passed": true,
+    "max_two_shape_D_or_band_equivalence_error": 7.105427357601002e-15,
+    "outer_bbox_samples": 6060,
+    "max_outer_bbox_hard_union_error": 0,
+    "max_disabled_join_isolation_error": 0,
+    "all_seven_optics_continuity": [
+      {
+        "at": [
+          27.83096047272784,
+          -19.0
+        ],
+        "one_sided_samples": [
+          {
+            "step": 0.1,
+            "property_differences": {
+              "Band": 0.008006466442935789,
+              "Distortion": 0.00216322340073144,
+              "Edge": 0.0021632234007316065,
+              "Highlight": 0.001297934040438875,
+              "LightX": 0.0004840839579374201,
+              "LightY": 0.0005846560915059862,
+              "Tint": 0.00021632234007312734
+            }
+          },
+          {
+            "step": 0.01,
+            "property_differences": {
+              "Band": 0.0008006474329373958,
+              "Distortion": 0.00021632184350378614,
+              "Edge": 0.00021632184350384165,
+              "Highlight": 0.00012979310610217176,
+              "LightX": 4.8407997794042146e-05,
+              "LightY": 5.846521794355963e-05,
+              "Tint": 2.1632184350375838e-05
+            }
+          },
+          {
+            "step": 0.001,
+            "property_differences": {
+              "Band": 8.006474408261965e-05,
+              "Distortion": 2.1632183853814713e-05,
+              "Edge": 2.16321838537592e-05,
+              "Highlight": 1.297931031229993e-05,
+              "LightX": 4.840799381455874e-06,
+              "LightY": 5.8465214031189205e-06,
+              "Tint": 2.1632183853786957e-06
+            }
+          },
+          {
+            "step": 0.0001,
+            "property_differences": {
+              "Band": 8.006474407906694e-06,
+              "Distortion": 2.163218385087262e-06,
+              "Edge": 2.1632183848652176e-06,
+              "Highlight": 1.2979310308747216e-06,
+              "LightX": 4.840799379124405e-07,
+              "LightY": 5.846521400343363e-07,
+              "Tint": 2.1632183851150177e-07
+            }
+          },
+          {
+            "step": 1e-05,
+            "property_differences": {
+              "Band": 8.006474416788478e-07,
+              "Distortion": 2.1632183849762399e-07,
+              "Edge": 2.1632183866415744e-07,
+              "Highlight": 1.2979310337613015e-07,
+              "LightX": 4.840799361360837e-08,
+              "LightY": 5.846521400343363e-08,
+              "Tint": 2.1632183863640186e-08
+            }
+          }
+        ]
+      },
+      {
+        "at": [
+          9.0,
+          -8.397197714557024
+        ],
+        "one_sided_samples": [
+          {
+            "step": 0.1,
+            "property_differences": {
+              "Band": 0.007389250003713599,
+              "Distortion": 0.005780548786592343,
+              "Edge": 0.005780548786592732,
+              "Highlight": 0.003468329271955506,
+              "LightX": 0.0043279584343400845,
+              "LightY": 0.004280666086795559,
+              "Tint": 0.0005780548786592232
+            }
+          },
+          {
+            "step": 0.01,
+            "property_differences": {
+              "Band": 0.000738889298398604,
+              "Distortion": 0.0005780755054278774,
+              "Edge": 0.0005780755054278774,
+              "Highlight": 0.00034684530325668206,
+              "LightX": 0.00043280567322545593,
+              "LightY": 0.00042807685439888443,
+              "Tint": 5.780755054277109e-05
+            }
+          },
+          {
+            "step": 0.001,
+            "property_differences": {
+              "Band": 7.388889413917354e-05,
+              "Distortion": 5.780757116896629e-05,
+              "Edge": 5.7807571168799754e-05,
+              "Highlight": 3.46845427015019e-05,
+              "LightX": 4.328057715230482e-05,
+              "LightY": 4.280769568554277e-05,
+              "Tint": 5.780757116893853e-06
+            }
+          },
+          {
+            "step": 0.0001,
+            "property_differences": {
+              "Band": 7.388889379456032e-06,
+              "Distortion": 5.780757137419101e-06,
+              "Edge": 5.780757137419101e-06,
+              "Highlight": 3.468454282451461e-06,
+              "LightX": 4.328057725100365e-06,
+              "LightY": 4.280769578757226e-06,
+              "Tint": 5.780757137557879e-07
+            }
+          },
+          {
+            "step": 1e-05,
+            "property_differences": {
+              "Band": 7.38888935813975e-07,
+              "Distortion": 5.780757138529324e-07,
+              "Edge": 5.780757139639547e-07,
+              "Highlight": 3.4684542826735054e-07,
+              "LightX": 4.328057725544454e-07,
+              "LightY": 4.280769579367849e-07,
+              "Tint": 5.7807571382517686e-08
+            }
+          }
+        ]
+      },
+      {
+        "at": [
+          13.0,
+          -6.799552356018921
+        ],
+        "one_sided_samples": [
+          {
+            "step": 0.1,
+            "property_differences": {
+              "Band": 0.006573935556170696,
+              "Distortion": 0.0044446031493683424,
+              "Edge": 0.00444460314936812,
+              "Highlight": 0.0026667618896212275,
+              "LightX": 0.003255168832240196,
+              "LightY": 0.0032263628264119215,
+              "Tint": 0.0004444603149368481
+            }
+          },
+          {
+            "step": 0.01,
+            "property_differences": {
+              "Band": 0.0006573963384965964,
+              "Distortion": 0.00044448629295473774,
+              "Edge": 0.00044448629295468223,
+              "Highlight": 0.00026669177577298697,
+              "LightX": 0.00032553171870641773,
+              "LightY": 0.0003226513862066849,
+              "Tint": 4.4448629295479325e-05
+            }
+          },
+          {
+            "step": 0.001,
+            "property_differences": {
+              "Band": 6.573963663569771e-05,
+              "Distortion": 4.444865527325481e-05,
+              "Edge": 4.444865527308828e-05,
+              "Highlight": 2.666919316407501e-05,
+              "LightX": 3.255318670636331e-05,
+              "LightY": 3.2265153724286844e-05,
+              "Tint": 4.4448655273227056e-06
+            }
+          },
+          {
+            "step": 0.0001,
+            "property_differences": {
+              "Band": 6.573963664990856e-06,
+              "Distortion": 4.444865553399069e-06,
+              "Edge": 4.4448655536211135e-06,
+              "Highlight": 2.6669193320394413e-06,
+              "LightX": 3.25531868561324e-06,
+              "LightY": 3.2265153875887798e-06,
+              "Tint": 4.444865553399069e-07
+            }
+          },
+          {
+            "step": 1e-05,
+            "property_differences": {
+              "Band": 6.573963684530781e-07,
+              "Distortion": 4.444865553399069e-07,
+              "Edge": 4.444865555619515e-07,
+              "Highlight": 2.6669193320394413e-07,
+              "LightX": 3.255318685724262e-07,
+              "LightY": 3.2265153870891794e-07,
+              "Tint": 4.444865553399069e-08
+            }
+          }
+        ]
+      }
+    ],
+    "max_isolated_double_angle_lobe_error": 3.3306690738754696e-16,
+    "limitations": [
+      "Sequential folding is order-dependent; stable ascending componentIDs make it deterministic.",
+      "N-ary smoothing can add more interior bridge area than minimum-of-pairs, while retaining exact group outerAABB bounds.",
+      "Cross-group hard unions intentionally retain abrupt material choices.",
+      "At K=0 and equalfields, material selection is a hardtie; lowgradient shading guards remain relevant for isolated/coincident cases."
+    ]
+  },
+  "shapes": {
+    "normalization_cases": [
+      {
+        "shape": "circle",
+        "input": [
+          80,
+          30,
+          2
+        ],
+        "normalized": [
+          80,
+          80,
+          40.0
+        ]
+      },
+      {
+        "shape": "capsule",
+        "input": [
+          120,
+          40,
+          0
+        ],
+        "normalized": [
+          120,
+          40,
+          20.0
+        ]
+      },
+      {
+        "shape": "capsule",
+        "input": [
+          40,
+          120,
+          100
+        ],
+        "normalized": [
+          40,
+          120,
+          20.0
+        ]
+      },
+      {
+        "shape": "rounded rectangle",
+        "input": [
+          90,
+          50,
+          100
+        ],
+        "normalized": [
+          90,
+          50,
+          25.0
+        ]
+      },
+      {
+        "shape": "rounded rectangle",
+        "input": [
+          90,
+          50,
+          -5
+        ],
+        "normalized": [
+          90,
+          50,
+          0.0
+        ]
+      }
+    ],
+    "circle_sdf_max_error": 0.0
+  },
+  "metaball": {
+    "model": "Normal-independent polynomial smooth union with four C1 bounds gates and reach=2*join*smoothstep(centerDistance/(2*join)).",
+    "remote_boundary_samples": 2404,
+    "max_remote_boundary_error": 7.105427357601002e-15,
+    "remote_definition": "Boundary points with |dA-dB| at least the global pair reach; compact support guarantees exact original union there.",
+    "near_overlap_back_shoulder_samples": 860,
+    "max_near_overlap_back_shoulder_field_change": 1.85543170328478,
+    "axis_aligned_circle_back_arc_max_error": 0.17752692280811885,
+    "coincident_shape_max_error": 0.0,
+    "topology_join_distance_20": [
+      {
+        "gap": -20,
+        "midpoint_distance": -20.0,
+        "connected": true
+      },
+      {
+        "gap": 0,
+        "midpoint_distance": -10.0,
+        "connected": true
+      },
+      {
+        "gap": 10,
+        "midpoint_distance": -5.0,
+        "connected": true
+      },
+      {
+        "gap": 19,
+        "midpoint_distance": -0.5,
+        "connected": true
+      },
+      {
+        "gap": 20,
+        "midpoint_distance": 0.0,
+        "connected": false
+      },
+      {
+        "gap": 21,
+        "midpoint_distance": 0.5,
+        "connected": false
+      },
+      {
+        "gap": 30,
+        "midpoint_distance": 5.0,
+        "connected": false
+      }
+    ],
+    "bridge_extents_radius_40_join_20": [
+      {
+        "center_separation": 0,
+        "original_top": 40.0,
+        "union_top": 40.0,
+        "inflation": 0.0,
+        "x_at_union_top": null
+      },
+      {
+        "center_separation": 15,
+        "original_top": 40.0,
+        "union_top": 40.0,
+        "inflation": 0.0,
+        "x_at_union_top": null
+      },
+      {
+        "center_separation": 40,
+        "original_top": 40.0,
+        "union_top": 40.0,
+        "inflation": 0.0,
+        "x_at_union_top": null
+      },
+      {
+        "center_separation": 60,
+        "original_top": 40.0,
+        "union_top": 40.0,
+        "inflation": 0.0,
+        "x_at_union_top": null
+      },
+      {
+        "center_separation": 80,
+        "original_top": 40.0,
+        "union_top": 40.0,
+        "inflation": 0.0,
+        "x_at_union_top": null
+      },
+      {
+        "center_separation": 90,
+        "original_top": 40.0,
+        "union_top": 40.0,
+        "inflation": 0.0,
+        "x_at_union_top": null
+      }
+    ],
+    "bounds_gate": "Product of four smoothstep(margin/band) gates, band=max(.01,min(attenuatedReach/2,min(wA,hA,wB,hB)/4)); attenuates kEff, never clamps final distance.",
+    "mixed_shape_exterior_samples": 72900,
+    "mixed_shape_bounds": [
+      {
+        "case": "rectangle_circle",
+        "bbox": [
+          -115.0,
+          -40.0,
+          60.0,
+          40.0
+        ],
+        "max_exterior_hard_union_error": 0.0
+      },
+      {
+        "case": "capsule_circle",
+        "bbox": [
+          -115.0,
+          -30.0,
+          60.0,
+          30.0
+        ],
+        "max_exterior_hard_union_error": 0.0
+      },
+      {
+        "case": "vertical_capsule_rectangle",
+        "bbox": [
+          -40.0,
+          -115.0,
+          40.0,
+          60.0
+        ],
+        "max_exterior_hard_union_error": 0.0
+      },
+      {
+        "case": "diagonal_rectangle_circle",
+        "bbox": [
+          -80.0,
+          -55.0,
+          70.0,
+          80.0
+        ],
+        "max_exterior_hard_union_error": 0.0
+      },
+      {
+        "case": "overlapping_round_rectangles",
+        "bbox": [
+          -80.0,
+          -30.0,
+          80.0,
+          30.0
+        ],
+        "max_exterior_hard_union_error": 0.0
+      },
+      {
+        "case": "overlapping_unequal_circles",
+        "bbox": [
+          -55.0,
+          -40.0,
+          40.0,
+          40.0
+        ],
+        "max_exterior_hard_union_error": 0.0
+      },
+      {
+        "case": "grazing_rectangle_circle",
+        "bbox": [
+          -60.0,
+          -40.0,
+          100.0,
+          40.0
+        ],
+        "max_exterior_hard_union_error": 0.0
+      },
+      {
+        "case": "grazing_capsule_circle",
+        "bbox": [
+          -80.0,
+          -30.0,
+          105.0,
+          30.0
+        ],
+        "max_exterior_hard_union_error": 0.0
+      },
+      {
+        "case": "unequal_circle_center_plane_contact",
+        "bbox": [
+          -40.0,
+          -50.0,
+          80.0,
+          50.0
+        ],
+        "max_exterior_hard_union_error": 0.0
+      }
+    ],
+    "mixed_rectangle_circle_gap_15_join_20_midpoint_distance": -2.5,
+    "grazing_and_diagonal_contour_tangents": [
+      {
+        "case": "rectangle_circle",
+        "intersection_x": 33.542486889354095,
+        "boundary_y": 34.763552954672775,
+        "one_sided_tangents": [
+          {
+            "step": 0.1,
+            "left": 0.14309819305751148,
+            "right": 0.1434057542215328,
+            "gap": 0.0003075611640213083
+          },
+          {
+            "step": 0.01,
+            "left": 0.14323597084029416,
+            "right": 0.14326672615254665,
+            "gap": 3.075531225249506e-05
+          },
+          {
+            "step": 0.001,
+            "left": 0.14324980448066071,
+            "right": 0.14325288000804903,
+            "gap": 3.075527388318733e-06
+          },
+          {
+            "step": 0.0001,
+            "left": 0.14325118840474715,
+            "right": 0.1432514959276432,
+            "gap": 3.0752289603697136e-07
+          }
+        ],
+        "dense_contour_samples": 401,
+        "dense_max_slope_gap": 2.379351826675702e-05
+      },
+      {
+        "case": "capsule_circle",
+        "intersection_x": 52.6393202250021,
+        "boundary_y": 26.055842370964356,
+        "one_sided_tangents": [
+          {
+            "step": 0.1,
+            "left": 0.11733437407244196,
+            "right": 0.11752495801331975,
+            "gap": 0.00019058394087778652
+          },
+          {
+            "step": 0.01,
+            "left": 0.11741968385052814,
+            "right": 0.11743874168459456,
+            "gap": 1.9057834066416035e-05
+          },
+          {
+            "step": 0.001,
+            "left": 0.11742825534355461,
+            "right": 0.11743016113285876,
+            "gap": 1.9057893041463103e-06
+          },
+          {
+            "step": 0.0001,
+            "left": 0.11742911290468783,
+            "right": 0.11742930354330383,
+            "gap": 1.9063861600443488e-07
+          }
+        ],
+        "dense_contour_samples": 401,
+        "dense_max_slope_gap": 4.8428887566842604e-05
+      },
+      {
+        "case": "diagonal_rectangle_circle",
+        "intersection_x": 41.7157287525381,
+        "boundary_y": 41.82843843780229,
+        "one_sided_tangents": [
+          {
+            "step": 0.1,
+            "left": 0.21101921843012406,
+            "right": 0.21130055460517383,
+            "gap": 0.0002813361750497734
+          },
+          {
+            "step": 0.01,
+            "left": 0.21114493691527514,
+            "right": 0.21117306973224004,
+            "gap": 2.8132816964898666e-05
+          },
+          {
+            "step": 0.001,
+            "left": 0.21115758784162608,
+            "right": 0.21116040113611234,
+            "gap": 2.8132944862591103e-06
+          },
+          {
+            "step": 0.0001,
+            "left": 0.2111588537445641,
+            "right": 0.21115913511948747,
+            "gap": 2.813749233609997e-07
+          }
+        ],
+        "dense_contour_samples": 401,
+        "dense_max_slope_gap": 5.516184842235816e-05
+      },
+      {
+        "case": "unequal_circles",
+        "intersection_x": 0,
+        "boundary_y": 43.404163176527845,
+        "one_sided_tangents": [
+          {
+            "step": 0.1,
+            "left": 0.18204758015073708,
+            "right": 0.18188962718312496,
+            "gap": 0.0001579529676121183
+          },
+          {
+            "step": 0.01,
+            "left": 0.1819738172542884,
+            "right": 0.18195802004470352,
+            "gap": 1.579720958488906e-05
+          },
+          {
+            "step": 0.001,
+            "left": 0.1819666816516019,
+            "right": 0.18196510194457005,
+            "gap": 1.5797070318512851e-06
+          },
+          {
+            "step": 0.0001,
+            "left": 0.1819659703983234,
+            "right": 0.18196581265783607,
+            "gap": 1.5774048733874224e-07
+          }
+        ],
+        "dense_contour_samples": 401,
+        "dense_max_slope_gap": 2.131230303348275e-05
+      }
+    ],
+    "coincident_center_continuity": [
+      {
+        "separation": 1,
+        "reach": 0.07375000000000002,
+        "max_distance_change": 0.018437500000000995
+      },
+      {
+        "separation": 0.1,
+        "reach": 0.0007487500000000001,
+        "max_distance_change": 0.00018718750000346063
+      },
+      {
+        "separation": 0.01,
+        "reach": 7.49875e-06,
+        "max_distance_change": 7.105427357601002e-15
+      },
+      {
+        "separation": 0.001,
+        "reach": 7.499875000000002e-08,
+        "max_distance_change": 3.552713678800501e-15
+      },
+      {
+        "separation": 0.0001,
+        "reach": 7.499987500000001e-10,
+        "max_distance_change": 3.552713678800501e-15
+      },
+      {
+        "separation": 0,
+        "reach": 0.0,
+        "max_distance_change": 0
+      }
+    ],
+    "edge_gate_one_sided_derivative_approaching_boundary": [
+      0.00029979999999999997,
+      2.9998e-05,
+      2.9999800000000004e-06
+    ],
+    "rejected_unbounded_alternatives": [
+      {
+        "gate_slope": 2,
+        "join": 20,
+        "separation": 40,
+        "inflation": 4.131262548035011
+      },
+      {
+        "gate_slope": 1,
+        "join": 40,
+        "separation": 40,
+        "inflation": 0.0
+      },
+      {
+        "gate_slope": 1,
+        "join": 60,
+        "separation": 60,
+        "inflation": 1.9598226872039959
+      }
+    ],
+    "limitations": "Exact rest bounds and compact-support remote arcs; diagonal deep-overlap shoulders within the active blend region may change locally. Pull uses conservative 2*amplitude-padded bounds, not the exact tight deformed bounds. Grid checks are not an all-configurations visual smoothness proof."
+  },
+  "artifact_sha256": {
+    "LiquidGlass_Studio.sb3": "2ee6a85f179540dd02347979b9e3059b90985425fc72c4a896112e0551d191f9",
+    "LiquidGlass_Component.sprite3": "d21e4f5375a9463faf7b0f5056ac19a6a1439c90972c702741d9ef17b39441c9"
+  }
+}

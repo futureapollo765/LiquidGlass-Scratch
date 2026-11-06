@@ -1,0 +1,37 @@
+{
+  "sha256": "9c8e6304f8a5c87712364c07d945a3fd7b3e0db6e726d8dcf8bbef30bab7b429",
+  "checks": [
+    "Swapping the two opening and two closing times independently swaps which part leads.",
+    "The default spring overshoots on both opening and closing, then settles back at the configured bounds.",
+    "Bounce zero reaches its target without overshoot.",
+    "The same elapsed wall time gives the same intermediate pose across 30 and 10 Hz VM steps.",
+    "A zero duration snaps only the requested channel."
+  ],
+  "samples": {
+    "independent": {
+      "open200ms": {
+        "seconds": 0.2,
+        "x": 49.8070332013005,
+        "y": -9.660826914966933,
+        "w": 83.50200631119648,
+        "h": 65.53134885287695,
+        "move": 0.9029241257266715,
+        "grow": 0.3016839596522685
+      },
+      "close200ms": {
+        "seconds": 0.2,
+        "x": 21.754714146614177,
+        "y": 5.033244970821144,
+        "w": 49.88703314328052,
+        "h": 46.45788829837596,
+        "move": 0.6357591823487064,
+        "grow": 0.05715241408174311
+      }
+    },
+    "bounce": {
+      "maxTravel": 1.0459656520718703,
+      "maxGrowth": 1.045813685636099
+    }
+  },
+  "passed": true
+}

@@ -1,0 +1,679 @@
+{
+  "source": "./LiquidGlass_Studio.sb3",
+  "native": "./versions/0.2.3/validation/ScratchVerified_0.2.3.sb3",
+  "source_sha256": "23d57b1cfefe4a76b8ff447eaed88a9a6c181a265410339f19571e9cefc89e0f",
+  "native_sha256": "bef809fb846d5f10c4d98137c1f0d457405096daa864b9af791fdb239a9c4292",
+  "source_structure": {
+    "path": "./LiquidGlass_Studio.sb3",
+    "targets": 2,
+    "blocks": 2677,
+    "assets": 3,
+    "extensions": [
+      "pen"
+    ],
+    "errors": [],
+    "warnings": [],
+    "passed": true
+  },
+  "native_structure": {
+    "path": "./versions/0.2.3/validation/ScratchVerified_0.2.3.sb3",
+    "targets": 2,
+    "blocks": 2644,
+    "assets": 3,
+    "extensions": [
+      "pen"
+    ],
+    "errors": [],
+    "warnings": [],
+    "passed": true
+  },
+  "source_code": {
+    "Stage": {
+      "definitions": 0,
+      "signatures": {},
+      "nonprimitive_opcode_counts": {},
+      "body_argument_reporters": []
+    },
+    "Liquid Glass": {
+      "definitions": 12,
+      "signatures": {
+        "LG advance": {
+          "arguments": [],
+          "defaults": [],
+          "warp": "true"
+        },
+        "LG shape %s %s %s": {
+          "arguments": [
+            "i",
+            "x",
+            "y"
+          ],
+          "defaults": [
+            "",
+            "",
+            ""
+          ],
+          "warp": "true"
+        },
+        "LG prepare": {
+          "arguments": [],
+          "defaults": [],
+          "warp": "true"
+        },
+        "LG sample %s %s": {
+          "arguments": [
+            "x",
+            "y"
+          ],
+          "defaults": [
+            "",
+            ""
+          ],
+          "warp": "true"
+        },
+        "LG field %s %s": {
+          "arguments": [
+            "x",
+            "y"
+          ],
+          "defaults": [
+            "",
+            ""
+          ],
+          "warp": "true"
+        },
+        "LG render": {
+          "arguments": [],
+          "defaults": [],
+          "warp": "true"
+        },
+        "LG shade %s %s %s": {
+          "arguments": [
+            "x",
+            "y",
+            "cell"
+          ],
+          "defaults": [
+            "",
+            "",
+            ""
+          ],
+          "warp": "true"
+        },
+        "LG background %s %s": {
+          "arguments": [
+            "x",
+            "y"
+          ],
+          "defaults": [
+            "",
+            ""
+          ],
+          "warp": "true"
+        },
+        "LG demo targets": {
+          "arguments": [],
+          "defaults": [],
+          "warp": "true"
+        },
+        "LG demo": {
+          "arguments": [],
+          "defaults": [],
+          "warp": "true"
+        },
+        "Glass %s x %s y %s width %s height %s shape %s radius %s reflection %s distortion %s edge %s highlight %s light %s tint %s join %s group %s transition %s spring %s damping %s pull %s drag %s quality %s": {
+          "arguments": [
+            "id",
+            "x",
+            "y",
+            "width",
+            "height",
+            "shape",
+            "radius",
+            "reflection",
+            "distortion",
+            "edge",
+            "highlight",
+            "light",
+            "tint",
+            "join",
+            "group",
+            "transition",
+            "spring",
+            "damping",
+            "pull",
+            "drag",
+            "quality"
+          ],
+          "defaults": [
+            "1",
+            "0",
+            "0",
+            "156",
+            "96",
+            "1",
+            "24",
+            "0.5",
+            "1",
+            "1",
+            "1",
+            "-30",
+            "0.05",
+            "30",
+            "1",
+            "0.45",
+            "18",
+            "0.85",
+            "0.9",
+            "1",
+            "2"
+          ],
+          "warp": "true"
+        },
+        "LG initialize": {
+          "arguments": [],
+          "defaults": [],
+          "warp": "true"
+        }
+      },
+      "nonprimitive_opcode_counts": {
+        "event_whenflagclicked": 1,
+        "procedures_definition": 12,
+        "procedures_prototype": 12,
+        "data_setvariableto": 244,
+        "sensing_timer": 6,
+        "operator_divide": 275,
+        "operator_subtract": 363,
+        "operator_add": 374,
+        "operator_mathop": 204,
+        "control_if": 43,
+        "operator_and": 10,
+        "sensing_mousedown": 3,
+        "operator_equals": 40,
+        "control_repeat": 48,
+        "data_itemoflist": 313,
+        "procedures_call": 20,
+        "sensing_mousex": 6,
+        "sensing_mousey": 6,
+        "operator_lt": 15,
+        "data_changevariableby": 17,
+        "operator_not": 3,
+        "operator_gt": 19,
+        "operator_multiply": 198,
+        "data_replaceitemoflist": 83,
+        "argument_reporter_string_number": 122,
+        "control_if_else": 15,
+        "data_deletealloflist": 58,
+        "data_addtolist": 50,
+        "data_lengthoflist": 4,
+        "pen_clear": 1,
+        "looks_switchcostumeto": 2,
+        "looks_costume": 2,
+        "motion_gotoxy": 3,
+        "looks_show": 1,
+        "pen_stamp": 1,
+        "looks_hide": 2,
+        "operator_round": 22,
+        "pen_setPenSizeTo": 1,
+        "pen_setPenColorParamTo": 2,
+        "pen_menu_colorParam": 2,
+        "operator_mod": 3,
+        "pen_setPenColorToColor": 1,
+        "pen_penDown": 1,
+        "pen_penUp": 2,
+        "control_forever": 1,
+        "control_wait": 1,
+        "event_whenkeypressed": 10,
+        "data_showvariable": 8,
+        "data_hidevariable": 8,
+        "operator_or": 3,
+        "motion_setrotationstyle": 1,
+        "looks_setsizeto": 1,
+        "sensing_resettimer": 1
+      },
+      "body_argument_reporters": [
+        [
+          "argument_reporter_string_number",
+          "cell",
+          11
+        ],
+        [
+          "argument_reporter_string_number",
+          "damping",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "distortion",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "drag",
+          1
+        ],
+        [
+          "argument_reporter_string_number",
+          "edge",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "group",
+          1
+        ],
+        [
+          "argument_reporter_string_number",
+          "height",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "highlight",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "i",
+          12
+        ],
+        [
+          "argument_reporter_string_number",
+          "id",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "join",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "light",
+          1
+        ],
+        [
+          "argument_reporter_string_number",
+          "pull",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "quality",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "radius",
+          2
+        ],
+        [
+          "argument_reporter_string_number",
+          "reflection",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "shape",
+          6
+        ],
+        [
+          "argument_reporter_string_number",
+          "spring",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "tint",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "transition",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "width",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "x",
+          16
+        ],
+        [
+          "argument_reporter_string_number",
+          "y",
+          16
+        ]
+      ]
+    }
+  },
+  "native_code": {
+    "Stage": {
+      "definitions": 0,
+      "signatures": {},
+      "nonprimitive_opcode_counts": {},
+      "body_argument_reporters": []
+    },
+    "Liquid Glass": {
+      "definitions": 12,
+      "signatures": {
+        "LG advance": {
+          "arguments": [],
+          "defaults": [],
+          "warp": "true"
+        },
+        "LG shape %s %s %s": {
+          "arguments": [
+            "i",
+            "x",
+            "y"
+          ],
+          "defaults": [
+            "",
+            "",
+            ""
+          ],
+          "warp": "true"
+        },
+        "LG prepare": {
+          "arguments": [],
+          "defaults": [],
+          "warp": "true"
+        },
+        "LG sample %s %s": {
+          "arguments": [
+            "x",
+            "y"
+          ],
+          "defaults": [
+            "",
+            ""
+          ],
+          "warp": "true"
+        },
+        "LG field %s %s": {
+          "arguments": [
+            "x",
+            "y"
+          ],
+          "defaults": [
+            "",
+            ""
+          ],
+          "warp": "true"
+        },
+        "LG render": {
+          "arguments": [],
+          "defaults": [],
+          "warp": "true"
+        },
+        "LG shade %s %s %s": {
+          "arguments": [
+            "x",
+            "y",
+            "cell"
+          ],
+          "defaults": [
+            "",
+            "",
+            ""
+          ],
+          "warp": "true"
+        },
+        "LG background %s %s": {
+          "arguments": [
+            "x",
+            "y"
+          ],
+          "defaults": [
+            "",
+            ""
+          ],
+          "warp": "true"
+        },
+        "LG demo targets": {
+          "arguments": [],
+          "defaults": [],
+          "warp": "true"
+        },
+        "LG demo": {
+          "arguments": [],
+          "defaults": [],
+          "warp": "true"
+        },
+        "Glass %s x %s y %s width %s height %s shape %s radius %s reflection %s distortion %s edge %s highlight %s light %s tint %s join %s group %s transition %s spring %s damping %s pull %s drag %s quality %s": {
+          "arguments": [
+            "id",
+            "x",
+            "y",
+            "width",
+            "height",
+            "shape",
+            "radius",
+            "reflection",
+            "distortion",
+            "edge",
+            "highlight",
+            "light",
+            "tint",
+            "join",
+            "group",
+            "transition",
+            "spring",
+            "damping",
+            "pull",
+            "drag",
+            "quality"
+          ],
+          "defaults": [
+            "1",
+            "0",
+            "0",
+            "156",
+            "96",
+            "1",
+            "24",
+            "0.5",
+            "1",
+            "1",
+            "1",
+            "-30",
+            "0.05",
+            "30",
+            "1",
+            "0.45",
+            "18",
+            "0.85",
+            "0.9",
+            "1",
+            "2"
+          ],
+          "warp": "true"
+        },
+        "LG initialize": {
+          "arguments": [],
+          "defaults": [],
+          "warp": "true"
+        }
+      },
+      "nonprimitive_opcode_counts": {
+        "event_whenflagclicked": 1,
+        "procedures_definition": 12,
+        "procedures_prototype": 12,
+        "data_setvariableto": 244,
+        "sensing_timer": 6,
+        "operator_divide": 275,
+        "operator_subtract": 363,
+        "operator_add": 374,
+        "operator_mathop": 204,
+        "control_if": 43,
+        "operator_and": 10,
+        "sensing_mousedown": 3,
+        "operator_equals": 40,
+        "control_repeat": 48,
+        "data_itemoflist": 313,
+        "procedures_call": 20,
+        "sensing_mousex": 6,
+        "sensing_mousey": 6,
+        "operator_lt": 15,
+        "data_changevariableby": 17,
+        "operator_not": 3,
+        "operator_gt": 19,
+        "operator_multiply": 198,
+        "data_replaceitemoflist": 83,
+        "argument_reporter_string_number": 122,
+        "control_if_else": 15,
+        "data_deletealloflist": 58,
+        "data_addtolist": 50,
+        "data_lengthoflist": 4,
+        "pen_clear": 1,
+        "looks_switchcostumeto": 2,
+        "looks_costume": 2,
+        "motion_gotoxy": 3,
+        "looks_show": 1,
+        "pen_stamp": 1,
+        "looks_hide": 2,
+        "operator_round": 22,
+        "pen_setPenSizeTo": 1,
+        "pen_setPenColorParamTo": 2,
+        "pen_menu_colorParam": 2,
+        "operator_mod": 3,
+        "pen_setPenColorToColor": 1,
+        "pen_penDown": 1,
+        "pen_penUp": 2,
+        "control_forever": 1,
+        "control_wait": 1,
+        "event_whenkeypressed": 10,
+        "data_showvariable": 8,
+        "data_hidevariable": 8,
+        "operator_or": 3,
+        "motion_setrotationstyle": 1,
+        "looks_setsizeto": 1,
+        "sensing_resettimer": 1
+      },
+      "body_argument_reporters": [
+        [
+          "argument_reporter_string_number",
+          "cell",
+          11
+        ],
+        [
+          "argument_reporter_string_number",
+          "damping",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "distortion",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "drag",
+          1
+        ],
+        [
+          "argument_reporter_string_number",
+          "edge",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "group",
+          1
+        ],
+        [
+          "argument_reporter_string_number",
+          "height",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "highlight",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "i",
+          12
+        ],
+        [
+          "argument_reporter_string_number",
+          "id",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "join",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "light",
+          1
+        ],
+        [
+          "argument_reporter_string_number",
+          "pull",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "quality",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "radius",
+          2
+        ],
+        [
+          "argument_reporter_string_number",
+          "reflection",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "shape",
+          6
+        ],
+        [
+          "argument_reporter_string_number",
+          "spring",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "tint",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "transition",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "width",
+          4
+        ],
+        [
+          "argument_reporter_string_number",
+          "x",
+          16
+        ],
+        [
+          "argument_reporter_string_number",
+          "y",
+          16
+        ]
+      ]
+    }
+  },
+  "normalization": "Only directly owned prototype argument display reporters are excluded. Modern Scratch rebuilds these from mutation metadata; all body argument reporters, names, signatures and other opcodes remain compared.",
+  "preserved": true,
+  "passed": true
+}

@@ -1,0 +1,12 @@
+{
+  "path": "./research/diagnostics/presentation_0.3.0_candidate/LiquidGlass_Studio_0.3.0.sb3",
+  "targets": 2,
+  "blocks": 2910,
+  "assets": 94,
+  "extensions": [
+    "pen"
+  ],
+  "errors": [],
+  "warnings": [],
+  "passed": true
+}

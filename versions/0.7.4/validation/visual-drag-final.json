@@ -1,0 +1,108 @@
+{
+  "project": "dce43901124f2b7b9a85c63805cb656f526460b67ccae16985a34fd076274a39",
+  "frames": 154,
+  "evidence": [
+    [
+      {
+        "component": "Button",
+        "offset": 0,
+        "pressed": 2,
+        "centerX": 67,
+        "width": 170.64
+      },
+      {
+        "component": "Button",
+        "offset": 120,
+        "pressed": 2,
+        "centerX": 87.60377358490567,
+        "width": 198.4550943396226
+      },
+      {
+        "component": "Button",
+        "offset": 60,
+        "pressed": 2,
+        "centerX": 83.29850746268657,
+        "width": 192.64298507462684
+      },
+      {
+        "component": "Button",
+        "offset": 0,
+        "pressed": 2,
+        "centerX": 67,
+        "width": 170.64
+      },
+      {
+        "component": "Button",
+        "offset": -60,
+        "pressed": 2,
+        "centerX": 50.70149253731343,
+        "width": 192.64298507462684
+      },
+      {
+        "component": "Button",
+        "offset": -120,
+        "pressed": 2,
+        "centerX": 46.39622641509434,
+        "width": 198.4550943396226
+      },
+      {
+        "component": "Button",
+        "offset": 0,
+        "pressed": 2,
+        "centerX": 67,
+        "width": 170.64
+      }
+    ],
+    [
+      {
+        "component": "Menu launcher",
+        "offset": 0,
+        "pressed": 3,
+        "centerX": 120,
+        "width": 39.44
+      },
+      {
+        "component": "Menu launcher",
+        "offset": 120,
+        "pressed": 3,
+        "centerX": 140.60377358490567,
+        "width": 53.95242334370137
+      },
+      {
+        "component": "Menu launcher",
+        "offset": 60,
+        "pressed": 3,
+        "centerX": 136.29850746268656,
+        "width": 53.43908449106416
+      },
+      {
+        "component": "Menu launcher",
+        "offset": 0,
+        "pressed": 3,
+        "centerX": 120,
+        "width": 39.44
+      },
+      {
+        "component": "Menu launcher",
+        "offset": -60,
+        "pressed": 3,
+        "centerX": 103.70149253731343,
+        "width": 53.43908449106416
+      },
+      {
+        "component": "Menu launcher",
+        "offset": -120,
+        "pressed": 3,
+        "centerX": 99.39622641509433,
+        "width": 53.95242334370137
+      },
+      {
+        "component": "Menu launcher",
+        "offset": 0,
+        "pressed": 3,
+        "centerX": 120,
+        "width": 39.44
+      }
+    ]
+  ]
+}

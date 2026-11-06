@@ -1,0 +1,15 @@
+{
+  "path": "./Roundtrip.sb3",
+  "targets": 3,
+  "blocks": 2543,
+  "assets": 4,
+  "extensions": [
+    "pen"
+  ],
+  "errors": [
+    "Liquid Glass/xS (data_itemoflist): INDEX points to missing block Go",
+    "Liquid Glass/kD (operator_subtract): NUM2 points to missing block Gp"
+  ],
+  "warnings": [],
+  "passed": false
+}

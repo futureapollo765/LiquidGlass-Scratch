@@ -1,0 +1,378 @@
+{
+  "project": "/private/tmp/lg072/final.sb3",
+  "sha256": "934fa22559d5d25be50abd6dd303b85eaacc2b999d99717b1c6a619eff6863fc",
+  "fixtureItems": "Help|Quit|Work>ZFolder>Jet|Work>ZFolder>Kiwi|Work>Archive",
+  "fixture": "In-memory menu-only scene. Remove the example sidebar and button calls, retain their public definitions, and set the visible Menu options input to a two-level hierarchy.",
+  "checks": [
+    {
+      "name": "Launcher and expanded menu content fade while the root changes shape",
+      "passed": true
+    },
+    {
+      "name": "The first child grows from its calling row while preserving the root menu",
+      "passed": true
+    },
+    {
+      "name": "Native layer painting dims the parent, fades the child’s content, and draws it in front",
+      "passed": true
+    },
+    {
+      "name": "A second-level menu starts from its parent row and receives independent geometry, dimming and hit ownership",
+      "passed": true
+    },
+    {
+      "name": "Back animates the selected child into its source row and restores the preceding page",
+      "passed": true
+    },
+    {
+      "name": "Returning to the root restores its original brightness and dimensions without delivering a leaf action",
+      "passed": true
+    },
+    {
+      "name": "Popping the final child restores exposed child pixels outside the root on a menu-only stage",
+      "passed": true
+    },
+    {
+      "name": "A nested leaf delivers exactly one action with the complete path and original public menu ID",
+      "passed": true
+    }
+  ],
+  "transitions": [
+    {
+      "path": "Work",
+      "direction": "push",
+      "first": {
+        "index": 1,
+        "path": "Work",
+        "parent": "",
+        "row": 3,
+        "p": 0,
+        "goal": 1,
+        "x": 58.99161518086501,
+        "y": -1.5185698634603284,
+        "w": 179.49249780602852,
+        "h": 26.259668254295853,
+        "pitch": 26.259668254295853,
+        "dim": 0
+      },
+      "phases": [
+        0,
+        0.051,
+        0.1704,
+        0.319,
+        0.471,
+        0.6107,
+        0.73,
+        0.826,
+        0.8993,
+        0.9521,
+        0.9879,
+        1.0102
+      ],
+      "intermediateHit": 0.8992546152100269,
+      "last": {
+        "index": 1,
+        "path": "Work",
+        "parent": "",
+        "row": 3,
+        "p": 1.01023601296999,
+        "goal": 1,
+        "x": 63.00230996713384,
+        "y": -31.261206365605403,
+        "w": 196.27669935108156,
+        "h": 102.78896108802445,
+        "pitch": 34.26298702934148,
+        "dim": 0
+      }
+    },
+    {
+      "path": "Work>ZFolder",
+      "direction": "push",
+      "first": {
+        "index": 2,
+        "path": "Work>ZFolder",
+        "parent": "Work",
+        "row": 1,
+        "p": 0,
+        "goal": 1,
+        "x": 62.04927061786244,
+        "y": -30.633817714492807,
+        "w": 186.7210223939456,
+        "h": 26.544093163297664,
+        "pitch": 26.544093163297664,
+        "dim": 0
+      },
+      "phases": [
+        0,
+        0.051,
+        0.1704,
+        0.319,
+        0.471,
+        0.6107,
+        0.73,
+        0.826,
+        0.8993,
+        0.9521,
+        0.9879,
+        1.0102
+      ],
+      "intermediateHit": 0.8992546152100263,
+      "last": {
+        "index": 2,
+        "path": "Work>ZFolder",
+        "parent": "Work",
+        "row": 1,
+        "p": 1.0102360129699899,
+        "goal": 1,
+        "x": 66.1042070660699,
+        "y": -60.854834768127716,
+        "w": 196.19948860520324,
+        "h": 102.79358200086484,
+        "pitch": 34.264527333621615,
+        "dim": 0
+      }
+    },
+    {
+      "path": "Work>ZFolder",
+      "direction": "pop",
+      "first": {
+        "index": 2,
+        "path": "Work>ZFolder",
+        "parent": "Work",
+        "row": 1,
+        "p": 1.0281258943746112,
+        "goal": 0,
+        "x": 66.10421189752498,
+        "y": -60.2450414136095,
+        "w": 196.54816794138276,
+        "h": 104.18058404621985,
+        "pitch": 34.72686134873995,
+        "dim": 0
+      },
+      "phases": [
+        1.0281,
+        0.9747,
+        0.8515,
+        0.6986,
+        0.5424,
+        0.399,
+        0.2765,
+        0.178,
+        0.103,
+        0.0488,
+        0.0122,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intermediateHit": null,
+      "last": null
+    },
+    {
+      "path": "Work",
+      "direction": "pop",
+      "first": {
+        "index": 1,
+        "path": "Work",
+        "parent": "",
+        "row": 3,
+        "p": 1,
+        "goal": 0,
+        "x": 63.053191489361694,
+        "y": -30.323529411764696,
+        "w": 196,
+        "h": 102,
+        "pitch": 34,
+        "dim": 0
+      },
+      "phases": [
+        1,
+        0.949,
+        0.8296,
+        0.681,
+        0.529,
+        0.3893,
+        0.27,
+        0.174,
+        0.1007,
+        0.0479,
+        0.0121,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "intermediateHit": null,
+      "last": null
+    },
+    {
+      "path": "Work",
+      "direction": "push",
+      "first": {
+        "index": 1,
+        "path": "Work",
+        "parent": "",
+        "row": 3,
+        "p": 0,
+        "goal": 1,
+        "x": 59,
+        "y": 0,
+        "w": 178,
+        "h": 26,
+        "pitch": 26,
+        "dim": 0
+      },
+      "phases": [
+        0,
+        0.051,
+        0.1704,
+        0.319,
+        0.471,
+        0.6107,
+        0.73,
+        0.826,
+        0.8993,
+        0.9521,
+        0.9879,
+        1.0102
+      ],
+      "intermediateHit": 0.8992546152100276,
+      "last": {
+        "index": 1,
+        "path": "Work",
+        "parent": "",
+        "row": 3,
+        "p": 1.0102360129699899,
+        "goal": 1,
+        "x": 63.004116152874985,
+        "y": -31.179655017591557,
+        "w": 196.27999024012126,
+        "h": 102.78953613299025,
+        "pitch": 34.26317871099675,
+        "dim": 0
+      }
+    },
+    {
+      "path": "Work>ZFolder",
+      "direction": "push",
+      "first": {
+        "index": 2,
+        "path": "Work>ZFolder",
+        "parent": "Work",
+        "row": 1,
+        "p": 0,
+        "goal": 1,
+        "x": 62.04931390903276,
+        "y": -30.631805598853504,
+        "w": 186.72122994118135,
+        "h": 26.544102899584807,
+        "pitch": 26.544102899584807,
+        "dim": 0
+      },
+      "phases": [
+        0,
+        0.051,
+        0.1704,
+        0.319,
+        0.471,
+        0.6107,
+        0.73,
+        0.826,
+        0.8993,
+        0.9521,
+        0.9879,
+        1.0102
+      ],
+      "intermediateHit": 0.8992546152100276,
+      "last": {
+        "index": 2,
+        "path": "Work>ZFolder",
+        "parent": "Work",
+        "row": 1,
+        "p": 1.0102360129699899,
+        "goal": 1,
+        "x": 66.1042070660699,
+        "y": -60.85483476812766,
+        "w": 196.19948860520324,
+        "h": 102.79358200086484,
+        "pitch": 34.264527333621615,
+        "dim": 0
+      }
+    }
+  ],
+  "parentDim": {
+    "before": [
+      75,
+      108,
+      136
+    ],
+    "after": [
+      62,
+      88,
+      113
+    ],
+    "maskAlpha": 0
+  },
+  "restoredProbes": [
+    {
+      "x": 55.00230996713384,
+      "y": -74.65568690961763,
+      "lastPrivate": 634547,
+      "lastClean": 640182
+    },
+    {
+      "x": 55.00230996713384,
+      "y": -69.65568690961763,
+      "lastPrivate": 634354,
+      "lastClean": 640182
+    },
+    {
+      "x": 63.00230996713384,
+      "y": -74.65568690961763,
+      "lastPrivate": 634551,
+      "lastClean": 640182
+    },
+    {
+      "x": 63.00230996713384,
+      "y": -69.65568690961763,
+      "lastPrivate": 634358,
+      "lastClean": 640182
+    },
+    {
+      "x": 71.00230996713384,
+      "y": -74.65568690961763,
+      "lastPrivate": 634555,
+      "lastClean": 640182
+    },
+    {
+      "x": 71.00230996713384,
+      "y": -69.65568690961763,
+      "lastPrivate": 634362,
+      "lastClean": 640182
+    }
+  ],
+  "passed": true
+}

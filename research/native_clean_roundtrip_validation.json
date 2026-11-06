@@ -1,0 +1,15 @@
+{
+  "path": "./CleanRoundtrip.sb3",
+  "targets": 3,
+  "blocks": 2290,
+  "assets": 4,
+  "extensions": [
+    "pen"
+  ],
+  "errors": [
+    "Liquid Glass/n (procedures_call): undefined procedure LG shape %s %s %s",
+    "Liquid Glass/Q (procedures_call): undefined procedure LG shape %s %s %s"
+  ],
+  "warnings": [],
+  "passed": false
+}

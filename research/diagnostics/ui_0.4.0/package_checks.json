@@ -1,0 +1,12 @@
+{
+  "path": "./LiquidGlass_Studio.sb3",
+  "targets": 2,
+  "blocks": 4710,
+  "assets": 276,
+  "extensions": [
+    "pen"
+  ],
+  "errors": [],
+  "warnings": [],
+  "passed": true
+}

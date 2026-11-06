@@ -1,0 +1,215 @@
+{
+  "sha256": "ed8177b1d43aad05ce681fd094e9489f06f43af725b8b909ab81eb99ca9ee404",
+  "checks": [
+    "Button and Menu follow signed horizontal, vertical and diagonal pulls and retract to their configured centers without activating.",
+    "Native white glyph outlines and inter-letter spacing agree with independently transformed source SVG edges through six control poses.",
+    "Both transitioning Menu titles and their up/down icons use the same moving, independently scaled face as their glass.",
+    "All four corners and bottom center reach the requested layout; custom coordinates retarget smoothly while open.",
+    "Position leads size on opening and the same two curves retrace on closing; an in-flight outside press reverses continuously."
+  ],
+  "positions": {
+    "top left": {
+      "end": [
+        -25,
+        56
+      ],
+      "intermediate": {
+        "travel": 0.6875937858108276,
+        "size": 0.20924799907899075,
+        "phase": 0.4410668964990781
+      }
+    },
+    "top right": {
+      "end": [
+        55,
+        56
+      ],
+      "intermediate": {
+        "travel": 0.6875937858108276,
+        "size": 0.20924799907899075,
+        "phase": 0.4410668964990781
+      }
+    },
+    "bottom left": {
+      "end": [
+        -25,
+        0
+      ],
+      "intermediate": {
+        "travel": 0.6875937858108276,
+        "size": 0.20924799907899075,
+        "phase": 0.4410668964990781
+      }
+    },
+    "bottom right": {
+      "end": [
+        55,
+        0
+      ],
+      "intermediate": {
+        "travel": 0.6875937858108276,
+        "size": 0.20924799907899075,
+        "phase": 0.4410668964990781
+      }
+    },
+    "bottom center": {
+      "end": [
+        15,
+        0
+      ],
+      "intermediate": {
+        "travel": 0.6875937858108276,
+        "size": 0.20924799907899075,
+        "phase": 0.4410668964990781
+      }
+    },
+    "retarget": {
+      "initial": [
+        116,
+        -61
+      ],
+      "first": [
+        5.742570882069344,
+        4.685276921320394
+      ],
+      "settled": [
+        -119,
+        79
+      ]
+    },
+    "custom": {
+      "end": [
+        116,
+        -61
+      ],
+      "intermediate": {
+        "travel": 0.6875937858108275,
+        "size": 0.20924799907899075,
+        "phase": 0.4410668964990781
+      }
+    },
+    "reversal": [
+      0.4411,
+      0.6265,
+      0.4628,
+      0.2982
+    ]
+  },
+  "ink": [
+    {
+      "name": "2: 92,0",
+      "sx": 1.262415584105349,
+      "sy": 0.9233947258353566,
+      "bounds": [
+        [
+          -73.31,
+          -62.68,
+          -96.59,
+          -85.56
+        ],
+        [
+          -61.95,
+          -51.32,
+          -96.59,
+          -85.56
+        ]
+      ]
+    },
+    {
+      "name": "2: 0,-72",
+      "sx": 0.7832434663440222,
+      "sy": 1.48830847912012,
+      "bounds": [
+        [
+          -88.11,
+          -80.51,
+          -112.43,
+          -96.44
+        ],
+        [
+          -81.06,
+          -73.46,
+          -112.43,
+          -96.44
+        ]
+      ]
+    },
+    {
+      "name": "2: -70,45",
+      "sx": 1.2457688216097151,
+      "sy": 1.360226523314061,
+      "bounds": [
+        [
+          -109.4,
+          -98.75,
+          -86.52,
+          -71.15
+        ],
+        [
+          -98.19,
+          -87.54,
+          -86.52,
+          -71.15
+        ]
+      ]
+    },
+    {
+      "name": "3: 92,0",
+      "sx": 1.3558304727170027,
+      "sy": 0.8924419566815258,
+      "bounds": [
+        [
+          -18.53,
+          -7.12,
+          23.47,
+          34.32
+        ],
+        [
+          -6.33,
+          5.08,
+          23.47,
+          34.32
+        ]
+      ]
+    },
+    {
+      "name": "3: 0,-72",
+      "sx": 0.7971014492753625,
+      "sy": 1.518,
+      "bounds": [
+        [
+          -16.37,
+          -8.63,
+          7.44,
+          23.75
+        ],
+        [
+          -9.19,
+          -1.46,
+          7.44,
+          23.75
+        ]
+      ]
+    },
+    {
+      "name": "3: -70,45",
+      "sx": 1.3325250052231143,
+      "sy": 1.4048968268785995,
+      "bounds": [
+        [
+          -53.86,
+          -42.53,
+          33.24,
+          49.18
+        ],
+        [
+          -41.86,
+          -30.54,
+          33.24,
+          49.18
+        ]
+      ]
+    }
+  ],
+  "passed": true
+}

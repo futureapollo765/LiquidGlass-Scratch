@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "sourceSHA256": "2ee6a85f179540dd02347979b9e3059b90985425fc72c4a896112e0551d191f9",
+  "nativeSavedSHA256": "2dd3c6143f5ee8e79bcc4a5ee8b2216ccf53c6124f9c16e1b2b921d8902f1e9c",
+  "observed": [
+    "Numbered source opened in the dedicated former EditorVerified window.",
+    "Green flag executed the visible main loop containing three public Glass calls.",
+    "M circle joining rendered a continuous rounded connection into the rectangle.",
+    "M plus Space displayed the expanded scene joining multiple components.",
+    "Save As created EditorVerified_0.2.0.sb3 without overwriting the numbered source.",
+    "Reopening the native saved file and running green flag plus M displayed the joining demo again."
+  ],
+  "scope": "Native visual checks supplement runtime, import and independent geometry tests. Automated diagonal drag capture was not used as proof; axis behavior was verified in the actual Scratch VM."
+}

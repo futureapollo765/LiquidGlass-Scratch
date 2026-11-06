@@ -1,0 +1,245 @@
+{
+  "sha256": "9c8e6304f8a5c87712364c07d945a3fd7b3e0db6e726d8dcf8bbef30bab7b429",
+  "checks": [
+    "Capsule, circular and rectangular Buttons and a capsule Menu follow both signs of cursor travel.",
+    "Both contour borders travel with the cursor at every reversal; crossing the press point preserves the largest width.",
+    "Pure horizontal/vertical gestures leave the other stretch at one; diagonals stretch both axes independently.",
+    "Gesture release returns to the configured center and size and suppresses clicks and menu opening.",
+    "Native Pen centerline endpoints follow computed glass edges in compiled and interpreted Scratch execution.",
+    "A large held pointer step is followed over multiple renders until the bounded contact displacement settles.",
+    "An early reversal redirects both edges immediately even when the new absolute target remains ahead; holding that pointer sample continues in the new direction."
+  ],
+  "observations": [
+    {
+      "id": 2,
+      "axis": "x",
+      "sign": 1,
+      "pressed": 142.55999999999997,
+      "peak": 168.33689080749753,
+      "firstPaint": [
+        -68,
+        76
+      ],
+      "lastPaint": [
+        -80,
+        84
+      ]
+    },
+    {
+      "id": 2,
+      "axis": "x",
+      "sign": -1,
+      "pressed": 142.55999999999997,
+      "peak": 168.33689080749753,
+      "firstPaint": [
+        -76,
+        68
+      ],
+      "lastPaint": [
+        -84,
+        80
+      ]
+    },
+    {
+      "id": 2,
+      "axis": "y",
+      "sign": 1,
+      "pressed": 47.519999999999996,
+      "peak": 63.06499438574094
+    },
+    {
+      "id": 2,
+      "axis": "x",
+      "sign": 1,
+      "pressed": 51.04000000000002,
+      "peak": 70.43520000000002,
+      "firstPaint": [
+        -24,
+        28
+      ],
+      "lastPaint": [
+        -32,
+        36
+      ]
+    },
+    {
+      "id": 2,
+      "axis": "x",
+      "sign": -1,
+      "pressed": 51.04000000000002,
+      "peak": 70.43520000000002,
+      "firstPaint": [
+        -28,
+        24
+      ],
+      "lastPaint": [
+        -36,
+        32
+      ]
+    },
+    {
+      "id": 2,
+      "axis": "y",
+      "sign": 1,
+      "pressed": 51.04000000000002,
+      "peak": 66.58499438574073
+    },
+    {
+      "id": 2,
+      "axis": "x",
+      "sign": 1,
+      "pressed": 142.55999999999997,
+      "peak": 168.3368908074974,
+      "firstPaint": [
+        -68,
+        76
+      ],
+      "lastPaint": [
+        -80,
+        84
+      ]
+    },
+    {
+      "id": 2,
+      "axis": "x",
+      "sign": -1,
+      "pressed": 142.55999999999997,
+      "peak": 168.3368908074974,
+      "firstPaint": [
+        -76,
+        68
+      ],
+      "lastPaint": [
+        -84,
+        80
+      ]
+    },
+    {
+      "id": 2,
+      "axis": "y",
+      "sign": 1,
+      "pressed": 47.519999999999996,
+      "peak": 63.06499438574072
+    },
+    {
+      "id": 3,
+      "axis": "x",
+      "sign": 1,
+      "pressed": 136.39999999999998,
+      "peak": 162.1768908074977,
+      "firstPaint": [
+        -64,
+        72
+      ],
+      "lastPaint": [
+        -76,
+        80
+      ]
+    },
+    {
+      "id": 3,
+      "axis": "x",
+      "sign": -1,
+      "pressed": 136.39999999999998,
+      "peak": 162.17689080749753,
+      "firstPaint": [
+        -72,
+        64
+      ],
+      "lastPaint": [
+        -80,
+        76
+      ]
+    },
+    {
+      "id": 3,
+      "axis": "y",
+      "sign": 1,
+      "pressed": 44,
+      "peak": 59.544994385741006
+    },
+    {
+      "id": 2,
+      "axis": "x",
+      "sign": 1,
+      "pressed": 142.55999999999997,
+      "peak": 165.9484617354364,
+      "firstPaint": [
+        -68,
+        76
+      ],
+      "lastPaint": [
+        -84,
+        80
+      ]
+    }
+  ],
+  "stepResponse": [
+    {
+      "id": 2,
+      "sign": -1,
+      "ideal": 19.327433628318587,
+      "first": 7.155652256600229,
+      "second": 15.396732256555199,
+      "held": 19.327433628318587,
+      "interrupted": 7.155652256600229,
+      "reverse": 6.852446652506902,
+      "reverseHeld": 6.503248347424128,
+      "widthAtReversal": 152.22013054641027,
+      "widthAcrossOrigin": 152.22013054641027
+    },
+    {
+      "id": 2,
+      "sign": 1,
+      "ideal": 19.327433628318587,
+      "first": 7.155652256602492,
+      "second": 15.396732256555199,
+      "held": 19.327433628318587,
+      "interrupted": 7.155652256602492,
+      "reverse": 6.852446652509261,
+      "reverseHeld": 6.503248347426422,
+      "widthAtReversal": 152.22013054641334,
+      "widthAcrossOrigin": 152.22013054641334
+    },
+    {
+      "id": 3,
+      "sign": -1,
+      "ideal": 19.327433628318587,
+      "first": 7.155652256600229,
+      "second": 15.396732256555199,
+      "held": 19.327433628318587,
+      "interrupted": 7.155652256604757,
+      "reverse": 6.852446652511526,
+      "reverseHeld": 6.503248347428718,
+      "widthAtReversal": 146.06013054641642,
+      "widthAcrossOrigin": 146.06013054641642
+    },
+    {
+      "id": 3,
+      "sign": 1,
+      "ideal": 19.327433628318587,
+      "first": 7.155652256600229,
+      "second": 15.396732256554468,
+      "held": 19.327433628318587,
+      "interrupted": 7.155652256600229,
+      "reverse": 6.852446652506998,
+      "reverseHeld": 6.50324834742419,
+      "widthAtReversal": 146.06013054641028,
+      "widthAcrossOrigin": 146.06013054641028
+    },
+    {
+      "id": 2,
+      "sign": 1,
+      "ideal": 19.327433628318587,
+      "first": 7.155652256600936,
+      "second": 15.396732256554923,
+      "held": 19.327433628318587,
+      "interrupted": 7.155652256600796,
+      "reverse": 6.852446652507541,
+      "reverseHeld": 6.503248347424745,
+      "widthAtReversal": 152.22013054641107,
+      "widthAcrossOrigin": 152.22013054641107
+    }
+  ],
+  "passed": true
+}

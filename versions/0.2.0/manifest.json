@@ -1,0 +1,37 @@
+{
+  "version": "0.2.0",
+  "previous": "0.1.1",
+  "createdUTC": "2026-11-05T01:54:08.440127+00:00",
+  "note": "Generated native Scratch update; see CHANGELOG.md for behavior changes.",
+  "files": {
+    "LiquidGlass_Studio_0.2.0.sb3": {
+      "sha256": "2ee6a85f179540dd02347979b9e3059b90985425fc72c4a896112e0551d191f9",
+      "bytes": 883309
+    },
+    "LiquidGlass_Component_0.2.0.sprite3": {
+      "sha256": "d21e4f5375a9463faf7b0f5056ac19a6a1439c90972c702741d9ef17b39441c9",
+      "bytes": 879243
+    },
+    "project.json": {
+      "sha256": "f7a23a673d776490f0b952ee39758f7b3391f6426e724533e476f920ff6b8c69",
+      "bytes": 3382447
+    },
+    "build_renderer.py": {
+      "sha256": "a977ce2c0e7e8d8860885023032cc93e029ed8796d15536e5a708f30f5e131aa",
+      "bytes": 37998
+    },
+    "README.md": {
+      "sha256": "e28b4b1f7d6690a84e675cde7e20ce34851a51d4e778ebe5a59b5a4b04fbe01c",
+      "bytes": 18766
+    },
+    "tools/snapshot_release.py": {
+      "sha256": "e5b94fd44195e4e431dcc62e52da2404beefa504cf8f44ae3f0aa29ea7192acc",
+      "bytes": 2661
+    },
+    "CHANGELOG.md": {
+      "sha256": "55f821d3a39fa583c4e63eab676a9152a6271fb27e5db8a9d02dd296772d4c6c",
+      "bytes": 1512
+    }
+  },
+  "validation": "Build checkpoint; final verification recorded separately."
+}

@@ -1,0 +1,237 @@
+{
+  "version": "0.7.0",
+  "previous": "0.6.0",
+  "createdUTC": "2026-11-06T02:11:30.528454+00:00",
+  "note": "Restore EffOnly refraction with smooth rounded edges and joined surfaces; independent menu springs, shared row titles and chevrons, and stretch-only held controls.",
+  "files": {
+    "LiquidGlass_Studio_0.7.0.sb3": {
+      "sha256": "beb5f2b4a7a422e22bcc4a3ed9a3a56a7efee0911f1e96421bf5aa816d77c11c",
+      "bytes": 1918132
+    },
+    "LiquidGlass_Component_0.7.0.sprite3": {
+      "sha256": "93afacae78693bc69d782cc836a15524f00d47cc389c48c6a57f0ecad7413f93",
+      "bytes": 1679324
+    },
+    "project.json": {
+      "sha256": "669b5403a0c6ce5a71691edf8715c06ffc3895a100f83e797d1ac227ec59333e",
+      "bytes": 4368503
+    },
+    "build_renderer.py": {
+      "sha256": "e38fccee850dde0fcb30c079ffc93ddbb7d1a85983908a333453c5c6ad1ecb89",
+      "bytes": 38685
+    },
+    "README.md": {
+      "sha256": "a45a69ced048e88e5831f445f17e5e1f973dbc5817aca83ee140c25f564946c7",
+      "bytes": 33392
+    },
+    "tools/snapshot_release.py": {
+      "sha256": "2311414e3eef9da17788db0b70b2234aa7dd4a5ceb6710f8c66addb21a0bfda1",
+      "bytes": 5509
+    },
+    "tools/repair_editor_ids.py": {
+      "sha256": "d65bb013235c04af8e4c0115b34b1f5241b3b56343acbb55d3f583f24efba26b",
+      "bytes": 7615
+    },
+    "tools/validate_sb3.py": {
+      "sha256": "2ced32266fa983447c70287f58203b4494e2ed8332ebfaecdfb98dbf448e2fa2",
+      "bytes": 13706
+    },
+    "tools/stable_pen.py": {
+      "sha256": "362a4811f466db1393aec083683d46baa98aecd290e72286d8273ede42788e1d",
+      "bytes": 18706
+    },
+    "tools/upgrade_stable_pen.py": {
+      "sha256": "24b61133f91f11baa7e9ea294207e4ed1007023da939456e5e65aae0608a94df",
+      "bytes": 4964
+    },
+    "tools/test_frame_presentation.cjs": {
+      "sha256": "5641bf16e52ffe6d14b8d02774663b56f66d2cf33dd793dfc1ae0314e789eddc",
+      "bytes": 13574
+    },
+    "tools/test_renderer.cjs": {
+      "sha256": "01b41e12c2cec219e27f96dec27ca9c4e364203bff9371852e20bff9caa51d28",
+      "bytes": 27321
+    },
+    "tools/test_editor_runtime.cjs": {
+      "sha256": "bfbedce9211528f321cacada1e62977991d497201f4600bb9fb0dad40197477f",
+      "bytes": 2758
+    },
+    "tools/vm_harness.cjs": {
+      "sha256": "aeb2d47b466098b4a4a1cb43da1545c8ab04871e9df46aef582e6eed990073ab",
+      "bytes": 7862
+    },
+    "tools/verify_editor_roundtrip.py": {
+      "sha256": "5d0612278cfb2430e040ab9fc69075152a62a7df3b04e9ec75785dd45a572747",
+      "bytes": 3459
+    },
+    "research/nary_blend_audit.json": {
+      "sha256": "90c6c50aa4e7554b695a0ce864f5a3e68c99fc6a95520736547a5dc3ee278ca0",
+      "bytes": 18577
+    },
+    "inputs/Studio_before_upgrade.sb3": {
+      "sha256": "ed8177b1d43aad05ce681fd094e9489f06f43af725b8b909ab81eb99ca9ee404",
+      "bytes": 1896199
+    },
+    "inputs/Component_before_upgrade.sprite3": {
+      "sha256": "f07e0d0343784bb272615a6d8a542c5228aad6147a9b902f7c5132b2fc3d0d59",
+      "bytes": 1656953
+    },
+    "inputs/EffOnly_reference.sb3": {
+      "sha256": "e7b2857989a08167f765998e5a3c9d065ddd5a86d639d7fb671b6f4c7ea1ed8c",
+      "bytes": 3522765
+    },
+    "CHANGELOG.md": {
+      "sha256": "c0f595a2c8290f6fe3be4cdd3f18037b87d291f9de141ee6ef5aff335f7ec411",
+      "bytes": 7757
+    },
+    "tools/compact_project.py": {
+      "sha256": "efe05158e924c7882c9bd92e8bfd6b15711ef843a2a46e25db5741e33d79330e",
+      "bytes": 7108
+    },
+    "tools/build_ui.py": {
+      "sha256": "6071b4cbfe9f9a226c194a7904ea3abd288ca946f24105d2cd6db327907237be",
+      "bytes": 11635
+    },
+    "tools/ui_components.py": {
+      "sha256": "e8665301ff1a9e5843361b5b66c840a94d1f18218d771eb70b3ae17ac8432f4c",
+      "bytes": 28834
+    },
+    "tools/ui_labels.py": {
+      "sha256": "5b10095da378546c08d672223d171aa61bcd13df99483727adbe85b5e03eb1ff",
+      "bytes": 31205
+    },
+    "tools/test_ui_components.cjs": {
+      "sha256": "5c8d5cb04b17ab8341e3081975707efd9d39efd6c8f986b8904315827358941b",
+      "bytes": 26478
+    },
+    "tools/test_ui_highlights.cjs": {
+      "sha256": "010c176e708115f4919d26132a83257f429c6c2202ab51e79f5060ff24b29c59",
+      "bytes": 11114
+    },
+    "tools/menu_layers.py": {
+      "sha256": "402449e64410367b6522ffdfa470b241b28cb73b2a8e851b77f254f121616c8d",
+      "bytes": 43648
+    },
+    "tools/glass_material.py": {
+      "sha256": "7a9445a138a028ecceb0351eab990e306f92e722516cb7111c2791461605c2f0",
+      "bytes": 22037
+    },
+    "tools/material_api.py": {
+      "sha256": "6bcc496aa9225513e5cc5a65326652598ed179883d83b55fadea4e33011b7ffb",
+      "bytes": 4720
+    },
+    "tools/test_ui_layers.cjs": {
+      "sha256": "6f567273b5ce988d75fa65bfe7a57ebba0edcb8601c49154769046a7a5460f07",
+      "bytes": 16514
+    },
+    "tools/test_materials.cjs": {
+      "sha256": "c48b04f64dbbf13488a766865a894357e63304c382ac443f38059250e697c939",
+      "bytes": 17399
+    },
+    "tools/test_native_save.cjs": {
+      "sha256": "1f02a62c20fdd781b9dac5d49d7745ddb4f14210239bd56cb54cc21f3a62cfaa",
+      "bytes": 5038
+    },
+    "tools/check_material_upgrade.py": {
+      "sha256": "4049de7779ff50fdff80a369ec6ae2346ea389f03699c4f17658efb7179207b6",
+      "bytes": 3285
+    },
+    "tools/test_layer_presentation.cjs": {
+      "sha256": "66b129ee960a72e5031ac2fb5607a357046ce80460cc31c9f1e3c9387f6e8cb0",
+      "bytes": 7693
+    },
+    "tools/grid_rows.py": {
+      "sha256": "47a169f69a4d592f091b3f32ce95687156883ec5ea79bd076114004c1a8bf973",
+      "bytes": 4794
+    },
+    "tools/panel_optics.py": {
+      "sha256": "355dc336831e56fba41f2f46f424b0328058a929c92202afd622a97b82f1ec7d",
+      "bytes": 10558
+    },
+    "tools/motion_layout.py": {
+      "sha256": "64d793900ef25fcd46b546ce6cb742c5d00d6a3a0ccd87a0dd673ee37dc5fb4f",
+      "bytes": 19870
+    },
+    "tools/body_ink.py": {
+      "sha256": "f90ee4957f483223aee0d89ef4c5d8f91575413dac7284d4cc5f617fb36c2cc4",
+      "bytes": 16547
+    },
+    "tools/body_ink_path.py": {
+      "sha256": "a92e93a7db06741e8b249fc5e4a98b2e804bc4f351c6133001b9ec2fa877ecd8",
+      "bytes": 5465
+    },
+    "tools/body_ink_atlas.py": {
+      "sha256": "b5aa8401419e8bc334570d622fd3cd15f3d829b9c1a2469cb6c978addffc6319",
+      "bytes": 1988
+    },
+    "tools/body_ink_raster.cpp": {
+      "sha256": "2ee1c00885c203aa135151c4e65cc2da61a899bb7835c3f06b2dec28501edad9",
+      "bytes": 2265
+    },
+    "tools/check_motion_upgrade.py": {
+      "sha256": "ff6adb41ab8a806705555c27894e7853467dd9b2334180facb364b0aaa7f407d",
+      "bytes": 2772
+    },
+    "tools/test_grid_pixels.cjs": {
+      "sha256": "ef0f9656dbe7da9c810a184780d47e196843e035584cf29b9587474922fb9a5c",
+      "bytes": 1371
+    },
+    "tools/test_control_motion.cjs": {
+      "sha256": "21162ef23a1db73266a6aa06947dc3401b9f9378ae1bd2621bd6d54dab72bc72",
+      "bytes": 12737
+    },
+    "tools/test_panel_edges.cjs": {
+      "sha256": "ec68281fe82e49aaaef99e1feecb63697bb345a7f0d8a21b6557ac92a67da84e",
+      "bytes": 5124
+    },
+    "tools/test_body_ink.cjs": {
+      "sha256": "1a2e82803acdd43bf8300f3907f815b8ec5515893725b59b4475172a9202ea93",
+      "bytes": 5647
+    },
+    "tools/menu_timing.py": {
+      "sha256": "f85e44d555b869b9e1abcbd5aea93f2b07a1bf1ec94cca2f5238ce46d5bcef1c",
+      "bytes": 13107
+    },
+    "tools/disclosure.py": {
+      "sha256": "4f2fc4f551f88da7f96fe7981d00fc477e498314da70e3afeb5c522edf5f1d24",
+      "bytes": 1997
+    },
+    "tools/menu_handoff.py": {
+      "sha256": "b7e4f0fd2566a50ad39c6416f5733cd5fb90536d589a71acecb1278a71b7d34f",
+      "bytes": 14157
+    },
+    "tools/stretch_gesture.py": {
+      "sha256": "d61ff2b1879d7e97f34e86cda344f6b3d0f7544abde13671d8a15244a642fed4",
+      "bytes": 6720
+    },
+    "tools/reference_refraction.py": {
+      "sha256": "dc1385acfa67a5acf9117b3340c5658e757731fec8c7be628f5970b6ec367003",
+      "bytes": 6707
+    },
+    "tools/test_menu_timing.cjs": {
+      "sha256": "3856864d3c6d26fd7a5d41926bcb737a3495410f0ade3524d5d7e299905a4db8",
+      "bytes": 5986
+    },
+    "tools/test_disclosure.cjs": {
+      "sha256": "3dbf661ce5c57947d0bd6e78331e61a5dbe5fbb28ddb130ced41eed4c3f6a8fa",
+      "bytes": 2201
+    },
+    "tools/test_menu_handoff.cjs": {
+      "sha256": "1fbf1856dc880bbc9705e17fd9af04784b476364b34c6acc8d21b8969e6dd725",
+      "bytes": 9000
+    },
+    "tools/test_stretch_gesture.cjs": {
+      "sha256": "87c8448ba54fd0d1311d286c012215e00ce4d2b04127ac2731ea84ef6aa8051f",
+      "bytes": 11283
+    },
+    "tools/test_reference_refraction.cjs": {
+      "sha256": "be009a687f05f435248a0172682444e5e7d6cb2d169f99374a6694322122f46e",
+      "bytes": 12479
+    },
+    "tools/check_spring_upgrade.py": {
+      "sha256": "af7a3e54d58e8b6dea80c61ee7bd751e1b52abd009872cba7c86d6f6f62b41c2",
+      "bytes": 2278
+    }
+  },
+  "validation": "Build checkpoint; final verification recorded separately."
+}

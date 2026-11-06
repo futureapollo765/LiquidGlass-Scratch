@@ -1,0 +1,51 @@
+{
+  "project": "./LiquidGlass_Studio.sb3",
+  "sourceSHA256": "b93e04c2686e7d99d8b4b895d1a5223a3d351f136820fc3eea6be7c69986aaaa",
+  "workflow": "green flag → stop all → R key → serialize → green flag",
+  "mode": "Installed TurboWarp VM compiler",
+  "checks": [
+    "Existing green flag regenerates all eight frame buffers",
+    "R key hat runs after stop and clears all eight buffers without restarting render",
+    "All 32 component state lists retain eight slots",
+    "Both RGB lookup lists remain unchanged",
+    "Serialized project.json is below 5,000,000 bytes",
+    "All blocks, comments, and broadcasts are identical to the loaded project",
+    "Green flag after export regenerates all eight buffers again"
+  ],
+  "runningBufferLengths": {
+    "field": 23241,
+    "pixelBand": 23241,
+    "pixelDistortion": 23241,
+    "pixelEdge": 23241,
+    "pixelHighlight": 23241,
+    "pixelLightX": 23241,
+    "pixelLightY": 23241,
+    "pixelTint": 23241
+  },
+  "afterStopThenRBufferLengths": {
+    "field": 0,
+    "pixelBand": 0,
+    "pixelDistortion": 0,
+    "pixelEdge": 0,
+    "pixelHighlight": 0,
+    "pixelLightX": 0,
+    "pixelLightY": 0,
+    "pixelTint": 0
+  },
+  "savedProjectJsonBytes": 3229958,
+  "rgbListSHA256": {
+    "Original RGB": "73f8efa1f31d97502d536c3f41ca7be1e7c5955f72026dc704e6263aaa5082b0",
+    "Grid RGB": "5b2b0a16324b4b599818f2224190e8c99ca67f867230c960ec11fd6d77ffc793"
+  },
+  "restartedBufferLengths": {
+    "field": 23241,
+    "pixelBand": 23241,
+    "pixelDistortion": 23241,
+    "pixelEdge": 23241,
+    "pixelHighlight": 23241,
+    "pixelLightX": 23241,
+    "pixelLightY": 23241,
+    "pixelTint": 23241
+  },
+  "passed": true
+}

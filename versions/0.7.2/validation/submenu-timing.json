@@ -1,0 +1,141 @@
+{
+  "sha256": "934fa22559d5d25be50abd6dd303b85eaacc2b999d99717b1c6a619eff6863fc",
+  "checks": [
+    "Source row, height, width, center and actual Pen coverage use independent opening springs; Back retraces those two channels at both depths.",
+    "An outside dismissal uses close travel/growth for a settled ancestor and a partially opened descendant instead of the Back durations.",
+    "A leaf activation dismisses both settled levels; reopening the launcher does not switch those retiring sheets to Back timing.",
+    "Independent zero sockets snap only the corresponding position or size/opacity lane on opening, Back and true dismissal.",
+    "A real Back press during entry preserves signed travel and growth velocities through reversal."
+  ],
+  "observations": {
+    "Tools": {
+      "open200ms": {
+        "x": -28.095752513945087,
+        "y": 2.3261570608804334,
+        "w": 171.68826505636738,
+        "h": 44.47493112444563,
+        "travel": 0.7996525956620457,
+        "growth": 0.28811739770422534,
+        "alpha": 0.39489978804859166
+      },
+      "back200ms": {
+        "x": -25.84806771077399,
+        "y": 32.74759102115081,
+        "w": 178.70079464108628,
+        "h": 82.12122627954912,
+        "travel": 0.20034740433796017,
+        "growth": 0.7118826022957797,
+        "alpha": 0.7551002119514131
+      }
+    },
+    "Tools>Data": {
+      "open200ms": {
+        "x": -24.775860451229903,
+        "y": -10.81163645317659,
+        "w": 176.94038826410633,
+        "h": 36.646778130215566,
+        "travel": 0.7996525956620537,
+        "growth": 0.28811739770423234,
+        "alpha": 0.39489978804859754
+      },
+      "back200ms": {
+        "x": -23.05801655734797,
+        "y": 11.309210467804661,
+        "w": 181.178040310022,
+        "h": 62.920220814892275,
+        "travel": 0.2003474043379741,
+        "growth": 0.711882602295792,
+        "alpha": 0.7551002119514234
+      }
+    },
+    "wholeDismiss": {
+      "settledAncestor": {
+        "x": -44.337094226994054,
+        "y": 21.678410842947983,
+        "w": 83.57391272213434,
+        "h": 21.355906562681334,
+        "travel": 0.7338055807349969,
+        "growth": 0.11656781001329239,
+        "alpha": 0.17835566342249076
+      },
+      "partialDescendant": {
+        "x": -44.78641633840337,
+        "y": -4.664333768089335,
+        "w": 83.70927779074299,
+        "h": 7.1009402435209426,
+        "travel": 0.7511944015458486,
+        "growth": 0.043290461305022836,
+        "alpha": 0.06814029966403554
+      },
+      "partialBefore": {
+        "x": -25.040111414079632,
+        "y": -8.573537124669002,
+        "w": 176.5901173520203,
+        "h": 32.63885417395161,
+        "travel": 0.7113304820343241,
+        "growth": 0.22293082066172434,
+        "alpha": 0.33949119756246565
+      },
+      "parentBefore": {
+        "x": -24.05209694207221,
+        "y": 0.2285996081777455,
+        "w": 183.77069179338275,
+        "h": 106.66241507602966,
+        "travel": 0.9999999999999999,
+        "growth": 1,
+        "alpha": 1.0000000000000004
+      }
+    },
+    "leafDismiss": {
+      "ancestor200ms": {
+        "x": -44.12459468137675,
+        "y": 22.141153651263807,
+        "w": 83.87226525425217,
+        "h": 21.35915739330361,
+        "travel": 0.7338055807349573,
+        "growth": 0.1165678100132563,
+        "alpha": 0.17835566342243817
+      },
+      "descendant200ms": {
+        "x": -44.57552083865767,
+        "y": -3.529392930426752,
+        "w": 91.79344480868879,
+        "h": 12.761603506004477,
+        "travel": 0.7338055807349573,
+        "growth": 0.11656781001325632,
+        "alpha": 0.17835566342243817
+      },
+      "path": "Tools>Data>Quartz"
+    },
+    "interruption": {
+      "before": {
+        "x": -28.328789579794034,
+        "y": 22.618526901580168,
+        "w": 171.1047590725462,
+        "h": 40.09843102097611,
+        "travel": 0.33638369453935946,
+        "growth": 0.23855543652459632,
+        "alpha": 0.3527721210459069
+      },
+      "pivot": {
+        "x": -27.716247672459644,
+        "y": 14.786733524392815,
+        "w": 173.33171380311498,
+        "h": 54.076002978731786,
+        "travel": 0.5339416944653229,
+        "growth": 0.39637818515327006,
+        "alpha": 0.4869214573802796
+      },
+      "after": {
+        "x": -27.392218822018748,
+        "y": 12.074842507444828,
+        "w": 174.32021931108747,
+        "h": 59.96253118223024,
+        "travel": 0.6061551198899545,
+        "growth": 0.46277869823216733,
+        "alpha": 0.5433618934973423
+      }
+    }
+  },
+  "passed": true
+}

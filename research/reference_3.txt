@@ -1,0 +1,857 @@
+
+TARGET Stage
+
+
+TARGET save
+
+
+TARGET liquid glass
+
+HAT
+event_whenflagclicked()
+setvariableto(VARIABLE=debug, VALUE=0)
+setvariableto(VARIABLE=W, VALUE=480)
+setvariableto(VARIABLE=H, VALUE=360)
+setvariableto(VARIABLE=PI, VALUE=3.1415926535)
+setvariableto(VARIABLE=dpr, VALUE=1)
+setvariableto(VARIABLE=blur_edge, VALUE=1)
+setvariableto(VARIABLE=tr, VALUE=255)
+setvariableto(VARIABLE=tg, VALUE=255)
+setvariableto(VARIABLE=tb, VALUE=255)
+setvariableto(VARIABLE=ta, VALUE=0.05)
+setvariableto(VARIABLE=NR, VALUE=0.98)
+setvariableto(VARIABLE=NG, VALUE=1)
+setvariableto(VARIABLE=NB, VALUE=1.02)
+setvariableto(VARIABLE=base_mult, VALUE=0.05)
+setvariableto(VARIABLE=merge_tol, VALUE=1)
+pen_clear()
+setvariableto(VARIABLE=ui_r, VALUE=0)
+setvariableto(VARIABLE=ui_l, VALUE=0)
+hidevariable(VARIABLE=thick)
+hidevariable(VARIABLE=ior)
+hidevariable(VARIABLE=disp)
+hidevariable(VARIABLE=blur_radius)
+hidevariable(VARIABLE=quality)
+hidevariable(VARIABLE=aa_samples)
+hidevariable(VARIABLE=k)
+hidevariable(VARIABLE=ui)
+hidelist(LIST=debug)
+setvariableto(VARIABLE=key_last, VALUE=)
+setvariableto(VARIABLE=blur_key_last, VALUE=)
+setvariableto(VARIABLE=skip, VALUE=0)
+control_forever()
+SUBSTACK
+  control_if(CONDITION=((ui_r = 0) and not(OPERAND=(sensing_mousex() < 238))))
+  SUBSTACK
+    setvariableto(VARIABLE=ui_r, VALUE=1)
+    showvariable(VARIABLE=thick)
+    showvariable(VARIABLE=ior)
+    showvariable(VARIABLE=disp)
+    showvariable(VARIABLE=blur_radius)
+    showvariable(VARIABLE=quality)
+    showvariable(VARIABLE=aa_samples)
+    showvariable(VARIABLE=k)
+    showvariable(VARIABLE=ui)
+  control_if(CONDITION=((ui_r = 1) and (sensing_mousex() < 103)))
+  SUBSTACK
+    setvariableto(VARIABLE=ui_r, VALUE=0)
+    hidevariable(VARIABLE=thick)
+    hidevariable(VARIABLE=ior)
+    hidevariable(VARIABLE=disp)
+    hidevariable(VARIABLE=blur_radius)
+    hidevariable(VARIABLE=quality)
+    hidevariable(VARIABLE=aa_samples)
+    hidevariable(VARIABLE=k)
+    hidevariable(VARIABLE=ui)
+  control_if(CONDITION=((ui_l = 0) and not(OPERAND=(sensing_mousex() > -238))))
+  SUBSTACK
+    setvariableto(VARIABLE=ui_l, VALUE=1)
+    showlist(LIST=debug)
+  control_if(CONDITION=((ui_l = 1) and (sensing_mousex() > -103)))
+  SUBSTACK
+    setvariableto(VARIABLE=ui_l, VALUE=0)
+    hidelist(LIST=debug)
+  setvariableto(VARIABLE=quality, VALUE=(round(NUM=(quality * 2)) / 2))
+  control_if(CONDITION=(quality < 0.5))
+  SUBSTACK
+    setvariableto(VARIABLE=quality, VALUE=0.5)
+  setvariableto(VARIABLE=W, VALUE=ceiling((480 / quality)))
+  setvariableto(VARIABLE=H, VALUE=ceiling((360 / quality)))
+  setvariableto(VARIABLE=N, VALUE=(W * H))
+  deletealloflist(LIST=debug)
+  setvariableto(VARIABLE=totalms, VALUE=0)
+  addtolist(LIST=debug, ITEM=sensing_dayssince2000())
+  control_if_else(CONDITION=(aa_samples > 1))
+  SUBSTACK
+    setvariableto(VARIABLE=aa_n, VALUE=round(NUM=aa_samples))
+    setvariableto(VARIABLE=aa_thr, VALUE=0)
+  SUBSTACK2
+    setvariableto(VARIABLE=aa_n, VALUE=1)
+    setvariableto(VARIABLE=aa_thr, VALUE=0)
+  setvariableto(VARIABLE=key_now, VALUE=join(STRING1=join(STRING1=join(STRING1=join(STRING1=join(STRING1=join(STRING1=join(STRING1=join(STRING1=join(STRING1=join(STRING1=join(STRING1=join(STRING1=join(STRING1=join(STRING1=join(STRING1=join(STRING1=join(STRING1=join(STRING1=quality, STRING2=join(STRING1=,, STRING2=ui)), STRING2=join(STRING1=,, STRING2=k)), STRING2=join(STRING1=,, STRING2=radius)), STRING2=join(STRING1=,, STRING2=gap)), STRING2=join(STRING1=,, STRING2=tile)), STRING2=join(STRING1=,, STRING2=thick)), STRING2=join(STRING1=,, STRING2=ior)), STRING2=join(STRING1=,, STRING2=disp)), STRING2=join(STRING1=,, STRING2=blur_edge)), STRING2=join(STRING1=,, STRING2=NR)), STRING2=join(STRING1=,, STRING2=NG)), STRING2=join(STRING1=,, STRING2=NB)), STRING2=join(STRING1=,, STRING2=tr)), STRING2=join(STRING1=,, STRING2=tg)), STRING2=join(STRING1=,, STRING2=tb)), STRING2=join(STRING1=,, STRING2=ta)), STRING2=join(STRING1=,, STRING2=base_mult)), STRING2=join(STRING1=,, STRING2=aa_samples)))
+  control_if(CONDITION=not(OPERAND=(key_now = key_last)))
+  SUBSTACK
+    setvariableto(VARIABLE=key_last, VALUE=key_now)
+    full_rebuild []
+  generate_sdf []
+  calculate_pixels []
+  render_glass []
+  debug %s ['total']
+
+DEFINE hs %s ["s"]
+control_if_else(CONDITION=not(OPERAND=($s > -1)))
+SUBSTACK
+  setvariableto(VARIABLE=hs_out, VALUE=0)
+SUBSTACK2
+  control_if_else(CONDITION=($s < 0))
+  SUBSTACK
+    setvariableto(VARIABLE=hs_out, VALUE=((($s + 1) * ($s + 1)) / 2))
+  SUBSTACK2
+    control_if_else(CONDITION=($s < 1))
+    SUBSTACK
+      setvariableto(VARIABLE=hs_out, VALUE=(1 - (((1 - $s) * (1 - $s)) / 2)))
+    SUBSTACK2
+      setvariableto(VARIABLE=hs_out, VALUE=1)
+
+DEFINE build_blur []
+setvariableto(VARIABLE=s_rad, VALUE=blur_radius)
+deletealloflist(LIST=kern)
+control_if_else(CONDITION=(s_rad < 0.01))
+SUBSTACK
+  setvariableto(VARIABLE=s_R, VALUE=0)
+  addtolist(LIST=kern, ITEM=1)
+SUBSTACK2
+  setvariableto(VARIABLE=s_a, VALUE=(s_rad / 2))
+  setvariableto(VARIABLE=s_R, VALUE=ceiling(s_a))
+  setvariableto(VARIABLE=s_tot, VALUE=0)
+  setvariableto(VARIABLE=s_u, VALUE=(0 - s_R))
+  control_repeat(TIMES=((s_R * 2) + 1))
+  SUBSTACK
+    hs %s ['(s_a - s_u)']
+    setvariableto(VARIABLE=s_k1, VALUE=hs_out)
+    hs %s ['((0 - s_a) - s_u)']
+    setvariableto(VARIABLE=s_k1, VALUE=(s_k1 - hs_out))
+    addtolist(LIST=kern, ITEM=s_k1)
+    changevariableby(VARIABLE=s_tot, VALUE=s_k1)
+    changevariableby(VARIABLE=s_u, VALUE=1)
+  setvariableto(VARIABLE=s_ki, VALUE=1)
+  control_repeat(TIMES=((s_R * 2) + 1))
+  SUBSTACK
+    replaceitemoflist(LIST=kern, INDEX=s_ki, ITEM=(kern[s_ki] / s_tot))
+    changevariableby(VARIABLE=s_ki, VALUE=1)
+deletealloflist(LIST=tmp_r)
+deletealloflist(LIST=tmp_g)
+deletealloflist(LIST=tmp_b)
+setvariableto(VARIABLE=s_row, VALUE=0)
+control_repeat(TIMES=360)
+SUBSTACK
+  setvariableto(VARIABLE=s_col, VALUE=0)
+  control_repeat(TIMES=480)
+  SUBSTACK
+    setvariableto(VARIABLE=s_ar, VALUE=0)
+    setvariableto(VARIABLE=s_ag, VALUE=0)
+    setvariableto(VARIABLE=s_ab, VALUE=0)
+    setvariableto(VARIABLE=s_j, VALUE=(0 - s_R))
+    setvariableto(VARIABLE=s_ki, VALUE=1)
+    control_repeat(TIMES=((s_R * 2) + 1))
+    SUBSTACK
+      setvariableto(VARIABLE=s_cc, VALUE=(s_col + s_j))
+      control_if(CONDITION=(s_cc < 0))
+      SUBSTACK
+        setvariableto(VARIABLE=s_cc, VALUE=0)
+      control_if(CONDITION=(s_cc > 479))
+      SUBSTACK
+        setvariableto(VARIABLE=s_cc, VALUE=479)
+      setvariableto(VARIABLE=s_ii, VALUE=(((s_row * 480) + s_cc) + 1))
+      setvariableto(VARIABLE=s_w, VALUE=kern[s_ki])
+      changevariableby(VARIABLE=s_ar, VALUE=(s_w * image r[s_ii]))
+      changevariableby(VARIABLE=s_ag, VALUE=(s_w * image g[s_ii]))
+      changevariableby(VARIABLE=s_ab, VALUE=(s_w * image b[s_ii]))
+      changevariableby(VARIABLE=s_j, VALUE=1)
+      changevariableby(VARIABLE=s_ki, VALUE=1)
+    addtolist(LIST=tmp_r, ITEM=s_ar)
+    addtolist(LIST=tmp_g, ITEM=s_ag)
+    addtolist(LIST=tmp_b, ITEM=s_ab)
+    changevariableby(VARIABLE=s_col, VALUE=1)
+  changevariableby(VARIABLE=s_row, VALUE=1)
+deletealloflist(LIST=blur_r)
+deletealloflist(LIST=blur_g)
+deletealloflist(LIST=blur_b)
+setvariableto(VARIABLE=s_row, VALUE=0)
+control_repeat(TIMES=360)
+SUBSTACK
+  setvariableto(VARIABLE=s_col, VALUE=0)
+  control_repeat(TIMES=480)
+  SUBSTACK
+    setvariableto(VARIABLE=s_ar, VALUE=0)
+    setvariableto(VARIABLE=s_ag, VALUE=0)
+    setvariableto(VARIABLE=s_ab, VALUE=0)
+    setvariableto(VARIABLE=s_j, VALUE=(0 - s_R))
+    setvariableto(VARIABLE=s_ki, VALUE=1)
+    control_repeat(TIMES=((s_R * 2) + 1))
+    SUBSTACK
+      setvariableto(VARIABLE=s_cc, VALUE=(s_row + s_j))
+      control_if(CONDITION=(s_cc < 0))
+      SUBSTACK
+        setvariableto(VARIABLE=s_cc, VALUE=0)
+      control_if(CONDITION=(s_cc > 359))
+      SUBSTACK
+        setvariableto(VARIABLE=s_cc, VALUE=359)
+      setvariableto(VARIABLE=s_ii, VALUE=(((s_cc * 480) + s_col) + 1))
+      setvariableto(VARIABLE=s_w, VALUE=kern[s_ki])
+      changevariableby(VARIABLE=s_ar, VALUE=(s_w * tmp_r[s_ii]))
+      changevariableby(VARIABLE=s_ag, VALUE=(s_w * tmp_g[s_ii]))
+      changevariableby(VARIABLE=s_ab, VALUE=(s_w * tmp_b[s_ii]))
+      changevariableby(VARIABLE=s_j, VALUE=1)
+      changevariableby(VARIABLE=s_ki, VALUE=1)
+    addtolist(LIST=blur_r, ITEM=s_ar)
+    addtolist(LIST=blur_g, ITEM=s_ag)
+    addtolist(LIST=blur_b, ITEM=s_ab)
+    changevariableby(VARIABLE=s_col, VALUE=1)
+  changevariableby(VARIABLE=s_row, VALUE=1)
+deletealloflist(LIST=tmp_r)
+deletealloflist(LIST=tmp_g)
+deletealloflist(LIST=tmp_b)
+
+DEFINE apply_rect %s %s %s %s %s ["x","y","w","h","r"]
+setvariableto(VARIABLE=s_cx, VALUE=($x / quality))
+setvariableto(VARIABLE=s_cy, VALUE=($y / quality))
+setvariableto(VARIABLE=s_hw, VALUE=($w / quality))
+setvariableto(VARIABLE=s_hh, VALUE=($h / quality))
+setvariableto(VARIABLE=s_rr, VALUE=($r / quality))
+setvariableto(VARIABLE=s_kq, VALUE=(k / quality))
+setvariableto(VARIABLE=s_km, VALUE=(s_kq * 2))
+setvariableto(VARIABLE=s_c0, VALUE=floor((((((W / 2) + s_cx) - s_hw) - s_km) - 0.5)))
+setvariableto(VARIABLE=s_c1, VALUE=ceiling((((((W / 2) + s_cx) + s_hw) + s_km) - 0.5)))
+setvariableto(VARIABLE=s_r0, VALUE=floor((((((H / 2) + s_cy) - s_hh) - s_km) - 0.5)))
+setvariableto(VARIABLE=s_r1, VALUE=ceiling((((((H / 2) + s_cy) + s_hh) + s_km) - 0.5)))
+control_if(CONDITION=(s_c0 < 0))
+SUBSTACK
+  setvariableto(VARIABLE=s_c0, VALUE=0)
+control_if(CONDITION=(s_c1 > (W - 1)))
+SUBSTACK
+  setvariableto(VARIABLE=s_c1, VALUE=(W - 1))
+control_if(CONDITION=(s_r0 < 0))
+SUBSTACK
+  setvariableto(VARIABLE=s_r0, VALUE=0)
+control_if(CONDITION=(s_r1 > (H - 1)))
+SUBSTACK
+  setvariableto(VARIABLE=s_r1, VALUE=(H - 1))
+control_if(CONDITION=(not(OPERAND=(s_c0 > s_c1)) and not(OPERAND=(s_r0 > s_r1))))
+SUBSTACK
+  addtolist(LIST=boxes, ITEM=s_c0)
+  addtolist(LIST=boxes, ITEM=s_c1)
+  addtolist(LIST=boxes, ITEM=s_r0)
+  addtolist(LIST=boxes, ITEM=s_r1)
+  setvariableto(VARIABLE=s_row, VALUE=s_r0)
+  control_repeat(TIMES=((s_r1 - s_r0) + 1))
+  SUBSTACK
+    setvariableto(VARIABLE=s_dy, VALUE=abs((((s_row + 0.5) - (H / 2)) - s_cy)))
+    control_if(CONDITION=not(OPERAND=(s_dy > (s_hh + s_km))))
+    SUBSTACK
+      setvariableto(VARIABLE=s_qy, VALUE=(s_dy - (s_hh - s_rr)))
+      setvariableto(VARIABLE=s_oy, VALUE=s_qy)
+      control_if(CONDITION=(s_oy < 0))
+      SUBSTACK
+        setvariableto(VARIABLE=s_oy, VALUE=0)
+      setvariableto(VARIABLE=s_be, VALUE=((s_row * W) + 1))
+      setvariableto(VARIABLE=s_col, VALUE=s_c0)
+      control_repeat(TIMES=((s_c1 - s_c0) + 1))
+      SUBSTACK
+        setvariableto(VARIABLE=s_dx, VALUE=abs((((s_col + 0.5) - (W / 2)) - s_cx)))
+        control_if(CONDITION=not(OPERAND=(s_dx > (s_hw + s_km))))
+        SUBSTACK
+          setvariableto(VARIABLE=s_qx, VALUE=(s_dx - (s_hw - s_rr)))
+          setvariableto(VARIABLE=s_ox, VALUE=s_qx)
+          control_if(CONDITION=(s_ox < 0))
+          SUBSTACK
+            setvariableto(VARIABLE=s_ox, VALUE=0)
+          setvariableto(VARIABLE=s_in, VALUE=s_qx)
+          control_if(CONDITION=(s_qy > s_in))
+          SUBSTACK
+            setvariableto(VARIABLE=s_in, VALUE=s_qy)
+          control_if(CONDITION=(s_in > 0))
+          SUBSTACK
+            setvariableto(VARIABLE=s_in, VALUE=0)
+          setvariableto(VARIABLE=s_dist, VALUE=((sqrt(((s_ox * s_ox) + (s_oy * s_oy))) + s_in) - s_rr))
+          setvariableto(VARIABLE=s_e, VALUE=(s_be + s_col))
+          setvariableto(VARIABLE=s_d, VALUE=sdf_list[s_e])
+          control_if(CONDITION=(s_dist < (s_d + s_kq)))
+          SUBSTACK
+            setvariableto(VARIABLE=s_h, VALUE=(0.5 + ((0.5 * (s_dist - s_d)) / s_kq)))
+            control_if(CONDITION=(s_h < 0))
+            SUBSTACK
+              setvariableto(VARIABLE=s_h, VALUE=0)
+            control_if(CONDITION=(s_h > 1))
+            SUBSTACK
+              setvariableto(VARIABLE=s_h, VALUE=1)
+            replaceitemoflist(LIST=sdf_list, INDEX=s_e, ITEM=(((s_d * s_h) + (s_dist * (1 - s_h))) - ((s_kq * s_h) * (1 - s_h))))
+        changevariableby(VARIABLE=s_col, VALUE=1)
+    changevariableby(VARIABLE=s_row, VALUE=1)
+
+DEFINE apply_circle %s %s %s ["x","y","r"]
+setvariableto(VARIABLE=s_cx, VALUE=($x / quality))
+setvariableto(VARIABLE=s_cy, VALUE=($y / quality))
+setvariableto(VARIABLE=s_rr, VALUE=($r / quality))
+setvariableto(VARIABLE=s_kq, VALUE=(k / quality))
+setvariableto(VARIABLE=s_km, VALUE=(s_kq * 2))
+setvariableto(VARIABLE=s_c0, VALUE=floor((((((W / 2) + s_cx) - s_rr) - s_km) - 0.5)))
+setvariableto(VARIABLE=s_c1, VALUE=ceiling((((((W / 2) + s_cx) + s_rr) + s_km) - 0.5)))
+setvariableto(VARIABLE=s_r0, VALUE=floor((((((H / 2) + s_cy) - s_rr) - s_km) - 0.5)))
+setvariableto(VARIABLE=s_r1, VALUE=ceiling((((((H / 2) + s_cy) + s_rr) + s_km) - 0.5)))
+control_if(CONDITION=(s_c0 < 0))
+SUBSTACK
+  setvariableto(VARIABLE=s_c0, VALUE=0)
+control_if(CONDITION=(s_c1 > (W - 1)))
+SUBSTACK
+  setvariableto(VARIABLE=s_c1, VALUE=(W - 1))
+control_if(CONDITION=(s_r0 < 0))
+SUBSTACK
+  setvariableto(VARIABLE=s_r0, VALUE=0)
+control_if(CONDITION=(s_r1 > (H - 1)))
+SUBSTACK
+  setvariableto(VARIABLE=s_r1, VALUE=(H - 1))
+control_if(CONDITION=(not(OPERAND=(s_c0 > s_c1)) and not(OPERAND=(s_r0 > s_r1))))
+SUBSTACK
+  addtolist(LIST=boxes, ITEM=s_c0)
+  addtolist(LIST=boxes, ITEM=s_c1)
+  addtolist(LIST=boxes, ITEM=s_r0)
+  addtolist(LIST=boxes, ITEM=s_r1)
+  setvariableto(VARIABLE=s_row, VALUE=s_r0)
+  control_repeat(TIMES=((s_r1 - s_r0) + 1))
+  SUBSTACK
+    setvariableto(VARIABLE=s_dy, VALUE=(((s_row + 0.5) - (H / 2)) - s_cy))
+    control_if(CONDITION=not(OPERAND=(abs(s_dy) > (s_rr + s_km))))
+    SUBSTACK
+      setvariableto(VARIABLE=s_be, VALUE=((s_row * W) + 1))
+      setvariableto(VARIABLE=s_col, VALUE=s_c0)
+      control_repeat(TIMES=((s_c1 - s_c0) + 1))
+      SUBSTACK
+        setvariableto(VARIABLE=s_dx, VALUE=(((s_col + 0.5) - (W / 2)) - s_cx))
+        control_if(CONDITION=not(OPERAND=(abs(s_dx) > (s_rr + s_km))))
+        SUBSTACK
+          setvariableto(VARIABLE=s_dist, VALUE=(sqrt(((s_dx * s_dx) + (s_dy * s_dy))) - s_rr))
+          setvariableto(VARIABLE=s_e, VALUE=(s_be + s_col))
+          setvariableto(VARIABLE=s_d, VALUE=sdf_list[s_e])
+          control_if(CONDITION=(s_dist < (s_d + s_kq)))
+          SUBSTACK
+            setvariableto(VARIABLE=s_h, VALUE=(0.5 + ((0.5 * (s_dist - s_d)) / s_kq)))
+            control_if(CONDITION=(s_h < 0))
+            SUBSTACK
+              setvariableto(VARIABLE=s_h, VALUE=0)
+            control_if(CONDITION=(s_h > 1))
+            SUBSTACK
+              setvariableto(VARIABLE=s_h, VALUE=1)
+            replaceitemoflist(LIST=sdf_list, INDEX=s_e, ITEM=(((s_d * s_h) + (s_dist * (1 - s_h))) - ((s_kq * s_h) * (1 - s_h))))
+        changevariableby(VARIABLE=s_col, VALUE=1)
+    changevariableby(VARIABLE=s_row, VALUE=1)
+
+DEFINE shade %s %s %s ["c","r","e"]
+setvariableto(VARIABLE=s_m, VALUE=sdf_list[$e])
+setvariableto(VARIABLE=s_nm, VALUE=(0 - s_m))
+control_if(CONDITION=(s_nm < 0))
+SUBSTACK
+  setvariableto(VARIABLE=s_nm, VALUE=0)
+setvariableto(VARIABLE=s_cov, VALUE=aa_n)
+control_if_else(CONDITION=(not(OPERAND=((s_nm * quality) < thick)) and (quality = 1)))
+SUBSTACK
+  setvariableto(VARIABLE=s_pr, VALUE=blur_r[$e])
+  setvariableto(VARIABLE=s_pg, VALUE=blur_g[$e])
+  setvariableto(VARIABLE=s_pb, VALUE=blur_b[$e])
+SUBSTACK2
+  setvariableto(VARIABLE=s_ix, VALUE=$c)
+  control_if(CONDITION=(s_ix < 1))
+  SUBSTACK
+    setvariableto(VARIABLE=s_ix, VALUE=1)
+  control_if(CONDITION=(s_ix > (W - 2)))
+  SUBSTACK
+    setvariableto(VARIABLE=s_ix, VALUE=(W - 2))
+  setvariableto(VARIABLE=s_iy, VALUE=$r)
+  control_if(CONDITION=(s_iy < 1))
+  SUBSTACK
+    setvariableto(VARIABLE=s_iy, VALUE=1)
+  control_if(CONDITION=(s_iy > (H - 2)))
+  SUBSTACK
+    setvariableto(VARIABLE=s_iy, VALUE=(H - 2))
+  setvariableto(VARIABLE=s_ie, VALUE=(((s_iy * W) + s_ix) + 1))
+  setvariableto(VARIABLE=s_gx, VALUE=(sdf_list[(s_ie + 1)] - sdf_list[(s_ie - 1)]))
+  setvariableto(VARIABLE=s_gy, VALUE=(sdf_list[(s_ie + W)] - sdf_list[(s_ie - W)]))
+  setvariableto(VARIABLE=s_l, VALUE=sqrt(((s_gx * s_gx) + (s_gy * s_gy))))
+  setvariableto(VARIABLE=s_nit, VALUE=1)
+  control_if(CONDITION=((aa_n > 1) and (s_m > -1.5)))
+  SUBSTACK
+    setvariableto(VARIABLE=s_nit, VALUE=aa_n)
+  setvariableto(VARIABLE=s_ar, VALUE=0)
+  setvariableto(VARIABLE=s_ag, VALUE=0)
+  setvariableto(VARIABLE=s_ab, VALUE=0)
+  setvariableto(VARIABLE=s_si2, VALUE=0)
+  control_repeat(TIMES=s_nit)
+  SUBSTACK
+    setvariableto(VARIABLE=s_ox2, VALUE=0)
+    setvariableto(VARIABLE=s_oy2, VALUE=0)
+    control_if(CONDITION=(s_nit > 1))
+    SUBSTACK
+      setvariableto(VARIABLE=s_ox2, VALUE=(((s_si2 + 0.5) / s_nit) - 0.5))
+      setvariableto(VARIABLE=s_oy2, VALUE=((((s_si2 * 0.7548776662) + 0.5) mod 1) - 0.5))
+    setvariableto(VARIABLE=s_nm2, VALUE=(0 - (s_m + (((s_gx * s_ox2) + (s_gy * s_oy2)) / 2))))
+    control_if(CONDITION=(s_nm2 < 0))
+    SUBSTACK
+      setvariableto(VARIABLE=s_nm2, VALUE=0)
+    setvariableto(VARIABLE=s_nm, VALUE=s_nm2)
+    setvariableto(VARIABLE=s_ns, VALUE=(s_nm2 * quality))
+    control_if_else(CONDITION=not(OPERAND=(s_ns < thick)))
+    SUBSTACK
+      setvariableto(VARIABLE=s_ef, VALUE=0)
+    SUBSTACK2
+      setvariableto(VARIABLE=s_xr, VALUE=(1 - (s_ns / thick)))
+      setvariableto(VARIABLE=s_t, VALUE=(s_xr * s_xr))
+      control_if(CONDITION=(s_t < -1))
+      SUBSTACK
+        setvariableto(VARIABLE=s_t, VALUE=-1)
+      control_if(CONDITION=(s_t > 1))
+      SUBSTACK
+        setvariableto(VARIABLE=s_t, VALUE=1)
+      setvariableto(VARIABLE=s_ti, VALUE=asin(s_t))
+      setvariableto(VARIABLE=s_t, VALUE=(sin(s_ti) / ior))
+      control_if(CONDITION=(s_t < -1))
+      SUBSTACK
+        setvariableto(VARIABLE=s_t, VALUE=-1)
+      control_if(CONDITION=(s_t > 1))
+      SUBSTACK
+        setvariableto(VARIABLE=s_t, VALUE=1)
+      setvariableto(VARIABLE=s_tt, VALUE=asin(s_t))
+      setvariableto(VARIABLE=s_ef, VALUE=(0 - tan((s_tt - s_ti))))
+    control_if_else(CONDITION=(s_l = 0))
+    SUBSTACK
+      setvariableto(VARIABLE=s_bx, VALUE=0)
+      setvariableto(VARIABLE=s_by, VALUE=0)
+    SUBSTACK2
+      setvariableto(VARIABLE=s_sc, VALUE=(((s_ef * base_mult) * 1414.213562) / s_l))
+      setvariableto(VARIABLE=s_bx, VALUE=((0 - s_gx) * s_sc))
+      setvariableto(VARIABLE=s_by, VALUE=((0 - s_gy) * s_sc))
+    setvariableto(VARIABLE=s_sx, VALUE=((((($c + 0.5) + s_ox2) - (W / 2)) * quality) + 239.5))
+    setvariableto(VARIABLE=s_sy, VALUE=((((($r + 0.5) + s_oy2) - (H / 2)) * quality) + 179.5))
+    setvariableto(VARIABLE=s_px, VALUE=(s_sx + (s_bx * fcR)))
+    setvariableto(VARIABLE=s_py, VALUE=(s_sy + (s_by * fcR)))
+    control_if(CONDITION=(s_px < 0))
+    SUBSTACK
+      setvariableto(VARIABLE=s_px, VALUE=0)
+    control_if(CONDITION=(s_px > 479))
+    SUBSTACK
+      setvariableto(VARIABLE=s_px, VALUE=479)
+    control_if(CONDITION=(s_py < 0))
+    SUBSTACK
+      setvariableto(VARIABLE=s_py, VALUE=0)
+    control_if(CONDITION=(s_py > 359))
+    SUBSTACK
+      setvariableto(VARIABLE=s_py, VALUE=359)
+    setvariableto(VARIABLE=s_x0, VALUE=floor(s_px))
+    setvariableto(VARIABLE=s_y0, VALUE=floor(s_py))
+    setvariableto(VARIABLE=s_fx, VALUE=(s_px - s_x0))
+    setvariableto(VARIABLE=s_fy, VALUE=(s_py - s_y0))
+    setvariableto(VARIABLE=s_x1, VALUE=(s_x0 + 1))
+    control_if(CONDITION=(s_x1 > 479))
+    SUBSTACK
+      setvariableto(VARIABLE=s_x1, VALUE=479)
+    setvariableto(VARIABLE=s_y1, VALUE=(s_y0 + 1))
+    control_if(CONDITION=(s_y1 > 359))
+    SUBSTACK
+      setvariableto(VARIABLE=s_y1, VALUE=359)
+    setvariableto(VARIABLE=s_i0, VALUE=((s_y0 * 480) + 1))
+    setvariableto(VARIABLE=s_i1, VALUE=((s_y1 * 480) + 1))
+    setvariableto(VARIABLE=s_pr, VALUE=((((blur_r[(s_i0 + s_x0)] * (1 - s_fx)) + (blur_r[(s_i0 + s_x1)] * s_fx)) * (1 - s_fy)) + (((blur_r[(s_i1 + s_x0)] * (1 - s_fx)) + (blur_r[(s_i1 + s_x1)] * s_fx)) * s_fy)))
+    control_if(CONDITION=(blur_edge = 0))
+    SUBSTACK
+      setvariableto(VARIABLE=s_bgv, VALUE=((((image r[(s_i0 + s_x0)] * (1 - s_fx)) + (image r[(s_i0 + s_x1)] * s_fx)) * (1 - s_fy)) + (((image r[(s_i1 + s_x0)] * (1 - s_fx)) + (image r[(s_i1 + s_x1)] * s_fx)) * s_fy)))
+      setvariableto(VARIABLE=s_pr, VALUE=(s_bgv + (((s_pr - s_bgv) * s_ns) / thick)))
+    setvariableto(VARIABLE=s_px, VALUE=(s_sx + (s_bx * fcG)))
+    setvariableto(VARIABLE=s_py, VALUE=(s_sy + (s_by * fcG)))
+    control_if(CONDITION=(s_px < 0))
+    SUBSTACK
+      setvariableto(VARIABLE=s_px, VALUE=0)
+    control_if(CONDITION=(s_px > 479))
+    SUBSTACK
+      setvariableto(VARIABLE=s_px, VALUE=479)
+    control_if(CONDITION=(s_py < 0))
+    SUBSTACK
+      setvariableto(VARIABLE=s_py, VALUE=0)
+    control_if(CONDITION=(s_py > 359))
+    SUBSTACK
+      setvariableto(VARIABLE=s_py, VALUE=359)
+    setvariableto(VARIABLE=s_x0, VALUE=floor(s_px))
+    setvariableto(VARIABLE=s_y0, VALUE=floor(s_py))
+    setvariableto(VARIABLE=s_fx, VALUE=(s_px - s_x0))
+    setvariableto(VARIABLE=s_fy, VALUE=(s_py - s_y0))
+    setvariableto(VARIABLE=s_x1, VALUE=(s_x0 + 1))
+    control_if(CONDITION=(s_x1 > 479))
+    SUBSTACK
+      setvariableto(VARIABLE=s_x1, VALUE=479)
+    setvariableto(VARIABLE=s_y1, VALUE=(s_y0 + 1))
+    control_if(CONDITION=(s_y1 > 359))
+    SUBSTACK
+      setvariableto(VARIABLE=s_y1, VALUE=359)
+    setvariableto(VARIABLE=s_i0, VALUE=((s_y0 * 480) + 1))
+    setvariableto(VARIABLE=s_i1, VALUE=((s_y1 * 480) + 1))
+    setvariableto(VARIABLE=s_pg, VALUE=((((blur_g[(s_i0 + s_x0)] * (1 - s_fx)) + (blur_g[(s_i0 + s_x1)] * s_fx)) * (1 - s_fy)) + (((blur_g[(s_i1 + s_x0)] * (1 - s_fx)) + (blur_g[(s_i1 + s_x1)] * s_fx)) * s_fy)))
+    control_if(CONDITION=(blur_edge = 0))
+    SUBSTACK
+      setvariableto(VARIABLE=s_bgv, VALUE=((((image g[(s_i0 + s_x0)] * (1 - s_fx)) + (image g[(s_i0 + s_x1)] * s_fx)) * (1 - s_fy)) + (((image g[(s_i1 + s_x0)] * (1 - s_fx)) + (image g[(s_i1 + s_x1)] * s_fx)) * s_fy)))
+      setvariableto(VARIABLE=s_pg, VALUE=(s_bgv + (((s_pg - s_bgv) * s_ns) / thick)))
+    setvariableto(VARIABLE=s_px, VALUE=(s_sx + (s_bx * fcB)))
+    setvariableto(VARIABLE=s_py, VALUE=(s_sy + (s_by * fcB)))
+    control_if(CONDITION=(s_px < 0))
+    SUBSTACK
+      setvariableto(VARIABLE=s_px, VALUE=0)
+    control_if(CONDITION=(s_px > 479))
+    SUBSTACK
+      setvariableto(VARIABLE=s_px, VALUE=479)
+    control_if(CONDITION=(s_py < 0))
+    SUBSTACK
+      setvariableto(VARIABLE=s_py, VALUE=0)
+    control_if(CONDITION=(s_py > 359))
+    SUBSTACK
+      setvariableto(VARIABLE=s_py, VALUE=359)
+    setvariableto(VARIABLE=s_x0, VALUE=floor(s_px))
+    setvariableto(VARIABLE=s_y0, VALUE=floor(s_py))
+    setvariableto(VARIABLE=s_fx, VALUE=(s_px - s_x0))
+    setvariableto(VARIABLE=s_fy, VALUE=(s_py - s_y0))
+    setvariableto(VARIABLE=s_x1, VALUE=(s_x0 + 1))
+    control_if(CONDITION=(s_x1 > 479))
+    SUBSTACK
+      setvariableto(VARIABLE=s_x1, VALUE=479)
+    setvariableto(VARIABLE=s_y1, VALUE=(s_y0 + 1))
+    control_if(CONDITION=(s_y1 > 359))
+    SUBSTACK
+      setvariableto(VARIABLE=s_y1, VALUE=359)
+    setvariableto(VARIABLE=s_i0, VALUE=((s_y0 * 480) + 1))
+    setvariableto(VARIABLE=s_i1, VALUE=((s_y1 * 480) + 1))
+    setvariableto(VARIABLE=s_pb, VALUE=((((blur_b[(s_i0 + s_x0)] * (1 - s_fx)) + (blur_b[(s_i0 + s_x1)] * s_fx)) * (1 - s_fy)) + (((blur_b[(s_i1 + s_x0)] * (1 - s_fx)) + (blur_b[(s_i1 + s_x1)] * s_fx)) * s_fy)))
+    control_if(CONDITION=(blur_edge = 0))
+    SUBSTACK
+      setvariableto(VARIABLE=s_bgv, VALUE=((((image b[(s_i0 + s_x0)] * (1 - s_fx)) + (image b[(s_i0 + s_x1)] * s_fx)) * (1 - s_fy)) + (((image b[(s_i1 + s_x0)] * (1 - s_fx)) + (image b[(s_i1 + s_x1)] * s_fx)) * s_fy)))
+      setvariableto(VARIABLE=s_pb, VALUE=(s_bgv + (((s_pb - s_bgv) * s_ns) / thick)))
+    changevariableby(VARIABLE=s_ar, VALUE=s_pr)
+    changevariableby(VARIABLE=s_ag, VALUE=s_pg)
+    changevariableby(VARIABLE=s_ab, VALUE=s_pb)
+    changevariableby(VARIABLE=s_si2, VALUE=1)
+  setvariableto(VARIABLE=s_pr, VALUE=(s_ar / s_nit))
+  setvariableto(VARIABLE=s_pg, VALUE=(s_ag / s_nit))
+  setvariableto(VARIABLE=s_pb, VALUE=(s_ab / s_nit))
+setvariableto(VARIABLE=s_cr, VALUE=(s_pr + (((tr - s_pr) * ta) * 0.8)))
+setvariableto(VARIABLE=s_cg, VALUE=(s_pg + (((tg - s_pg) * ta) * 0.8)))
+setvariableto(VARIABLE=s_cb, VALUE=(s_pb + (((tb - s_pb) * ta) * 0.8)))
+setvariableto(VARIABLE=shade_out, VALUE=((s_cov * 16777216) + (((floor((s_cr * 0.999)) * 65536) + (floor((s_cg * 0.999)) * 256)) + floor((s_cb * 0.999)))))
+
+DEFINE build_base []
+deletealloflist(LIST=slo)
+deletealloflist(LIST=shi)
+control_repeat(TIMES=H)
+SUBSTACK
+  addtolist(LIST=slo, ITEM=99999)
+  addtolist(LIST=shi, ITEM=-1)
+control_if_else(CONDITION=(ui = 0))
+SUBSTACK
+  tile_rect %s %s %s %s ['0', '0', '2', '2']
+  tile_rect %s %s %s %s ['-2', '0.5', '2', '1']
+  tile_rect %s %s %s %s ['-2.5', '-0.5', '1', '1']
+  tile_rect %s %s %s %s ['-1.5', '-0.5', '1', '1']
+  tile_rect %s %s %s %s ['-0.5', '-1.5', '1', '1']
+  tile_rect %s %s %s %s ['0.5', '-1.5', '1', '1']
+  tile_rect %s %s %s %s ['-2', '-1.5', '2', '1']
+  tile_rect %s %s %s %s ['-1', '-2.5', '4', '1']
+  tile_rect %s %s %s %s ['-1', '-3.5', '4', '1']
+  tile_rect %s %s %s %s ['-2.5', '-4.5', '1', '1']
+  tile_rect %s %s %s %s ['-1.5', '-4.5', '1', '1']
+  tile_rect %s %s %s %s ['-0.5', '-4.5', '1', '1']
+  tile_rect %s %s %s %s ['0.5', '-4.5', '1', '1']
+SUBSTACK2
+  apply_rect %s %s %s %s %s ['0', '-155', '230', '15', '15']
+  apply_rect %s %s %s %s %s ['0', '155', '230', '15', '15']
+  apply_rect %s %s %s %s %s ['170', '65', '55', '55', '15']
+  apply_rect %s %s %s %s %s ['40', '65', '55', '55', '15']
+deletealloflist(LIST=boxes)
+setvariableto(VARIABLE=s_i, VALUE=1)
+control_repeat(TIMES=N)
+SUBSTACK
+  replaceitemoflist(LIST=sdf_base, INDEX=s_i, ITEM=sdf_list[s_i])
+  changevariableby(VARIABLE=s_i, VALUE=1)
+setvariableto(VARIABLE=s_row, VALUE=0)
+control_repeat(TIMES=H)
+SUBSTACK
+  setvariableto(VARIABLE=s_col, VALUE=0)
+  control_repeat(TIMES=W)
+  SUBSTACK
+    setvariableto(VARIABLE=s_e, VALUE=(((s_row * W) + s_col) + 1))
+    control_if(CONDITION=not(OPERAND=(sdf_list[s_e] > aa_thr)))
+    SUBSTACK
+      shade %s %s %s ['s_col', 's_row', 's_e']
+      replaceitemoflist(LIST=col_base, INDEX=s_e, ITEM=shade_out)
+      replaceitemoflist(LIST=col, INDEX=s_e, ITEM=shade_out)
+      control_if(CONDITION=(s_col < slo[(s_row + 1)]))
+      SUBSTACK
+        replaceitemoflist(LIST=slo, INDEX=(s_row + 1), ITEM=s_col)
+      control_if(CONDITION=(s_col > shi[(s_row + 1)]))
+      SUBSTACK
+        replaceitemoflist(LIST=shi, INDEX=(s_row + 1), ITEM=s_col)
+    changevariableby(VARIABLE=s_col, VALUE=1)
+  changevariableby(VARIABLE=s_row, VALUE=1)
+
+DEFINE tile_rect %s %s %s %s ["gx","gy","gw","gh"]
+setvariableto(VARIABLE=tile, VALUE=(radius * 2))
+setvariableto(VARIABLE=gap, VALUE=(radius * 0.3))
+apply_rect %s %s %s %s %s ['(($gx * (tile + gap)) + (240 - (tile + gap)))', '(($gy * (tile + gap)) + (180 - (tile + gap)))', '((($gw * tile) + (($gw - 1) * gap)) / 2)', '((($gh * tile) + (($gh - 1) * gap)) / 2)', 'radius']
+
+DEFINE full_rebuild []
+setvariableto(VARIABLE=fcR, VALUE=(1 - ((NR - 1) * disp)))
+setvariableto(VARIABLE=fcG, VALUE=(1 - ((NG - 1) * disp)))
+setvariableto(VARIABLE=fcB, VALUE=(1 - ((NB - 1) * disp)))
+deletealloflist(LIST=sdf_list)
+deletealloflist(LIST=sdf_base)
+deletealloflist(LIST=col)
+deletealloflist(LIST=col_base)
+deletealloflist(LIST=mark)
+control_repeat(TIMES=N)
+SUBSTACK
+  addtolist(LIST=sdf_list, ITEM=600)
+  addtolist(LIST=sdf_base, ITEM=600)
+  addtolist(LIST=col, ITEM=0)
+  addtolist(LIST=col_base, ITEM=0)
+  addtolist(LIST=mark, ITEM=0)
+deletealloflist(LIST=rlo)
+deletealloflist(LIST=rhi)
+control_repeat(TIMES=H)
+SUBSTACK
+  addtolist(LIST=rlo, ITEM=0)
+  addtolist(LIST=rhi, ITEM=0)
+deletealloflist(LIST=boxes)
+deletealloflist(LIST=pboxes)
+setvariableto(VARIABLE=last_dsig, VALUE=)
+setvariableto(VARIABLE=fid, VALUE=0)
+control_if(CONDITION=not(OPERAND=(blur_key_last = blur_radius)))
+SUBSTACK
+  setvariableto(VARIABLE=blur_key_last, VALUE=blur_radius)
+  build_blur []
+build_base []
+
+DEFINE generate_sdf []
+deletealloflist(LIST=dshape)
+control_if_else(CONDITION=(ui = 0))
+SUBSTACK
+  addtolist(LIST=dshape, ITEM=1)
+  addtolist(LIST=dshape, ITEM=sensing_mousex())
+  addtolist(LIST=dshape, ITEM=sensing_mousey())
+  addtolist(LIST=dshape, ITEM=50)
+  addtolist(LIST=dshape, ITEM=0)
+  addtolist(LIST=dshape, ITEM=0)
+SUBSTACK2
+  addtolist(LIST=dshape, ITEM=0)
+  addtolist(LIST=dshape, ITEM=sensing_mousex())
+  addtolist(LIST=dshape, ITEM=sensing_mousey())
+  addtolist(LIST=dshape, ITEM=30)
+  addtolist(LIST=dshape, ITEM=30)
+  addtolist(LIST=dshape, ITEM=20)
+  addtolist(LIST=dshape, ITEM=1)
+  addtolist(LIST=dshape, ITEM=((sin((sensing_timer() * 24)) * 50) - 130))
+  addtolist(LIST=dshape, ITEM=80)
+  addtolist(LIST=dshape, ITEM=40)
+  addtolist(LIST=dshape, ITEM=0)
+  addtolist(LIST=dshape, ITEM=0)
+  addtolist(LIST=dshape, ITEM=1)
+  addtolist(LIST=dshape, ITEM=((sin(((sensing_timer() * 24) + 45)) * 50) - 130))
+  addtolist(LIST=dshape, ITEM=-25)
+  addtolist(LIST=dshape, ITEM=40)
+  addtolist(LIST=dshape, ITEM=0)
+  addtolist(LIST=dshape, ITEM=0)
+setvariableto(VARIABLE=dsig, VALUE=)
+setvariableto(VARIABLE=s_i, VALUE=1)
+control_repeat(TIMES=lengthoflist(LIST=dshape))
+SUBSTACK
+  setvariableto(VARIABLE=dsig, VALUE=join(STRING1=dsig, STRING2=join(STRING1=dshape[s_i], STRING2=,)))
+  changevariableby(VARIABLE=s_i, VALUE=1)
+control_if_else(CONDITION=(dsig = last_dsig))
+SUBSTACK
+  setvariableto(VARIABLE=skip, VALUE=1)
+SUBSTACK2
+  setvariableto(VARIABLE=skip, VALUE=0)
+  setvariableto(VARIABLE=last_dsig, VALUE=dsig)
+  setvariableto(VARIABLE=s_bi, VALUE=1)
+  control_repeat(TIMES=(lengthoflist(LIST=pboxes) / 4))
+  SUBSTACK
+    setvariableto(VARIABLE=s_row, VALUE=pboxes[(s_bi + 2)])
+    control_repeat(TIMES=((pboxes[(s_bi + 3)] - pboxes[(s_bi + 2)]) + 1))
+    SUBSTACK
+      setvariableto(VARIABLE=s_e, VALUE=(((s_row * W) + pboxes[s_bi]) + 1))
+      control_repeat(TIMES=((pboxes[(s_bi + 1)] - pboxes[s_bi]) + 1))
+      SUBSTACK
+        replaceitemoflist(LIST=sdf_list, INDEX=s_e, ITEM=sdf_base[s_e])
+        replaceitemoflist(LIST=col, INDEX=s_e, ITEM=col_base[s_e])
+        changevariableby(VARIABLE=s_e, VALUE=1)
+      changevariableby(VARIABLE=s_row, VALUE=1)
+    changevariableby(VARIABLE=s_bi, VALUE=4)
+  deletealloflist(LIST=boxes)
+  setvariableto(VARIABLE=s_si, VALUE=1)
+  control_repeat(TIMES=(lengthoflist(LIST=dshape) / 6))
+  SUBSTACK
+    control_if_else(CONDITION=(dshape[s_si] = 0))
+    SUBSTACK
+      apply_rect %s %s %s %s %s ['dshape[(s_si + 1)]', 'dshape[(s_si + 2)]', 'dshape[(s_si + 3)]', 'dshape[(s_si + 4)]', 'dshape[(s_si + 5)]']
+    SUBSTACK2
+      apply_circle %s %s %s ['dshape[(s_si + 1)]', 'dshape[(s_si + 2)]', 'dshape[(s_si + 3)]']
+    changevariableby(VARIABLE=s_si, VALUE=6)
+debug %s ['Generate SDF']
+
+DEFINE calculate_pixels []
+control_if(CONDITION=(skip = 0))
+SUBSTACK
+  changevariableby(VARIABLE=fid, VALUE=1)
+  setvariableto(VARIABLE=s_bi, VALUE=1)
+  control_repeat(TIMES=(lengthoflist(LIST=boxes) / 4))
+  SUBSTACK
+    setvariableto(VARIABLE=s_row, VALUE=boxes[(s_bi + 2)])
+    control_repeat(TIMES=((boxes[(s_bi + 3)] - boxes[(s_bi + 2)]) + 1))
+    SUBSTACK
+      setvariableto(VARIABLE=s_col, VALUE=boxes[s_bi])
+      setvariableto(VARIABLE=s_e, VALUE=(((s_row * W) + s_col) + 1))
+      control_repeat(TIMES=((boxes[(s_bi + 1)] - boxes[s_bi]) + 1))
+      SUBSTACK
+        control_if(CONDITION=not(OPERAND=(sdf_list[s_e] > aa_thr)))
+        SUBSTACK
+          control_if(CONDITION=not(OPERAND=(sdf_list[s_e] = sdf_base[s_e])))
+          SUBSTACK
+            control_if(CONDITION=not(OPERAND=(mark[s_e] = fid)))
+            SUBSTACK
+              replaceitemoflist(LIST=mark, INDEX=s_e, ITEM=fid)
+              shade %s %s %s ['s_col', 's_row', 's_e']
+              replaceitemoflist(LIST=col, INDEX=s_e, ITEM=shade_out)
+        changevariableby(VARIABLE=s_e, VALUE=1)
+        changevariableby(VARIABLE=s_col, VALUE=1)
+      changevariableby(VARIABLE=s_row, VALUE=1)
+    changevariableby(VARIABLE=s_bi, VALUE=4)
+  deletealloflist(LIST=pboxes)
+  setvariableto(VARIABLE=s_i, VALUE=1)
+  control_repeat(TIMES=lengthoflist(LIST=boxes))
+  SUBSTACK
+    addtolist(LIST=pboxes, ITEM=boxes[s_i])
+    changevariableby(VARIABLE=s_i, VALUE=1)
+debug %s ['Calculate pixels']
+
+DEFINE flush_run []
+control_if(CONDITION=(s_re > s_rs))
+SUBSTACK
+  motion_gotoxy(X=(((s_re + 0.5) - (W / 2)) * quality), Y=s_gy2)
+pen_penUp()
+
+DEFINE render_glass []
+control_if(CONDITION=(skip = 0))
+SUBSTACK
+  pen_setPenSizeTo(SIZE=(2 * quality))
+  pen_clear()
+  setvariableto(VARIABLE=s_i, VALUE=1)
+  control_repeat(TIMES=H)
+  SUBSTACK
+    replaceitemoflist(LIST=rlo, INDEX=s_i, ITEM=slo[s_i])
+    replaceitemoflist(LIST=rhi, INDEX=s_i, ITEM=shi[s_i])
+    changevariableby(VARIABLE=s_i, VALUE=1)
+  setvariableto(VARIABLE=s_bi, VALUE=1)
+  control_repeat(TIMES=(lengthoflist(LIST=boxes) / 4))
+  SUBSTACK
+    setvariableto(VARIABLE=s_row, VALUE=boxes[(s_bi + 2)])
+    control_repeat(TIMES=((boxes[(s_bi + 3)] - boxes[(s_bi + 2)]) + 1))
+    SUBSTACK
+      control_if(CONDITION=(boxes[s_bi] < rlo[(s_row + 1)]))
+      SUBSTACK
+        replaceitemoflist(LIST=rlo, INDEX=(s_row + 1), ITEM=boxes[s_bi])
+      control_if(CONDITION=(boxes[(s_bi + 1)] > rhi[(s_row + 1)]))
+      SUBSTACK
+        replaceitemoflist(LIST=rhi, INDEX=(s_row + 1), ITEM=boxes[(s_bi + 1)])
+      changevariableby(VARIABLE=s_row, VALUE=1)
+    changevariableby(VARIABLE=s_bi, VALUE=4)
+  setvariableto(VARIABLE=s_row, VALUE=0)
+  control_repeat(TIMES=H)
+  SUBSTACK
+    control_if(CONDITION=not(OPERAND=(rlo[(s_row + 1)] > rhi[(s_row + 1)])))
+    SUBSTACK
+      setvariableto(VARIABLE=s_gy2, VALUE=(((s_row + 0.5) - (H / 2)) * quality))
+      setvariableto(VARIABLE=s_inrun, VALUE=0)
+      setvariableto(VARIABLE=s_col, VALUE=rlo[(s_row + 1)])
+      setvariableto(VARIABLE=s_cend, VALUE=rhi[(s_row + 1)])
+      setvariableto(VARIABLE=s_e, VALUE=(((s_row * W) + s_col) + 1))
+      control_repeat(TIMES=((s_cend - s_col) + 1))
+      SUBSTACK
+        control_if_else(CONDITION=(not(OPERAND=(sdf_list[s_e] > aa_thr)) and not(OPERAND=(col[s_e] < 16777216))))
+        SUBSTACK
+          setvariableto(VARIABLE=s_v, VALUE=col[s_e])
+          control_if_else(CONDITION=(s_inrun = 1))
+          SUBSTACK
+            control_if_else(CONDITION=(s_v = s_rcol))
+            SUBSTACK
+              setvariableto(VARIABLE=s_re, VALUE=s_col)
+            SUBSTACK2
+              setvariableto(VARIABLE=s_ok, VALUE=0)
+              control_if(CONDITION=((merge_tol > 0) and (floor((s_v / 16777216)) = s_cv0)))
+              SUBSTACK
+                setvariableto(VARIABLE=s_dr, VALUE=abs(((floor((s_v / 65536)) mod 256) - s_r0)))
+                setvariableto(VARIABLE=s_dg, VALUE=abs(((floor((s_v / 256)) mod 256) - s_g0)))
+                setvariableto(VARIABLE=s_db, VALUE=abs(((s_v mod 256) - s_b0)))
+                control_if(CONDITION=(not(OPERAND=(s_dr > merge_tol)) and (not(OPERAND=(s_dg > merge_tol)) and not(OPERAND=(s_db > merge_tol)))))
+                SUBSTACK
+                  setvariableto(VARIABLE=s_ok, VALUE=1)
+              control_if_else(CONDITION=(s_ok = 1))
+              SUBSTACK
+                setvariableto(VARIABLE=s_re, VALUE=s_col)
+              SUBSTACK2
+                flush_run []
+                setvariableto(VARIABLE=s_rs, VALUE=s_col)
+                setvariableto(VARIABLE=s_re, VALUE=s_col)
+                setvariableto(VARIABLE=s_rcol, VALUE=s_v)
+                setvariableto(VARIABLE=s_inrun, VALUE=1)
+                setvariableto(VARIABLE=s_cv0, VALUE=floor((s_v / 16777216)))
+                setvariableto(VARIABLE=s_r0, VALUE=(floor((s_v / 65536)) mod 256))
+                setvariableto(VARIABLE=s_g0, VALUE=(floor((s_v / 256)) mod 256))
+                setvariableto(VARIABLE=s_b0, VALUE=(s_v mod 256))
+                pen_setPenColorToColor(COLOR=(s_v mod 16777216))
+                pen_setPenColorParamTo(COLOR_PARAM=pen_menu_colorParam(colorParam=transparency), VALUE=((1 - (s_cv0 / aa_n)) * 100))
+                motion_gotoxy(X=(((s_col + 0.5) - (W / 2)) * quality), Y=s_gy2)
+                pen_penDown()
+          SUBSTACK2
+            setvariableto(VARIABLE=s_rs, VALUE=s_col)
+            setvariableto(VARIABLE=s_re, VALUE=s_col)
+            setvariableto(VARIABLE=s_rcol, VALUE=s_v)
+            setvariableto(VARIABLE=s_inrun, VALUE=1)
+            setvariableto(VARIABLE=s_cv0, VALUE=floor((s_v / 16777216)))
+            setvariableto(VARIABLE=s_r0, VALUE=(floor((s_v / 65536)) mod 256))
+            setvariableto(VARIABLE=s_g0, VALUE=(floor((s_v / 256)) mod 256))
+            setvariableto(VARIABLE=s_b0, VALUE=(s_v mod 256))
+            pen_setPenColorToColor(COLOR=(s_v mod 16777216))
+            pen_setPenColorParamTo(COLOR_PARAM=pen_menu_colorParam(colorParam=transparency), VALUE=((1 - (s_cv0 / aa_n)) * 100))
+            motion_gotoxy(X=(((s_col + 0.5) - (W / 2)) * quality), Y=s_gy2)
+            pen_penDown()
+        SUBSTACK2
+          control_if(CONDITION=(s_inrun = 1))
+          SUBSTACK
+            flush_run []
+            setvariableto(VARIABLE=s_inrun, VALUE=0)
+        changevariableby(VARIABLE=s_col, VALUE=1)
+        changevariableby(VARIABLE=s_e, VALUE=1)
+      control_if(CONDITION=(s_inrun = 1))
+      SUBSTACK
+        flush_run []
+    changevariableby(VARIABLE=s_row, VALUE=1)
+debug %s ['Render']
+
+DEFINE debug %s ["tag"]
+control_if_else(CONDITION=($tag = total))
+SUBSTACK
+  deleteoflist(LIST=debug, INDEX=last)
+  addtolist(LIST=debug, ITEM=Total)
+  control_if(CONDITION=(totalms < 0.01))
+  SUBSTACK
+    setvariableto(VARIABLE=totalms, VALUE=0.01)
+  addtolist(LIST=debug, ITEM=join(STRING1=join(STRING1=round(NUM=totalms), STRING2= ms - ), STRING2=join(STRING1=(round(NUM=((1000 / totalms) * 10)) / 10), STRING2= fps)))
+SUBSTACK2
+  addtolist(LIST=debug, ITEM=$tag)
+  setvariableto(VARIABLE=ms, VALUE=((sensing_dayssince2000() - debug[(lengthoflist(LIST=debug) - 1)]) * 86400000))
+  changevariableby(VARIABLE=totalms, VALUE=ms)
+  addtolist(LIST=debug, ITEM=join(STRING1=round(NUM=ms), STRING2= ms))
+  deleteoflist(LIST=debug, INDEX=(lengthoflist(LIST=debug) - 2))
+  addtolist(LIST=debug, ITEM=sensing_dayssince2000())

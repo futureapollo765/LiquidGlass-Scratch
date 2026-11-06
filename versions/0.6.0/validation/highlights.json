@@ -1,0 +1,490 @@
+{
+  "previousFile": "versions/0.4.0/LiquidGlass_Studio_0.4.0.sb3",
+  "currentFile": "/private/tmp/liquidglass-060/final.sb3",
+  "previousSHA256": "938946226fa6d0758afb552b6ea2a5bb2e81c447e51e87725a04b1c38727802f",
+  "currentSHA256": "ed8177b1d43aad05ce681fd094e9489f06f43af725b8b909ab81eb99ca9ee404",
+  "method": "Installed real Scratch interpreter and native Pen extension. The renderer captures emitted penPoint, penLine and penStamp calls. Interior color samples use source-over compositing over neutral RGB(96,96,96).",
+  "direct": [
+    {
+      "w": 151,
+      "h": 35,
+      "tone": "hover",
+      "previousAlpha": [
+        0.2775,
+        0.15000000000000002,
+        0.15000000000000002
+      ],
+      "correctedAlpha": [
+        0.15000000000000002,
+        0.15000000000000002,
+        0.15000000000000002
+      ],
+      "correctedRGB": [
+        116,
+        118,
+        120
+      ],
+      "visibleDraw": "line"
+    },
+    {
+      "w": 151,
+      "h": 35,
+      "tone": "pressed",
+      "previousAlpha": [
+        0.6975,
+        0.44999999999999996,
+        0.44999999999999996
+      ],
+      "correctedAlpha": [
+        0.44999999999999996,
+        0.44999999999999996,
+        0.44999999999999996
+      ],
+      "correctedRGB": [
+        109,
+        136,
+        168
+      ],
+      "visibleDraw": "line"
+    },
+    {
+      "w": 151,
+      "h": 35,
+      "tone": "selected",
+      "previousAlpha": [
+        0.48160000000000003,
+        0.28,
+        0.28
+      ],
+      "correctedAlpha": [
+        0.28,
+        0.28,
+        0.28
+      ],
+      "correctedRGB": [
+        116,
+        126,
+        141
+      ],
+      "visibleDraw": "line"
+    },
+    {
+      "w": 178,
+      "h": 30,
+      "tone": "hover",
+      "previousAlpha": [
+        0.2775,
+        0.15000000000000002,
+        0.15000000000000002
+      ],
+      "correctedAlpha": [
+        0.15000000000000002,
+        0.15000000000000002,
+        0.15000000000000002
+      ],
+      "correctedRGB": [
+        116,
+        118,
+        120
+      ],
+      "visibleDraw": "line"
+    },
+    {
+      "w": 178,
+      "h": 30,
+      "tone": "pressed",
+      "previousAlpha": [
+        0.6975,
+        0.44999999999999996,
+        0.44999999999999996
+      ],
+      "correctedAlpha": [
+        0.44999999999999996,
+        0.44999999999999996,
+        0.44999999999999996
+      ],
+      "correctedRGB": [
+        109,
+        136,
+        168
+      ],
+      "visibleDraw": "line"
+    },
+    {
+      "w": 178,
+      "h": 30,
+      "tone": "selected",
+      "previousAlpha": [
+        0.48160000000000003,
+        0.28,
+        0.28
+      ],
+      "correctedAlpha": [
+        0.28,
+        0.28,
+        0.28
+      ],
+      "correctedRGB": [
+        116,
+        126,
+        141
+      ],
+      "visibleDraw": "line"
+    },
+    {
+      "w": 30,
+      "h": 30,
+      "tone": "hover",
+      "previousAlpha": [
+        0.2775,
+        0.2775,
+        0.2775
+      ],
+      "correctedAlpha": [
+        0.15000000000000002,
+        0.15000000000000002,
+        0.15000000000000002
+      ],
+      "correctedRGB": [
+        116,
+        118,
+        120
+      ],
+      "visibleDraw": "point"
+    },
+    {
+      "w": 30,
+      "h": 30,
+      "tone": "pressed",
+      "previousAlpha": [
+        0.6975,
+        0.6975,
+        0.6975
+      ],
+      "correctedAlpha": [
+        0.44999999999999996,
+        0.44999999999999996,
+        0.44999999999999996
+      ],
+      "correctedRGB": [
+        109,
+        136,
+        168
+      ],
+      "visibleDraw": "point"
+    },
+    {
+      "w": 30,
+      "h": 30,
+      "tone": "selected",
+      "previousAlpha": [
+        0.48160000000000003,
+        0.48160000000000003,
+        0.48160000000000003
+      ],
+      "correctedAlpha": [
+        0.28,
+        0.28,
+        0.28
+      ],
+      "correctedRGB": [
+        116,
+        126,
+        141
+      ],
+      "visibleDraw": "point"
+    },
+    {
+      "w": 29,
+      "h": 96,
+      "tone": "hover",
+      "previousAlpha": [
+        0,
+        0.2775,
+        0
+      ],
+      "correctedAlpha": [
+        0.15000000000000002,
+        0.15000000000000002,
+        0.15000000000000002
+      ],
+      "correctedRGB": [
+        116,
+        118,
+        120
+      ],
+      "visibleDraw": "line"
+    },
+    {
+      "w": 29,
+      "h": 96,
+      "tone": "pressed",
+      "previousAlpha": [
+        0,
+        0.6975,
+        0
+      ],
+      "correctedAlpha": [
+        0.44999999999999996,
+        0.44999999999999996,
+        0.44999999999999996
+      ],
+      "correctedRGB": [
+        109,
+        136,
+        168
+      ],
+      "visibleDraw": "line"
+    },
+    {
+      "w": 29,
+      "h": 96,
+      "tone": "selected",
+      "previousAlpha": [
+        0,
+        0.48160000000000003,
+        0
+      ],
+      "correctedAlpha": [
+        0.28,
+        0.28,
+        0.28
+      ],
+      "correctedRGB": [
+        116,
+        126,
+        141
+      ],
+      "visibleDraw": "line"
+    },
+    {
+      "w": 32.75,
+      "h": 21.25,
+      "tone": "hover",
+      "previousAlpha": [
+        0.2775,
+        0.2775,
+        0.15000000000000002
+      ],
+      "correctedAlpha": [
+        0.15000000000000002,
+        0.15000000000000002,
+        0.15000000000000002
+      ],
+      "correctedRGB": [
+        116,
+        118,
+        120
+      ],
+      "visibleDraw": "line"
+    },
+    {
+      "w": 32.75,
+      "h": 21.25,
+      "tone": "pressed",
+      "previousAlpha": [
+        0.6975,
+        0.6975,
+        0.44999999999999996
+      ],
+      "correctedAlpha": [
+        0.44999999999999996,
+        0.44999999999999996,
+        0.44999999999999996
+      ],
+      "correctedRGB": [
+        109,
+        136,
+        168
+      ],
+      "visibleDraw": "line"
+    },
+    {
+      "w": 32.75,
+      "h": 21.25,
+      "tone": "selected",
+      "previousAlpha": [
+        0.48160000000000003,
+        0.48160000000000003,
+        0.28
+      ],
+      "correctedAlpha": [
+        0.28,
+        0.28,
+        0.28
+      ],
+      "correctedRGB": [
+        116,
+        126,
+        141
+      ],
+      "visibleDraw": "line"
+    },
+    {
+      "w": 16,
+      "h": 15.75,
+      "tone": "hover",
+      "previousAlpha": [
+        0.2775,
+        0.2775,
+        0.2775
+      ],
+      "correctedAlpha": [
+        0.15000000000000002,
+        0.15000000000000002,
+        0.15000000000000002
+      ],
+      "correctedRGB": [
+        116,
+        118,
+        120
+      ],
+      "visibleDraw": "line"
+    },
+    {
+      "w": 16,
+      "h": 15.75,
+      "tone": "pressed",
+      "previousAlpha": [
+        0.6975,
+        0.6975,
+        0.6975
+      ],
+      "correctedAlpha": [
+        0.44999999999999996,
+        0.44999999999999996,
+        0.44999999999999996
+      ],
+      "correctedRGB": [
+        109,
+        136,
+        168
+      ],
+      "visibleDraw": "line"
+    },
+    {
+      "w": 16,
+      "h": 15.75,
+      "tone": "selected",
+      "previousAlpha": [
+        0.48160000000000003,
+        0.48160000000000003,
+        0.48160000000000003
+      ],
+      "correctedAlpha": [
+        0.28,
+        0.28,
+        0.28
+      ],
+      "correctedRGB": [
+        116,
+        126,
+        141
+      ],
+      "visibleDraw": "line"
+    }
+  ],
+  "foreground": [
+    {
+      "widget": "button",
+      "tone": "hover",
+      "selected": false,
+      "previousAlpha": [
+        0.2775,
+        0.15000000000000002,
+        0.15000000000000002
+      ],
+      "correctedAlpha": [
+        0.15000000000000002,
+        0.15000000000000002,
+        0.15000000000000002
+      ],
+      "visibleCoats": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "widget": "button",
+      "tone": "pressed",
+      "selected": false,
+      "previousAlpha": [
+        0.6975,
+        0.44999999999999996,
+        0.44999999999999996
+      ],
+      "correctedAlpha": [
+        0.44999999999999996,
+        0.44999999999999996,
+        0.44999999999999996
+      ],
+      "visibleCoats": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "widget": "row",
+      "tone": "selected",
+      "selected": true,
+      "previousAlpha": [
+        0.48160000000000003,
+        0.28,
+        0.28
+      ],
+      "correctedAlpha": [
+        0.28,
+        0.28,
+        0.28
+      ],
+      "visibleCoats": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "widget": "row",
+      "tone": "hover",
+      "selected": true,
+      "previousAlpha": [
+        0.625456,
+        0.388,
+        0.388
+      ],
+      "correctedAlpha": [
+        0.15000000000000002,
+        0.15000000000000002,
+        0.15000000000000002
+      ],
+      "visibleCoats": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "widget": "row",
+      "tone": "pressed",
+      "selected": true,
+      "previousAlpha": [
+        0.8431839999999999,
+        0.604,
+        0.604
+      ],
+      "correctedAlpha": [
+        0.44999999999999996,
+        0.44999999999999996,
+        0.44999999999999996
+      ],
+      "visibleCoats": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "passed": true
+}

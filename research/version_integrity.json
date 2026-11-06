@@ -1,0 +1,23 @@
+{
+  "VERSION": "0.2.0",
+  "snapshots": [
+    {
+      "version": "0.1.1",
+      "previous": "0.1.0",
+      "files_checked": 6,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "version": "0.2.0",
+      "previous": "0.1.1",
+      "files_checked": 7,
+      "errors": [],
+      "passed": true
+    }
+  ],
+  "current_archives_match_0_2_0": {
+    "LiquidGlass_Studio.sb3": true,
+    "LiquidGlass_Component.sprite3": true
+  }
+}

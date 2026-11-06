@@ -1,0 +1,22 @@
+{
+  "sha256": "9839e01d752e178b8e612f875b648eebf40a911004d241b6778bdd465440a9da",
+  "saves": [
+    {
+      "state": "running, launcher closed",
+      "projectJsonBytes": 4816433
+    },
+    {
+      "state": "root menu open",
+      "projectJsonBytes": 4817845
+    },
+    {
+      "state": "child menu open, parent retained",
+      "projectJsonBytes": 4819433
+    }
+  ],
+  "demoFinishes": [
+    "Smoked",
+    "Clear"
+  ],
+  "passed": true
+}

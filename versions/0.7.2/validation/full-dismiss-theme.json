@@ -1,0 +1,1232 @@
+{
+  "before": {
+    "finish": "Smoked",
+    "page": "Work>ZFolder",
+    "dim": 1,
+    "mat": "@#292A32"
+  },
+  "after": {
+    "finish": "Smoked",
+    "page": "",
+    "dim": 0,
+    "mat": "@#292A32",
+    "open": 0,
+    "hover": 0,
+    "press": 0,
+    "events": 0,
+    "count": 0
+  },
+  "reopen": {
+    "finish": "Smoked",
+    "page": "",
+    "mat": "@#292A32",
+    "current": []
+  },
+  "firstRootFaceZero": 6,
+  "orphan": [],
+  "childArtAfterRootFaceZero": [],
+  "frames": [
+    {
+      "i": 0,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 1521,
+      "root": 0.8950342434659404,
+      "goal": 0,
+      "p": [
+        0.8950342434659404,
+        0.8950342434659404
+      ],
+      "page": ""
+    },
+    {
+      "i": 1,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 1230,
+      "root": 0.68100657937308,
+      "goal": 0,
+      "p": [
+        0.6810065793730801,
+        0.6810065793730801
+      ],
+      "page": ""
+    },
+    {
+      "i": 2,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 833,
+      "root": 0.4569892632759258,
+      "goal": 0,
+      "p": [
+        0.4569892632759258,
+        0.4569892632759258
+      ],
+      "page": ""
+    },
+    {
+      "i": 3,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 478,
+      "root": 0.27000776717920016,
+      "goal": 0,
+      "p": [
+        0.27000776717920016,
+        0.27000776717920016
+      ],
+      "page": ""
+    },
+    {
+      "i": 4,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 261,
+      "root": 0.13462682091509282,
+      "goal": 0,
+      "p": [
+        0.1346268209150928,
+        0.1346268209150928
+      ],
+      "page": ""
+    },
+    {
+      "i": 5,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 138,
+      "root": 0.04790701373268694,
+      "goal": 0,
+      "p": [
+        0.047907013732686944,
+        0.047907013732686944
+      ],
+      "page": ""
+    },
+    {
+      "i": 6,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [
+        0,
+        0
+      ],
+      "page": ""
+    },
+    {
+      "i": 7,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [
+        0,
+        0
+      ],
+      "page": ""
+    },
+    {
+      "i": 8,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [
+        0,
+        0
+      ],
+      "page": ""
+    },
+    {
+      "i": 9,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [
+        0,
+        0
+      ],
+      "page": ""
+    },
+    {
+      "i": 10,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [
+        0,
+        0
+      ],
+      "page": ""
+    },
+    {
+      "i": 11,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [
+        0,
+        0
+      ],
+      "page": ""
+    },
+    {
+      "i": 12,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [
+        0,
+        0
+      ],
+      "page": ""
+    },
+    {
+      "i": 13,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [
+        0,
+        0
+      ],
+      "page": ""
+    },
+    {
+      "i": 14,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [
+        0,
+        0
+      ],
+      "page": ""
+    },
+    {
+      "i": 15,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [
+        0,
+        0
+      ],
+      "page": ""
+    },
+    {
+      "i": 16,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [
+        0,
+        0
+      ],
+      "page": ""
+    },
+    {
+      "i": 17,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [
+        0,
+        0
+      ],
+      "page": ""
+    },
+    {
+      "i": 18,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [
+        0,
+        0
+      ],
+      "page": ""
+    },
+    {
+      "i": 19,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [
+        0,
+        0
+      ],
+      "page": ""
+    },
+    {
+      "i": 20,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [
+        0,
+        0
+      ],
+      "page": ""
+    },
+    {
+      "i": 21,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [
+        0,
+        0
+      ],
+      "page": ""
+    },
+    {
+      "i": 22,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [
+        0,
+        0
+      ],
+      "page": ""
+    },
+    {
+      "i": 23,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [
+        0,
+        0
+      ],
+      "page": ""
+    },
+    {
+      "i": 24,
+      "paths": [
+        "Work",
+        "Work>ZFolder"
+      ],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [
+        0,
+        0
+      ],
+      "page": ""
+    },
+    {
+      "i": 25,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 26,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 27,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 28,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 29,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 30,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 31,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 32,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 33,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 34,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 35,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 36,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 37,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 38,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 39,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 40,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 41,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 42,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 43,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 44,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 45,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 46,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 47,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 48,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 49,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 50,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 51,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 52,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 53,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 54,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 55,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 56,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 57,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 58,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 59,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 60,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 61,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 62,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 63,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 64,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 65,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 66,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 67,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 68,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 69,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 70,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 71,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 72,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 73,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 74,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 75,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 76,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 77,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 78,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 79,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 80,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 81,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 82,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 83,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 84,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 85,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 86,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 87,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 88,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 89,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 90,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 91,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 92,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 93,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 94,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 95,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 96,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 97,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 98,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 99,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 100,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 101,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 102,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 103,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    },
+    {
+      "i": 104,
+      "paths": [],
+      "orphan": false,
+      "privateRun": 0,
+      "root": 0,
+      "goal": 0,
+      "p": [],
+      "page": ""
+    }
+  ],
+  "sha256": "934fa22559d5d25be50abd6dd303b85eaacc2b999d99717b1c6a619eff6863fc",
+  "passed": true
+}

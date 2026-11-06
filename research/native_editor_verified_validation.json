@@ -1,0 +1,12 @@
+{
+  "path": "./EditorVerified.sb3",
+  "targets": 3,
+  "blocks": 2548,
+  "assets": 4,
+  "extensions": [
+    "pen"
+  ],
+  "errors": [],
+  "warnings": [],
+  "passed": true
+}

@@ -1,0 +1,112 @@
+{
+  "initial": {
+    "frames": 3,
+    "grab": 0,
+    "wasDown": false,
+    "grabDX": 0,
+    "grabDY": 0,
+    "x": [
+      -90,
+      85,
+      20
+    ],
+    "tx": [
+      -90,
+      85,
+      20
+    ],
+    "amp": [
+      0,
+      0,
+      0
+    ]
+  },
+  "grabbed": {
+    "frames": 5,
+    "grab": 2,
+    "wasDown": true,
+    "grabDX": -10,
+    "grabDY": 0,
+    "x": [
+      -90,
+      85,
+      20
+    ],
+    "tx": [
+      -90,
+      85,
+      20
+    ],
+    "amp": [
+      0,
+      0,
+      0
+    ]
+  },
+  "dragging": {
+    "frames": 15,
+    "grab": 2,
+    "wasDown": true,
+    "grabDX": -10,
+    "grabDY": 0,
+    "x": [
+      -90,
+      -5.798794669827124,
+      20
+    ],
+    "tx": [
+      -90,
+      -20,
+      20
+    ],
+    "amp": [
+      0,
+      24.699999999999996,
+      0
+    ]
+  },
+  "released": {
+    "frames": 55,
+    "grab": 0,
+    "wasDown": false,
+    "grabDX": -10,
+    "grabDY": 0,
+    "x": [
+      -90,
+      -19.995232588001684,
+      20
+    ],
+    "tx": [
+      -90,
+      -20,
+      20
+    ],
+    "amp": [
+      0,
+      0.023380773267813737,
+      0
+    ]
+  },
+  "entireDragBetweenFrames": {
+    "frames": 13,
+    "grab": 0,
+    "wasDown": false,
+    "grabDX": -10,
+    "grabDY": 0,
+    "x": [
+      -90,
+      85,
+      20
+    ],
+    "tx": [
+      -90,
+      85,
+      20
+    ],
+    "amp": [
+      0,
+      0,
+      0
+    ]
+  }
+}

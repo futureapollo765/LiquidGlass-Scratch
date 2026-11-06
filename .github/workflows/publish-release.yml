@@ -1,0 +1,26 @@
+name: Publish Scratch release
+on:
+  push:
+    branches: [main]
+    paths: [VERSION]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scratch-release-${{ github.sha }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Verify and publish Studio and component
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 tools/publish_github_release.py --repo "$GITHUB_REPOSITORY" --commit "$GITHUB_SHA"

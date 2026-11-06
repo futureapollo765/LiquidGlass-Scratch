@@ -1,0 +1,16 @@
+{
+  "version": "0.2.1",
+  "change": "Only saved contents of eight rebuildable frame-buffer lists were cleared.",
+  "input": "./versions/0.2.1/inputs/EditorVerified_0.2.0_before_0.2.1.sb3",
+  "output": "./versions/0.2.1/LiquidGlass_Studio_0.2.1.sb3",
+  "inputSHA256": "6f36fbcb71934beae2ef20001d700c4eb755b57ed36df5ae22d3564cd2b76c29",
+  "outputSHA256": "b93e04c2686e7d99d8b4b895d1a5223a3d351f136820fc3eea6be7c69986aaaa",
+  "projectJsonBytesBefore": 8452882,
+  "projectJsonBytesAfter": 3231258,
+  "onlyEightListValuesChanged": true,
+  "blocksVariablesSettingsAssetsUnchanged": true,
+  "runtimeChecksPassed": 42,
+  "existingStopResetSaveWorkflowVerified": true,
+  "resetWorkflowNote": "R resets demo/component state to existing defaults; archive cleanup preserves every other saved value.",
+  "component": "Unchanged from 0.2.0; already below the JSON limit."
+}

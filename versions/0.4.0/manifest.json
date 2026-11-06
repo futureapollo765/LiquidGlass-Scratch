@@ -1,0 +1,105 @@
+{
+  "version": "0.4.0",
+  "previous": "0.3.0",
+  "createdUTC": "2026-11-05T19:56:13.455574+00:00",
+  "note": "Functional Menu, Button and Background controls, with native input, nested actions, retained labels, and a Finder-style passive sidebar. Rebuild with python3 -m tools.build_ui using the preserved 0.3.0 inputs.",
+  "files": {
+    "LiquidGlass_Studio_0.4.0.sb3": {
+      "sha256": "938946226fa6d0758afb552b6ea2a5bb2e81c447e51e87725a04b1c38727802f",
+      "bytes": 1651374
+    },
+    "LiquidGlass_Component_0.4.0.sprite3": {
+      "sha256": "11f68c8ad76408fb733c47948676ca77292860482a9d90cf04df199c73f14684",
+      "bytes": 1417927
+    },
+    "project.json": {
+      "sha256": "c00c39d0fef4b3fb28acf58527b83a2f3b5ae1cb1fd6e9e4a97556d95e86730b",
+      "bytes": 3750937
+    },
+    "build_renderer.py": {
+      "sha256": "e38fccee850dde0fcb30c079ffc93ddbb7d1a85983908a333453c5c6ad1ecb89",
+      "bytes": 38685
+    },
+    "README.md": {
+      "sha256": "9e568c30d793b61c4ebc8909ab922fe899eaa53e3502b40522034a9ff86898c1",
+      "bytes": 26100
+    },
+    "tools/snapshot_release.py": {
+      "sha256": "90d883b5206a700fa57560b3d77e5ad67e76cf88317ceb6816e3d29c3e6c9fec",
+      "bytes": 4341
+    },
+    "tools/repair_editor_ids.py": {
+      "sha256": "d65bb013235c04af8e4c0115b34b1f5241b3b56343acbb55d3f583f24efba26b",
+      "bytes": 7615
+    },
+    "tools/validate_sb3.py": {
+      "sha256": "063beb41bafb2b68900bb7dea35286ca7c00bc03aab9708e2b92862a7d528dc2",
+      "bytes": 13509
+    },
+    "tools/stable_pen.py": {
+      "sha256": "362a4811f466db1393aec083683d46baa98aecd290e72286d8273ede42788e1d",
+      "bytes": 18706
+    },
+    "tools/upgrade_stable_pen.py": {
+      "sha256": "24b61133f91f11baa7e9ea294207e4ed1007023da939456e5e65aae0608a94df",
+      "bytes": 4964
+    },
+    "tools/test_frame_presentation.cjs": {
+      "sha256": "9aefd30fd709842c6afed347710c784e9116ce9cb3103af61a4b24342f986c70",
+      "bytes": 12343
+    },
+    "tools/test_renderer.cjs": {
+      "sha256": "375b0353db7d6c512e2eaecc314fb07bb1fb78e0b1b25d6edc8cf463bc0e0f28",
+      "bytes": 27111
+    },
+    "tools/test_editor_runtime.cjs": {
+      "sha256": "bfbedce9211528f321cacada1e62977991d497201f4600bb9fb0dad40197477f",
+      "bytes": 2758
+    },
+    "tools/vm_harness.cjs": {
+      "sha256": "aeb2d47b466098b4a4a1cb43da1545c8ab04871e9df46aef582e6eed990073ab",
+      "bytes": 7862
+    },
+    "tools/verify_editor_roundtrip.py": {
+      "sha256": "5d0612278cfb2430e040ab9fc69075152a62a7df3b04e9ec75785dd45a572747",
+      "bytes": 3459
+    },
+    "research/nary_blend_audit.json": {
+      "sha256": "90c6c50aa4e7554b695a0ce864f5a3e68c99fc6a95520736547a5dc3ee278ca0",
+      "bytes": 18577
+    },
+    "inputs/Studio_before_upgrade.sb3": {
+      "sha256": "2f9c28c74aa49d9d5219c93d99c472cd29a2b1796949fc0ad682b07a6eeb93ae",
+      "bytes": 1633218
+    },
+    "inputs/Component_before_upgrade.sprite3": {
+      "sha256": "0aeaf4561a455ef8d7829a961c374cf5b71bbebe13a6b6d11b4e77dda6f149c9",
+      "bytes": 1306556
+    },
+    "CHANGELOG.md": {
+      "sha256": "d31a6b9f5695c5f4ef39195edbfd981c9668cde436ca3b875caf1fd9f2b53af0",
+      "bytes": 4747
+    },
+    "tools/compact_project.py": {
+      "sha256": "a81e730205c4d6441556866ed7e29de42588ac926b448eeae8f3469518e4f021",
+      "bytes": 6162
+    },
+    "tools/build_ui.py": {
+      "sha256": "6dd4ac0666673386d84890538776e3e6edb4a18195207b913c2ec3daef8442d2",
+      "bytes": 6228
+    },
+    "tools/ui_components.py": {
+      "sha256": "e8665301ff1a9e5843361b5b66c840a94d1f18218d771eb70b3ae17ac8432f4c",
+      "bytes": 28834
+    },
+    "tools/ui_labels.py": {
+      "sha256": "45f16c59309edecd9b3eac38492ca1268c9e1c3c6a1b9ec3b8e72048b95c12ec",
+      "bytes": 27387
+    },
+    "tools/test_ui_components.cjs": {
+      "sha256": "704951d364df0c97b395df8aba4609935c361c17e6ecf5174e8c834e15eabb41",
+      "bytes": 24043
+    }
+  },
+  "validation": "Build checkpoint; final verification recorded separately."
+}

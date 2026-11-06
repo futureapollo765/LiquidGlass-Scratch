@@ -1,0 +1,189 @@
+{
+  "version": "0.6.0",
+  "previous": "0.5.0",
+  "createdUTC": "2026-11-06T01:35:10.819555+00:00",
+  "note": "Anchor controls under pull; lead menu growth with center travel; add corner or custom placement; attach text and icons to the moving glass. Smooth rim refraction and preserve a continuous foreground over dimmed rear panes.",
+  "files": {
+    "LiquidGlass_Studio_0.6.0.sb3": {
+      "sha256": "ed8177b1d43aad05ce681fd094e9489f06f43af725b8b909ab81eb99ca9ee404",
+      "bytes": 1896199
+    },
+    "LiquidGlass_Component_0.6.0.sprite3": {
+      "sha256": "f07e0d0343784bb272615a6d8a542c5228aad6147a9b902f7c5132b2fc3d0d59",
+      "bytes": 1656953
+    },
+    "project.json": {
+      "sha256": "b81280517b935165ba5d8ba8039426892588db3a0ee9de6894aaf853c08b3966",
+      "bytes": 4135588
+    },
+    "build_renderer.py": {
+      "sha256": "e38fccee850dde0fcb30c079ffc93ddbb7d1a85983908a333453c5c6ad1ecb89",
+      "bytes": 38685
+    },
+    "README.md": {
+      "sha256": "96638b175f69255726586eb661db64a267c769ab4482d9de5a767792175dec93",
+      "bytes": 31108
+    },
+    "tools/snapshot_release.py": {
+      "sha256": "4df7c2633cedf5cd5068bb9b2797fb5073c71bf2cfba4fef1ed79bd8da84cc3f",
+      "bytes": 4921
+    },
+    "tools/repair_editor_ids.py": {
+      "sha256": "d65bb013235c04af8e4c0115b34b1f5241b3b56343acbb55d3f583f24efba26b",
+      "bytes": 7615
+    },
+    "tools/validate_sb3.py": {
+      "sha256": "063beb41bafb2b68900bb7dea35286ca7c00bc03aab9708e2b92862a7d528dc2",
+      "bytes": 13509
+    },
+    "tools/stable_pen.py": {
+      "sha256": "362a4811f466db1393aec083683d46baa98aecd290e72286d8273ede42788e1d",
+      "bytes": 18706
+    },
+    "tools/upgrade_stable_pen.py": {
+      "sha256": "24b61133f91f11baa7e9ea294207e4ed1007023da939456e5e65aae0608a94df",
+      "bytes": 4964
+    },
+    "tools/test_frame_presentation.cjs": {
+      "sha256": "dda9ca441283861c9d2d34c4159ea1a0fd1d040d72edd961f6fa8d2d9a438eb8",
+      "bytes": 13295
+    },
+    "tools/test_renderer.cjs": {
+      "sha256": "5e452a90daad56f98a4125aac69cd43af4ca4f801f52edd5cf1b5eb494da4215",
+      "bytes": 27284
+    },
+    "tools/test_editor_runtime.cjs": {
+      "sha256": "bfbedce9211528f321cacada1e62977991d497201f4600bb9fb0dad40197477f",
+      "bytes": 2758
+    },
+    "tools/vm_harness.cjs": {
+      "sha256": "aeb2d47b466098b4a4a1cb43da1545c8ab04871e9df46aef582e6eed990073ab",
+      "bytes": 7862
+    },
+    "tools/verify_editor_roundtrip.py": {
+      "sha256": "5d0612278cfb2430e040ab9fc69075152a62a7df3b04e9ec75785dd45a572747",
+      "bytes": 3459
+    },
+    "research/nary_blend_audit.json": {
+      "sha256": "90c6c50aa4e7554b695a0ce864f5a3e68c99fc6a95520736547a5dc3ee278ca0",
+      "bytes": 18577
+    },
+    "inputs/Studio_before_upgrade.sb3": {
+      "sha256": "2a08612b5a5d40f542f6af28799a3c2572c80073980e13104660846616c021cc",
+      "bytes": 1869244
+    },
+    "inputs/Component_before_upgrade.sprite3": {
+      "sha256": "147dca1a28d5f960424a355f49b1bb839d16ee7b9b81afcb624b91124550f57a",
+      "bytes": 1628835
+    },
+    "CHANGELOG.md": {
+      "sha256": "0319bab6f2cd4c8da8f03202dd847a4799498dfe52daf6cce96c5cd562e36092",
+      "bytes": 6678
+    },
+    "tools/compact_project.py": {
+      "sha256": "efe05158e924c7882c9bd92e8bfd6b15711ef843a2a46e25db5741e33d79330e",
+      "bytes": 7108
+    },
+    "tools/build_ui.py": {
+      "sha256": "d569dd81157c9f073941cdf1255e75895ec347d215b8578008445e7aefaa1cc8",
+      "bytes": 11020
+    },
+    "tools/ui_components.py": {
+      "sha256": "e8665301ff1a9e5843361b5b66c840a94d1f18218d771eb70b3ae17ac8432f4c",
+      "bytes": 28834
+    },
+    "tools/ui_labels.py": {
+      "sha256": "5b10095da378546c08d672223d171aa61bcd13df99483727adbe85b5e03eb1ff",
+      "bytes": 31205
+    },
+    "tools/test_ui_components.cjs": {
+      "sha256": "4a1201e0f0991bf106e32bdbb2c9d88da09216fa6dfd172518a43820aac838f4",
+      "bytes": 26477
+    },
+    "tools/test_ui_highlights.cjs": {
+      "sha256": "2bbdb65bb835af396ad8b949a4e3518bf75498d7860ee731d61d39eb34aba842",
+      "bytes": 9123
+    },
+    "tools/menu_layers.py": {
+      "sha256": "402449e64410367b6522ffdfa470b241b28cb73b2a8e851b77f254f121616c8d",
+      "bytes": 43648
+    },
+    "tools/glass_material.py": {
+      "sha256": "7a9445a138a028ecceb0351eab990e306f92e722516cb7111c2791461605c2f0",
+      "bytes": 22037
+    },
+    "tools/material_api.py": {
+      "sha256": "6bcc496aa9225513e5cc5a65326652598ed179883d83b55fadea4e33011b7ffb",
+      "bytes": 4720
+    },
+    "tools/test_ui_layers.cjs": {
+      "sha256": "6f567273b5ce988d75fa65bfe7a57ebba0edcb8601c49154769046a7a5460f07",
+      "bytes": 16514
+    },
+    "tools/test_materials.cjs": {
+      "sha256": "2d3532250130d60b01b6033c1bff468e40fb02ccebd176d86499ac9bb0c1272c",
+      "bytes": 17219
+    },
+    "tools/test_native_save.cjs": {
+      "sha256": "a5dea5d9b3ee5f4943e15cbacf15a228bd9e77f497c4ccd13da1c2619b8c663a",
+      "bytes": 4971
+    },
+    "tools/check_material_upgrade.py": {
+      "sha256": "4049de7779ff50fdff80a369ec6ae2346ea389f03699c4f17658efb7179207b6",
+      "bytes": 3285
+    },
+    "tools/test_layer_presentation.cjs": {
+      "sha256": "66b129ee960a72e5031ac2fb5607a357046ce80460cc31c9f1e3c9387f6e8cb0",
+      "bytes": 7693
+    },
+    "tools/grid_rows.py": {
+      "sha256": "47a169f69a4d592f091b3f32ce95687156883ec5ea79bd076114004c1a8bf973",
+      "bytes": 4794
+    },
+    "tools/panel_optics.py": {
+      "sha256": "355dc336831e56fba41f2f46f424b0328058a929c92202afd622a97b82f1ec7d",
+      "bytes": 10558
+    },
+    "tools/motion_layout.py": {
+      "sha256": "64d793900ef25fcd46b546ce6cb742c5d00d6a3a0ccd87a0dd673ee37dc5fb4f",
+      "bytes": 19870
+    },
+    "tools/body_ink.py": {
+      "sha256": "f90ee4957f483223aee0d89ef4c5d8f91575413dac7284d4cc5f617fb36c2cc4",
+      "bytes": 16547
+    },
+    "tools/body_ink_path.py": {
+      "sha256": "a92e93a7db06741e8b249fc5e4a98b2e804bc4f351c6133001b9ec2fa877ecd8",
+      "bytes": 5465
+    },
+    "tools/body_ink_atlas.py": {
+      "sha256": "b5aa8401419e8bc334570d622fd3cd15f3d829b9c1a2469cb6c978addffc6319",
+      "bytes": 1988
+    },
+    "tools/body_ink_raster.cpp": {
+      "sha256": "2ee1c00885c203aa135151c4e65cc2da61a899bb7835c3f06b2dec28501edad9",
+      "bytes": 2265
+    },
+    "tools/check_motion_upgrade.py": {
+      "sha256": "ff6adb41ab8a806705555c27894e7853467dd9b2334180facb364b0aaa7f407d",
+      "bytes": 2772
+    },
+    "tools/test_grid_pixels.cjs": {
+      "sha256": "ef0f9656dbe7da9c810a184780d47e196843e035584cf29b9587474922fb9a5c",
+      "bytes": 1371
+    },
+    "tools/test_control_motion.cjs": {
+      "sha256": "ca1567433bbff6d2b738f638b899aa241dbc74ea880240e68c3885e0cfc76d10",
+      "bytes": 13045
+    },
+    "tools/test_panel_edges.cjs": {
+      "sha256": "ec68281fe82e49aaaef99e1feecb63697bb345a7f0d8a21b6557ac92a67da84e",
+      "bytes": 5124
+    },
+    "tools/test_body_ink.cjs": {
+      "sha256": "1a2e82803acdd43bf8300f3907f815b8ec5515893725b59b4475172a9202ea93",
+      "bytes": 5647
+    }
+  },
+  "validation": "Build checkpoint; final verification recorded separately."
+}

@@ -1,0 +1,41 @@
+{
+  "version": "0.2.1",
+  "previous": "0.2.0",
+  "createdUTC": "2026-11-05T02:50:36.499834+00:00",
+  "note": "Data-only cleanup of the current native editor save: eight saved frame buffers cleared, all Scratch scripts and other data unchanged.",
+  "files": {
+    "LiquidGlass_Studio_0.2.1.sb3": {
+      "sha256": "b93e04c2686e7d99d8b4b895d1a5223a3d351f136820fc3eea6be7c69986aaaa",
+      "bytes": 1001839
+    },
+    "LiquidGlass_Component_0.2.1.sprite3": {
+      "sha256": "d21e4f5375a9463faf7b0f5056ac19a6a1439c90972c702741d9ef17b39441c9",
+      "bytes": 879243
+    },
+    "project.json": {
+      "sha256": "61980a989fb0e534564210193c028df894cc67bddcb26a6ab33da77cb6a3a7fb",
+      "bytes": 3231258
+    },
+    "build_renderer.py": {
+      "sha256": "a977ce2c0e7e8d8860885023032cc93e029ed8796d15536e5a708f30f5e131aa",
+      "bytes": 37998
+    },
+    "README.md": {
+      "sha256": "e242d1591f72e4610536e7162b1eb1db165c2a8b465223408e2c3c2bd8ed3f9e",
+      "bytes": 21236
+    },
+    "tools/snapshot_release.py": {
+      "sha256": "0f7817dd5797043e9458b0e9bbbe39ea08d3b27d3288b65a8c9fb4c3aaed5cbf",
+      "bytes": 2786
+    },
+    "CHANGELOG.md": {
+      "sha256": "e1326706b14f9ac6a3d9c9b77750fe2a1135c5c33b629dc95d2c89ab99230e5d",
+      "bytes": 2242
+    },
+    "tools/compact_project.py": {
+      "sha256": "50e625384ad7b9a5f786db122591e2f9c6013a5868ee090ac4d4627c24c0c89c",
+      "bytes": 5833
+    }
+  },
+  "validation": "Build checkpoint; final verification recorded separately."
+}

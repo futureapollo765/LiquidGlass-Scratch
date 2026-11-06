@@ -1,0 +1,236 @@
+{
+  "sha256": "9c8e6304f8a5c87712364c07d945a3fd7b3e0db6e726d8dcf8bbef30bab7b429",
+  "checks": [
+    "Button and Menu follow signed horizontal, vertical and diagonal pulls and retract to their configured centers without activating.",
+    "Native white glyph outlines and inter-letter spacing agree with independently transformed source SVG edges through six control poses.",
+    "Both transitioning Menu titles and their up/down icons use the same moving, independently scaled face as their glass.",
+    "All four corners and bottom center reach the requested layout; custom coordinates retarget smoothly while open.",
+    "The default springs lead with position on opening and with size on closing. An in-flight outside press reverses continuously."
+  ],
+  "positions": {
+    "top left": {
+      "end": [
+        -25,
+        56
+      ],
+      "intermediate": {
+        "travel": 0.5430107367240837,
+        "size": 0.3405897951301163,
+        "phase": 0.3189934206572067
+      }
+    },
+    "top right": {
+      "end": [
+        55,
+        56
+      ],
+      "intermediate": {
+        "travel": 0.5430107367240837,
+        "size": 0.3405897951301163,
+        "phase": 0.3189934206572067
+      }
+    },
+    "bottom left": {
+      "end": [
+        -25,
+        0
+      ],
+      "intermediate": {
+        "travel": 0.5430107367240837,
+        "size": 0.3405897951301163,
+        "phase": 0.3189934206572068
+      }
+    },
+    "bottom right": {
+      "end": [
+        55,
+        0
+      ],
+      "intermediate": {
+        "travel": 0.5430107367240644,
+        "size": 0.34058979513009824,
+        "phase": 0.31899342065718783
+      }
+    },
+    "bottom center": {
+      "end": [
+        15,
+        0
+      ],
+      "intermediate": {
+        "travel": 0.5430107367240453,
+        "size": 0.3405897951300815,
+        "phase": 0.31899342065716896
+      }
+    },
+    "retarget": {
+      "initial": [
+        116,
+        -61
+      ],
+      "first": [
+        5.742570882077771,
+        4.685276921315378
+      ],
+      "settled": [
+        -119,
+        79
+      ]
+    },
+    "custom": {
+      "end": [
+        116,
+        -61
+      ],
+      "intermediate": {
+        "travel": 0.5430107367240453,
+        "size": 0.3405897951300815,
+        "phase": 0.31899342065716896
+      }
+    },
+    "reversal": [
+      0.471,
+      0.6107,
+      0.5255,
+      0.3789
+    ],
+    "reversalSettled": {
+      "start": {
+        "x": 44.10546699159215,
+        "y": 7.626173105885496,
+        "w": 130.18857496213352,
+        "h": 61.16131252185454,
+        "sx": 1.0334740482192806,
+        "sy": 1.058579584383741,
+        "phase": 0.37894867250563224
+      },
+      "rest": {
+        "x": 15,
+        "y": 28,
+        "w": 100,
+        "h": 40,
+        "sx": 1,
+        "sy": 1,
+        "phase": 0
+      },
+      "frames": 23
+    }
+  },
+  "ink": [
+    {
+      "name": "2: 92,0",
+      "sx": 1.2696092206575154,
+      "sy": 1.0805208131669068,
+      "bounds": [
+        [
+          -73.27,
+          -62.58,
+          -97.22,
+          -84.62
+        ],
+        [
+          -61.85,
+          -51.16,
+          -97.22,
+          -84.62
+        ]
+      ]
+    },
+    {
+      "name": "2: 0,-72",
+      "sx": 1.0805208131669068,
+      "sy": 1.4911187221703313,
+      "bounds": [
+        [
+          -90.78,
+          -81.1,
+          -112.73,
+          -96.29
+        ],
+        [
+          -81.06,
+          -71.38,
+          -112.73,
+          -96.29
+        ]
+      ]
+    },
+    {
+      "name": "2: -70,45",
+      "sx": 1.2523837756687226,
+      "sy": 1.4389637607815968,
+      "bounds": [
+        [
+          -109.61,
+          -98.8,
+          -86.78,
+          -70.61
+        ],
+        [
+          -98.34,
+          -87.53,
+          -86.78,
+          -70.61
+        ]
+      ]
+    },
+    {
+      "name": "3: 92,0",
+      "sx": 1.3653747869454855,
+      "sy": 1.1006510164586332,
+      "bounds": [
+        [
+          -18.8,
+          -7.3,
+          22.63,
+          35.57
+        ],
+        [
+          -6.51,
+          4.99,
+          22.63,
+          35.57
+        ]
+      ]
+    },
+    {
+      "name": "3: 0,-72",
+      "sx": 1.1006510164586334,
+      "sy": 1.5188984027129135,
+      "bounds": [
+        [
+          -27.9,
+          -18.04,
+          7.14,
+          23.89
+        ],
+        [
+          -18,
+          -8.14,
+          7.14,
+          23.89
+        ]
+      ]
+    },
+    {
+      "name": "3: -70,45",
+      "sx": 1.3412591639611753,
+      "sy": 1.5128604062155258,
+      "bounds": [
+        [
+          -54.36,
+          -42.82,
+          32.87,
+          49.9
+        ],
+        [
+          -42.29,
+          -30.75,
+          32.87,
+          49.9
+        ]
+      ]
+    }
+  ],
+  "passed": true
+}
